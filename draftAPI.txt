@@ -1,0 +1,17 @@
+{
+    "_id":
+    "location": {
+        "name": "text", // required
+        "located_in": "<textarea>", // required
+        "environment": "<textarea>", // [not MVP], optional --> 'unknown / unexplored' if empty
+        "location_image": "URL" // optional --> not displayed if empty
+    },
+    "life": {
+        "life_form": "text", // optional --> 'unknown / potentially uninhabited' if empty
+        "about_life": "<textarea>", // optional --> 'unobserved' if empty
+        "life_image": "URL" // optional --> not displayed if empty
+    },
+    "comments": "<textarea>", // optional --> not displayed if empty
+    "contributor": "text", // optional --> 'unknown' if empty
+    "contact": "text" // optional --> not displayed if empty
+},
