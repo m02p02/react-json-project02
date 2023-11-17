@@ -1,6 +1,10 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import React from 'react'
+import { useEffect, useState } from 'react'
+import { Route, Routes} from "react-router-dom"
+import NavBar from "./components/NavBar"
+import HomePage from "./pages/HomePage"
+import AddLocationPage from "./pages/AddLocationPage"
+import LocationDetailsPage from "./pages/LocationDetailsPage"
 import './App.css'
 
 function App() {
@@ -9,7 +13,13 @@ function App() {
   return (
 
     <>
-      <h1>i make this change</h1>
+      <h1>The mighty locations</h1>
+      <NavBar />
+      <Routes>
+        <Route path='/' element={<HomePage/>}/>
+        <Route path='/location-details' element={<LocationDetailsPage/>}/>
+        <Route path='/add-location' element={<AddLocationPage/>}/>
+      </Routes>
     </>
   )
 }
