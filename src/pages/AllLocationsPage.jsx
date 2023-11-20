@@ -3,12 +3,12 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 function AllLocationsPage() {
-    const [locations, setLocations] = useState([]);
+    const [place, setPlace] = useState([]);
     
     const displayAllPlaces = () =>{
         axios.get("https://exo-app-rest-api.adaptable.app/places")
             .then((response) =>{
-                setLocations(response.data)
+                setPlace(response.data)
             })
             .catch((error) => console.log(error))
     }
@@ -18,29 +18,24 @@ function AllLocationsPage() {
     }, []);
 
     return (
-        <div>
-            <h2>1. This is the All Locations Page</h2>
-            <ul>
-                {locations.map(place =>(
+        <>
+            <h2>All Places</h2>
+            <div>
+                {place.map(place =>(
                     <Link to={`/places/details/${place.id}`}>
-                        <li key={place.id}>
+                        <div className='place-container' key={place.id}>
                             <img className='place-image'src={place.placeImage} />
                             <h3>{place.placeName}</h3>
                             <p>Location:{place.location}</p>
                             <p>Description:{place.placeDescription}</p>
                             <p>inhabitants:{place.inhabitants}</p>
                             <p>Description:{place.inhabitantsDescription}</p>
-                            <img className='place-image' src={place.inhabitantsImage} />
-                        </li>
+                            <img className='inhabitants-image' src={place.inhabitantsImage} />
+                        </div>
                     </Link>
                 ))}
-            </ul>
-        </div>
-
-
-
-
-
+            </div>
+        </>
 
 
        /* <>

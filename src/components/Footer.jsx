@@ -6,7 +6,7 @@ function Footer() {
 
         <>
             <hr />
-            <h3>This is the Footer</h3>
+            <h1>Footer</h1>
         </>
     )
 }

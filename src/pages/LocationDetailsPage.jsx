@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 function LocationDetailsPage() {
 
     const [place, setPlace] = useState({});
-    const {placeId} = useParams();
+    const { placeId } = useParams();
 
     const getOnePlace = () => {
         axios.get(`https://exo-app-rest-api.adaptable.app/places/${placeId}`)
@@ -24,10 +24,10 @@ function LocationDetailsPage() {
     return (
 
         <>
-            <h2>****Location Details Page</h2>
-            <h2>****OPTIONAL -- add --EDIT-- and --DELETE-- functions to this page??</h2>
+            <h1>Place Details</h1>
+            <h2>?? -- add --EDIT-- and --DELETE-- functions to this page??</h2>
 
-            <div className='place-details-container' key={place.id}>
+            <div className='place-container' key={place.id}>
                 {place && (
                     <>
                         <img className='place-image' src={place.placeImage} />

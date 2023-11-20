@@ -6,10 +6,11 @@ function NavBar(){
     return(
 
         <>
-            <h3>NavBar only has two links:</h3>
+            <h3>NavBar</h3>
             <nav className='nav-container'>
-                <Link to="/">🏠Home Page </Link>
-                <Link to="/places/all-locations">🏠All Locations Page </Link>
+                <Link to="/"> **🏠Home Page** </Link>
+                <Link to="/places/all-places"> **🏠All Places** </Link>
+                <Link to="/places/random-place"> **Random Place** </Link>
             </nav>
             <hr />
         </>

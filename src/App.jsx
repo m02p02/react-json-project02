@@ -23,10 +23,10 @@ function App() {
 
       <Routes>
         <Route path='/' element={<HomePage />} />
-        <Route path='/places/all-locations' element={<AllLocationsPage />} />
+        <Route path='/places/all-places' element={<AllLocationsPage />} />
         <Route path='/places/details/:placeId' element={<LocationDetailsPage />} />
-        <Route path='/places/random-location' element={<RandomLocationPage />} />
-        <Route path='/places/add-location' element={<AddLocationPage />} />
+        <Route path='/places/random-place' element={<RandomLocationPage />} />
+        <Route path='/places/add-place' element={<AddLocationPage />} />
       </Routes>
 
       <Footer />

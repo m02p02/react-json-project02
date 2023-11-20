@@ -51,7 +51,7 @@ Link {
 }
 
 /* LocationDetailsPage: */
-.place-details-container {
+.place-container {
   border: 2px solid white;
   max-width: 60%;
 }
