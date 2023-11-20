@@ -56,11 +56,8 @@ Link {
 }
 
 .place-image {
-  max-width: 70%;
-}
-
-.inhabitants-image {
-  max-width: 50%;
+  width: 85%;
+  border-radius: 25px;
 }
 
 /* AddLocationsPage */
@@ -82,18 +79,33 @@ Link {
 /* AllLocationsPage */
 .all-locations-parent {
   display: flex;
-  flex-direction: column;
+  justify-content: space-evenly;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 500px;
 }
 
 .all-locations-container {
+  width: 500px;
   border: 2px solid ivory;
+  border-radius: 25px;
   max-width: 40%;
-  padding: 5%;
+  padding-top: 5%;
+  margin: 1em;
+  color: ivory;
+  font-size: 20px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 /* LocationDetailsPage */
 .location-details-container {
   border: 2px solid ivory;
-  display: flex;
-  align-items: center;
+  border-radius: 25px;
+  padding-top: 5%;
+}
+
+.inhabitants-image {
+  max-width: 50%;
+  border-radius: 25px;
 }
