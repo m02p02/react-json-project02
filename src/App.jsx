@@ -8,6 +8,7 @@ import AllLocationsPage from './pages/AllLocationsPage.jsx';
 import LocationDetailsPage from "./pages/LocationDetailsPage"
 import RandomLocationPage from './pages/RandomLocationPage.jsx';
 import AddLocationPage from "./pages/AddLocationPage"
+import EditDeletePage from './pages/EditDeletePage.jsx';
 import Footer from './components/Footer.jsx';
 
 import './App.css'
@@ -26,6 +27,7 @@ function App() {
         <Route path='/places/all-places' element={<AllLocationsPage />} />
         <Route path='/places/details/:placeId' element={<LocationDetailsPage />} />
         <Route path='/places/random-place' element={<RandomLocationPage />} />
+        <Route path='/places/Edit-delete' element={<EditDeletePage />} />
         <Route path='/places/add-place' element={<AddLocationPage />} />
       </Routes>
 
