@@ -36,7 +36,7 @@ function AddLocationPage(){
     return (
         <div>
             <h3>Add a Place</h3>
-            <form className='add-location-form' onSubmit={handleSubmit}>
+            <form className='input-place-form' onSubmit={handleSubmit}>
                 <label className='input-label'>
                     Place Name
                     <input 
@@ -70,7 +70,7 @@ function AddLocationPage(){
                     onChange={(e) => { setDescription(e.target.value) }}
                     />
                 </label>
-                <label className='input-textarea'>
+                <label className='input-label'>
                     Place Image
                     <input 
                     type="text" 
@@ -103,7 +103,7 @@ function AddLocationPage(){
                     onChange={(e) => { setInhabitantsDescription(e.target.value) }}
                     />
                 </label>
-                <label className='input-textarea'>
+                <label className='input-label'>
                     Inhabitants Image
                     <input 
                     type="text" 
@@ -114,7 +114,7 @@ function AddLocationPage(){
                     onChange={(e) => { setInhabitantsImage(e.target.value) }}
                     />
                 </label>
-                <button type='submit'>Add Place to database</button>
+                <button className='submit-btn' type='submit'>Add to Database</button>
             </form>
 
         </div>

@@ -50,7 +50,7 @@ function EditPage() {
     axios
       .put(`https://exo-app-rest-api.adaptable.app/places/${placeId}`, requestBody)
       .then((response) => {
-        navigate(`/places/${placeId}`);
+        navigate('/places/all-places');
       })
       .catch((error) => {
         console.log("error updating project");
@@ -61,8 +61,8 @@ function EditPage() {
   return (
     <div className="edit-page">
       <h3>This is Edit-Delete</h3>
-      <form onSubmit={handleFormSubmit}>
-        <label>
+      <form className='input-place-form' onSubmit={handleFormSubmit}>
+        <label className='input-label'>
           Place Name
           <input
             type="text"
@@ -75,7 +75,7 @@ function EditPage() {
             }}
           />
         </label>
-        <label>
+        <label className='input-label'>
           Location
           <input
             type="text"
@@ -88,9 +88,9 @@ function EditPage() {
             }}
           />
         </label>
-        <label>
+        <label className='input-textarea'>
           Description
-          <input
+          <textarea
             type="text"
             name="Description"
             placeholder="Please enter a description about your place"
@@ -101,7 +101,7 @@ function EditPage() {
             }}
           />
         </label>
-        <label>
+        <label className='input-label'>
           Place Image
           <input
             type="text"
@@ -112,7 +112,7 @@ function EditPage() {
             onChange={(e) => { setPlaceImage(e.target.value) }}
           />
         </label>
-        <label>
+        <label className='input-label'>
           Inhabitants
           <input
             type="text"
@@ -125,9 +125,9 @@ function EditPage() {
             }}
           />
         </label>
-        <label>
+        <label className='input-textarea'>
           Inhabitants Description
-          <input
+          <textarea
             type="text"
             name="Inhabitants description"
             placeholder="Please enter a inhabitants details of your place"
@@ -138,7 +138,7 @@ function EditPage() {
             }}
           />
         </label>
-        <label>
+        <label className='input-label'>
           Inhabitants Image
           <input
             type="text"
@@ -149,7 +149,7 @@ function EditPage() {
             onChange={(e) => { setInhabitantsImage(e.target.value) }}
           />
         </label>
-        <button type="submit">Update Place</button>
+        <button className='submit-btn' type="submit">Update</button>
       </form>
     </div>
   );

@@ -49,6 +49,24 @@ Link {
   display: inline-block;
 }
 
+/* NavBar */
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  
+}
+
+.nav-btn {
+  border: 1px solid ivory;
+  margin: 2px;
+  padding: 5px;
+  font-size: 20px;
+  font-weight: bold;
+  color: ivory;
+  border-radius: 25px;
+}
+
 /* LocationDetailsPage */
 .place-container {
   border: 2px solid white;
@@ -60,8 +78,8 @@ Link {
   border-radius: 25px;
 }
 
-/* AddLocationsPage */
-.add-location-form {
+/* AddLocationsPage, EditPage*/
+.input-place-form {
   font-size: 15px;
   min-width: 40%;
 }
@@ -108,4 +126,11 @@ Link {
 .inhabitants-image {
   max-width: 50%;
   border-radius: 25px;
+}
+
+/* submit buttons: LocationDetails, AddLocationsPage, EditPage */
+.submit-btn {
+  padding: 5px;
+  margin: 5px;
+  border-radius: 20px;
 }

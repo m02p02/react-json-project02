@@ -52,8 +52,8 @@ function LocationDetailsPage(props) {
                         <img className='inhabitants-image' src={place.inhabitantsImage} />
                         <h3>Inhabitants: {place.inhabitants}</h3>
                         <h3>Description: {place.inhabitantsDescription}</h3>
-                        <button onClick={() => navigate(`/places/edit/${placeId}`)}>Edit</button>
-                        <button onClick={function() {deletePlace()}}>Delete</button>
+                        <button className='submit-btn' onClick={() => navigate(`/places/edit/${placeId}`)}>Edit</button>
+                        <button className='submit-btn' onClick={function() {deletePlace()}}>Delete</button>
                     </div>
                 )}
             </div>
