@@ -20,7 +20,7 @@ function AddLocationPage(){
             inhabitantsDescription: inhabitantsDescription
         }
 
-        axios.post(`${import.meta.env.EXO_APP_URL}/places`, requestBody)
+        axios.post('https://exo-app-rest-api.adaptable.app/places/', requestBody)
             .then(response =>{
                 navigate("/places/all-places")
             })
@@ -88,7 +88,7 @@ function AddLocationPage(){
                     onChange={(e) => { setInhabitantsDescription(e.target.value) }}
                     />
                 </label>
-                <button>Add Place to database</button>
+                <button type='submit'>Add Place to database</button>
             </form>
 
         </div>
