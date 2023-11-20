@@ -118,11 +118,6 @@ function AddLocationPage(){
             </form>
 
         </div>
-        
-        // <>
-        //     <h1>Add Location Page</h1>
-        //     <h2>Add functionality - when a new location is added, automatically redirect to All Locations Page</h2>
-        // </>
     )
 }
 

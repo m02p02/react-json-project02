@@ -3,12 +3,14 @@ import React, { useEffect } from "react";
 import { useState } from "react";
 import { useNavigate, useParams } from "react-router";
 
-function EditDeleteLocation() {
+function EditPage() {
   const [placeName, setPlaceName] = useState("");
   const [location, setLocation] = useState("");
   const [description, setDescription] = useState("");
+  const [placeImage, setPlaceImage] = useState('');
   const [inhabitants, setinhabitants] = useState("");
   const [inhabitantsDescription, setInhabitantsDescription] = useState("");
+  const [inhabitantsImage, setInhabitantsImage] = useState('');
 
   const { placeId } = useParams();
 
@@ -21,8 +23,10 @@ function EditDeleteLocation() {
         setPlaceName(response.data.placeName);
         setLocation(response.data.location);
         setDescription(response.data.description);
+        setPlaceImage(response.data.placeImage);
         setinhabitants(response.data.inhabitants);
         setInhabitantsDescription(response.data.inhabitantsDescription);
+        setInhabitantsImage(response.data.inhabitantsImage);
       })
       .catch((error) => {
         console.log("error getting place in the API");
@@ -32,19 +36,19 @@ function EditDeleteLocation() {
 
   const handleFormSubmit = (e) => {
     e.preventDefault();
+
     const requestBody = {
       placeName: placeName,
       location: location,
       description: description,
+      placeImage: placeImage,
       inhabitants: inhabitants,
       inhabitantsDescription: inhabitantsDescription,
+      inhabitantsImage: inhabitantsImage
     };
 
     axios
-      .put(
-        `https://exo-app-rest-api.adaptable.app/places/${placeId}`,
-        requestBody
-      )
+      .put(`https://exo-app-rest-api.adaptable.app/places/${placeId}`, requestBody)
       .then((response) => {
         navigate(`/places/${placeId}`);
       })
@@ -55,7 +59,7 @@ function EditDeleteLocation() {
   };
 
   return (
-    <div className="EditDeletePage">
+    <div className="edit-page">
       <h3>This is Edit-Delete</h3>
       <form onSubmit={handleFormSubmit}>
         <label>
@@ -98,6 +102,17 @@ function EditDeleteLocation() {
           />
         </label>
         <label>
+          Place Image
+          <input
+            type="text"
+            name="Place Image"
+            placeholder="URL of Place Image"
+            required={true}
+            value={placeImage}
+            onChange={(e) => { setPlaceImage(e.target.value) }}
+          />
+        </label>
+        <label>
           Inhabitants
           <input
             type="text"
@@ -123,10 +138,21 @@ function EditDeleteLocation() {
             }}
           />
         </label>
+        <label>
+          Inhabitants Image
+          <input
+            type="text"
+            name="Inhabitants Image"
+            placeholder="URL of inhabitants image"
+            required={true}
+            value={inhabitantsImage}
+            onChange={(e) => { setInhabitantsImage(e.target.value) }}
+          />
+        </label>
         <button type="submit">Update Place</button>
       </form>
     </div>
   );
 }
 
-export default EditDeleteLocation;
+export default EditPage;

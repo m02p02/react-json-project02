@@ -2,9 +2,10 @@ import React from "react";
 import axios from "axios";
 import { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
-import { Link } from "react-router-dom";
 
-function LocationDetailsPage() {
+import EditPage from "./EditPage";
+
+function LocationDetailsPage(props) {
 
     const [place, setPlace] = useState({});
     const { placeId } = useParams();
@@ -49,7 +50,7 @@ function LocationDetailsPage() {
                         <img className='inhabitants-image' src={place.inhabitantsImage} />
                         <h3>Inhabitants: {place.inhabitants}</h3>
                         <h3>Description: {place.inhabitantsDescription}</h3>
-                        <button onClick={function() {editPlace()}}>Edit</button>
+                        <button onClick={function() {EditPage(placeId)}}>Edit</button>
                         <button onClick={function() {deletePlace()}}>Delete</button>
                     </div>
                 )}

@@ -27,7 +27,7 @@ function App() {
         <Route path='/places/all-places' element={<AllLocationsPage />} />
         <Route path='/places/details/:placeId' element={<LocationDetailsPage />} />
         <Route path='/places/random-place' element={<RandomLocationPage />} />
-        <Route path='/places/Edit' element={<EditPage />} />
+        {/*<Route path='/places/Edit' element={<EditPage />} />*/}
         <Route path='/places/add-place' element={<AddLocationPage />} />
       </Routes>
 
