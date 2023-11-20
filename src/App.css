@@ -10,3 +10,17 @@
   background-position: 100%;
   color: white;
 }
+
+/* LocationDetailsPage: */
+.place-details-container {
+  border: 2px solid white;
+  max-width: 60%;
+}
+
+.place-image {
+  max-width: 70%;
+}
+
+.inhabitants-image {
+  max-width: 50%;
+}

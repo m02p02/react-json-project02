@@ -24,20 +24,19 @@ function LocationDetailsPage() {
     return (
 
         <>
-            <h2>1. This is the Location Details Page</h2>
-            <h3>2. This will display specific/individual locations</h3>
-            <h3>3. These locations can only be accessed via the All Locations Page</h3>
+            <h2>****Location Details Page</h2>
+            <h2>****OPTIONAL -- add --EDIT-- and --DELETE-- functions to this page??</h2>
 
             <div className='place-details-container' key={place.id}>
                 {place && (
                     <>
                         <img className='place-image' src={place.placeImage} />
-                        <h3>{place.placeName}</h3>
-                        <h3>{place.location}</h3>
-                        <h3>{place.placeDescription}</h3>
+                        <h3>Place Name: {place.placeName}</h3>
+                        <h3>Location: {place.location}</h3>
+                        <h3>Description: {place.placeDescription}</h3>
                         <img className='inhabitants-image' src={place.inhabitantsImage} />
-                        <h3>{place.inhabitants}</h3>
-                        <h3>{place.inhabitantsDescription}</h3>
+                        <h3>Inhabitants: {place.inhabitants}</h3>
+                        <h3>Description: {place.inhabitantsDescription}</h3>
                     </>
                 )}
             </div>

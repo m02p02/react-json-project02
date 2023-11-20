@@ -24,10 +24,9 @@ function App() {
       <Routes>
         <Route path='/' element={<HomePage />} />
         <Route path='/all-locations' element={<AllLocationsPage />} />
-        <Route path='/location-details' element={<LocationDetailsPage />} />
+        <Route path='/places/:placeId' element={<LocationDetailsPage />} />
         <Route path='/random-location' element={<RandomLocationPage />} />
         <Route path='/add-location' element={<AddLocationPage />} />
-        <Route path='/places/:placeId' element={<LocationDetailsPage />} />
       </Routes>
 
       <Footer />
