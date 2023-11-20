@@ -6,8 +6,10 @@ function AddLocationPage(){
     const [placeName, setPlaceName] = useState("");
     const [location, setLocation] = useState("");
     const [description, setDescription] = useState("");
+    const [placeImage, setPlaceImage] = useState('');
     const [inhabitants, setinhabitants] = useState("");
     const [inhabitantsDescription, setInhabitantsDescription] = useState("");
+    const [inhabitantsImage, setInhabitantsImage] = useState('');
 
     const navigate = useNavigate();
     const handleSubmit = (e) => {
@@ -16,8 +18,10 @@ function AddLocationPage(){
             placeName: placeName,
             location: location,
             description: description,
+            placeImage: placeImage,
             inhabitants: inhabitants,
-            inhabitantsDescription: inhabitantsDescription
+            inhabitantsDescription: inhabitantsDescription,
+            inhabitantsImage: inhabitantsImage
         }
 
         axios.post('https://exo-app-rest-api.adaptable.app/places/', requestBody)
@@ -66,6 +70,17 @@ function AddLocationPage(){
                     onChange={(e) => { setDescription(e.target.value) }}
                     />
                 </label>
+                <label className='input-textarea'>
+                    Place Image
+                    <input 
+                    type="text" 
+                    name="Place Image" 
+                    placeholder="URL of Place Image"
+                    required={true}
+                    value={placeImage}
+                    onChange={(e) => { setPlaceImage(e.target.value) }}
+                    />
+                </label>
                 <label className='input-label'>
                     Inhabitants
                     <input 
@@ -86,6 +101,17 @@ function AddLocationPage(){
                     required={true}
                     value={inhabitantsDescription}
                     onChange={(e) => { setInhabitantsDescription(e.target.value) }}
+                    />
+                </label>
+                <label className='input-textarea'>
+                    Inhabitants Image
+                    <input 
+                    type="text" 
+                    name="Inhabitants Image" 
+                    placeholder="URL of inhabitants image"
+                    required={true}
+                    value={inhabitantsImage}
+                    onChange={(e) => { setInhabitantsImage(e.target.value) }}
                     />
                 </label>
                 <button type='submit'>Add Place to database</button>

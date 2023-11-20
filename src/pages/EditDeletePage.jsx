@@ -54,7 +54,7 @@ function EditDeleteLocation() {
       });
   };
 
-  const deleteProject = () => {
+  const deletePlace = () => {
     axios
       .delete(`https://exo-app-rest-api.adaptable.app/places/${placeId}`)
       .then((response) => {

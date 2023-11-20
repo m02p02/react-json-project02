@@ -1,13 +1,15 @@
 import React from "react";
 import axios from "axios";
 import { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 
 function LocationDetailsPage() {
 
     const [place, setPlace] = useState({});
     const { placeId } = useParams();
+
+    const navigate = useNavigate();
 
     const getOnePlace = () => {
         axios.get(`https://exo-app-rest-api.adaptable.app/places/${placeId}`)
@@ -20,6 +22,16 @@ function LocationDetailsPage() {
     useEffect(() => {
         getOnePlace();
     }, []);
+
+    const deletePlace = () => {
+        axios.delete(`https://exo-app-rest-api.adaptable.app/places/${placeId}`)
+            .then((response) => {
+                navigate("/places/all-places");
+            })
+            .catch((error) => {
+                console.log(error);
+            })
+    };
 
     return (
 
@@ -37,6 +49,8 @@ function LocationDetailsPage() {
                         <img className='inhabitants-image' src={place.inhabitantsImage} />
                         <h3>Inhabitants: {place.inhabitants}</h3>
                         <h3>Description: {place.inhabitantsDescription}</h3>
+                        <button onClick={function() {editPlace()}}>Edit</button>
+                        <button onClick={function() {deletePlace()}}>Delete</button>
                     </div>
                 )}
             </div>

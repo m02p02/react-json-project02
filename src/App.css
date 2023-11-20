@@ -80,10 +80,15 @@ Link {
 }
 
 /* AllLocationsPage */
+.all-locations-parent {
+  display: flex;
+  flex-direction: column;
+}
+
 .all-locations-container {
   border: 2px solid ivory;
-  direction: flex;
   max-width: 40%;
+  padding: 5%;
 }
 
 /* LocationDetailsPage */
