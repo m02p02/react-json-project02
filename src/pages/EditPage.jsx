@@ -54,18 +54,6 @@ function EditDeleteLocation() {
       });
   };
 
-  const deletePlace = () => {
-    axios
-      .delete(`https://exo-app-rest-api.adaptable.app/places/${placeId}`)
-      .then((response) => {
-        navigate("/places");
-      })
-      .catch((error) => {
-        console.log("Error deleting project...");
-        console.log(error);
-      });
-  };
-
   return (
     <div className="EditDeletePage">
       <h3>This is Edit-Delete</h3>
@@ -137,7 +125,6 @@ function EditDeleteLocation() {
         </label>
         <button type="submit">Update Place</button>
       </form>
-        <button onClick={deleteProject}>Delete Project</button>
     </div>
   );
 }
