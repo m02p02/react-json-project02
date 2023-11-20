@@ -9,7 +9,7 @@ function NavBar(){
             <h3>NavBar only has two links:</h3>
             <nav className='nav-container'>
                 <Link to="/">🏠Home Page </Link>
-                <Link to="/all-locations">🏠All Locations Page </Link>
+                <Link to="/places/all-locations">🏠All Locations Page </Link>
             </nav>
             <hr />
         </>

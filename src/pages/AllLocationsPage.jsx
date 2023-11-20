@@ -5,31 +5,34 @@ import { Link } from "react-router-dom";
 function AllLocationsPage() {
     const [locations, setLocations] = useState([]);
     
-    useEffect(() =>{
+    const displayAllPlaces = () =>{
         axios.get("https://exo-app-rest-api.adaptable.app/places")
-        .then(response =>{
-            setLocations(response.data)
-        })
-        .catch(error =>{
-            console.log(error)
-        })
-    },[])
+            .then((response) =>{
+                setLocations(response.data)
+            })
+            .catch((error) => console.log(error))
+    }
+
+    useEffect(() => {
+        displayAllPlaces();
+    }, []);
 
     return (
         <div>
             <h2>1. This is the All Locations Page</h2>
             <ul>
-                {places.map(place =>(
-                    <li key={place._id}>
-                        <img src={place.placeImage_url} alt={place.placeName} style={{ maxWidth: "50px" }}/>
-                        <h3>{place.name}</h3>
-                        <p>Location:{place.location}</p>
-                        <p>placeDescription:{place.placeDescription}</p>
-                        <p>inhabitants:{place.inhabitants}</p>
-                        <p>inhabitantsDescription:{place.inhabitantsDescription}</p>
-                        <img src={place.inhabitantsImage_url} alt={place.inhabitants} style={{ maxWidth: "50px" }}/>
-
-                    </li>
+                {locations.map(place =>(
+                    <Link to={`/places/details/${place.id}`}>
+                        <li key={place.id}>
+                            <img className='place-image'src={place.placeImage} />
+                            <h3>{place.placeName}</h3>
+                            <p>Location:{place.location}</p>
+                            <p>Description:{place.placeDescription}</p>
+                            <p>inhabitants:{place.inhabitants}</p>
+                            <p>Description:{place.inhabitantsDescription}</p>
+                            <img className='place-image' src={place.inhabitantsImage} />
+                        </li>
+                    </Link>
                 ))}
             </ul>
         </div>
