@@ -1,8 +1,27 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import axios from "axios";
+import React, { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 
 function AddLocationPage(){
+    const [placeName, setPlaceName] = useState("");
+    const [location, setLocation] = useState("");
+    const [description, setDescription] = useState("");
+    const [inhabitants, setinhabitants] = useState("");
+    const [inhabitantsDescription, setInhabitantsDescription] = useState("");
 
+    const navigate = useNavigate();
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        const requestBody = {
+            placeName: placeName,
+            location: location,
+            description: description,
+            inhabitants: inhabitants,
+            inhabitantsDescription: inhabitantsDescription
+        }
+
+        axios.post(`${import.meta.env.EXO_APP_URL}/places`, requestBody)
+    }
     return (
         
         <>

@@ -27,9 +27,9 @@ function AllLocationsPage() {
                             <img className='place-image'src={place.placeImage} />
                             <h3>{place.placeName}</h3>
                             <p>Location:{place.location}</p>
-                            <p>Description:{place.placeDescription}</p>
-                            <p>inhabitants:{place.inhabitants}</p>
-                            <p>Description:{place.inhabitantsDescription}</p>
+                            <p>Description: {place.placeDescription}</p>
+                            <p>inhabitants: {place.inhabitants}</p>
+                            <p>Description: {place.inhabitantsDescription}</p>
                             <img className='inhabitants-image' src={place.inhabitantsImage} />
                         </div>
                     </Link>
