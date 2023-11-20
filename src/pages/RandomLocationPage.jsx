@@ -2,6 +2,7 @@ import React from "react";
 import axios from "axios";
 import { useEffect, useState } from 'react';
 import { useParams } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 function RandomLocationPage () {
 
@@ -23,6 +24,10 @@ function RandomLocationPage () {
         getRandomPlace();
     }, []);
 
+    function reloadPage() {
+        window.location.reload(false);
+    }
+
     return (
 
         <>
@@ -38,6 +43,7 @@ function RandomLocationPage () {
                         <img className='inhabitants-image' src={place.inhabitantsImage} />
                         <h3>Inhabitants: {place.inhabitants}</h3>
                         <h3>Description: {place.inhabitantsDescription}</h3>
+                        <button className='submit-btn' onClick={reloadPage}>Reload</button>
                     </>
                 )}
             </div>
