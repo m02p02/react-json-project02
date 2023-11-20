@@ -9,9 +9,12 @@ function RandomLocationPage () {
     const { placeId } = useParams();
 
     const getRandomPlace = () => {
-        axios.get(`https://exo-app-rest-api.adaptable.app/places/random`)
+        axios.get('https://exo-app-rest-api.adaptable.app/places/')
             .then((response) => {
-                setPlace(response.data);
+                const allPlaces = response.data;
+                const randomize = Math.floor(Math.random() * allPlaces.length);
+                const getRandom = allPlaces[randomize];
+                setPlace(getRandom);
             })
             .catch((error) => console.log(error));
     }
@@ -23,7 +26,7 @@ function RandomLocationPage () {
     return (
 
         <>
-            <h1>This is the Random Place Page</h1>
+            <h1>Random Place</h1>
 
             <div className='place-container' key={place.id}>
                 {place && (
