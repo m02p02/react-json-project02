@@ -11,6 +11,7 @@ function NavBar(){
                 <Link to="/"> **🏠Home Page** </Link>
                 <Link to="/places/all-places"> **🏠All Places** </Link>
                 <Link to="/places/random-place"> **Random Place** </Link>
+                <Link to='/places/add-place'> **Add Place** </Link>
             </nav>
             <hr />
         </>
