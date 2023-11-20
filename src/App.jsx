@@ -27,6 +27,7 @@ function App() {
         <Route path='/location-details' element={<LocationDetailsPage />} />
         <Route path='/random-location' element={<RandomLocationPage />} />
         <Route path='/add-location' element={<AddLocationPage />} />
+        <Route path='/places/:placeId' element={<LocationDetailsPage />} />
       </Routes>
 
       <Footer />
