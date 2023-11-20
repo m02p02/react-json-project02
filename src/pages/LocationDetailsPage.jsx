@@ -3,14 +3,16 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 
-import EditPage from "./EditPage";
-
 function LocationDetailsPage(props) {
 
     const [place, setPlace] = useState({});
     const { placeId } = useParams();
 
     const navigate = useNavigate();
+
+    const editPlace = () => {
+        navigate(`/edit/${placeId}`);
+    }
 
     const getOnePlace = () => {
         axios.get(`https://exo-app-rest-api.adaptable.app/places/${placeId}`)
@@ -50,7 +52,7 @@ function LocationDetailsPage(props) {
                         <img className='inhabitants-image' src={place.inhabitantsImage} />
                         <h3>Inhabitants: {place.inhabitants}</h3>
                         <h3>Description: {place.inhabitantsDescription}</h3>
-                        <button onClick={function() {EditPage(placeId)}}>Edit</button>
+                        <button onClick={() => navigate(`/places/edit/${placeId}`)}>Edit</button>
                         <button onClick={function() {deletePlace()}}>Delete</button>
                     </div>
                 )}
