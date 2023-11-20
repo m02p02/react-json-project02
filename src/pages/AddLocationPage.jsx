@@ -30,59 +30,59 @@ function AddLocationPage(){
             })
     }
     return (
-        <div className="AddLocationPage">
+        <div>
             <h3>Add a Place</h3>
-            <form onSubmit={handleSubmit}>
-                <label>
+            <form className='add-location-form' onSubmit={handleSubmit}>
+                <label className='input-label'>
                     Place Name
                     <input 
                     type="text" 
-                    name="Name of your place" 
-                    placeholder="Please enter your place name"
+                    name="Place" 
+                    placeholder="Place name"
                     required={true}
                     value={placeName}
                     onChange={(e) => { setPlaceName(e.target.value) }}
                     />
                 </label>
-                <label>
+                <label className='input-label'>
                     Location
                     <input 
                     type="text" 
                     name="Location" 
-                    placeholder="Please enter your place location"
+                    placeholder="Where is it located?"
                     required={true}
                     value={location}
                     onChange={(e) => { setLocation(e.target.value) }}
                     />
                 </label>
-                <label>
+                <label className='input-textarea'>
                     Description
-                    <input 
+                    <textarea 
                     type="text" 
                     name="Description" 
-                    placeholder="Please enter a description about your place"
+                    placeholder="Describe the place and location"
                     required={true}
                     value={description}
                     onChange={(e) => { setDescription(e.target.value) }}
                     />
                 </label>
-                <label>
+                <label className='input-label'>
                     Inhabitants
                     <input 
                     type="text" 
                     name="Inhabitants" 
-                    placeholder="Please enter inhabitants of your place"
+                    placeholder="What lives there?"
                     required={true}
                     value={inhabitants}
                     onChange={(e) => { setinhabitants(e.target.value) }}
                     />
                 </label>
-                <label>
+                <label className='input-textarea'>
                     Inhabitants Description
-                    <input 
+                    <textarea 
                     type="text" 
                     name="Inhabitants description" 
-                    placeholder="Please enter a inhabitants details of your place"
+                    placeholder="Describe those life forms"
                     required={true}
                     value={inhabitantsDescription}
                     onChange={(e) => { setInhabitantsDescription(e.target.value) }}

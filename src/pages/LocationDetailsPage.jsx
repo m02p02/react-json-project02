@@ -27,9 +27,9 @@ function LocationDetailsPage() {
             <h1>Place Details</h1>
             <h2>?? -- add --EDIT-- and --DELETE-- functions to this page??</h2>
 
-            <div className='place-container' key={place.id}>
+            <div className='location-details-container' key={place.id}>
                 {place && (
-                    <>
+                    <div>
                         <img className='place-image' src={place.placeImage} />
                         <h3>Place Name: {place.placeName}</h3>
                         <h3>Location: {place.location}</h3>
@@ -37,7 +37,7 @@ function LocationDetailsPage() {
                         <img className='inhabitants-image' src={place.inhabitantsImage} />
                         <h3>Inhabitants: {place.inhabitants}</h3>
                         <h3>Description: {place.inhabitantsDescription}</h3>
-                    </>
+                    </div>
                 )}
             </div>
         </>

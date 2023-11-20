@@ -23,7 +23,7 @@ function AllLocationsPage() {
             <div>
                 {place.map(place =>(
                     <Link to={`/places/details/${place.id}`}>
-                        <div className='place-container' key={place.id}>
+                        <div className='all-locations-container' key={place.id}>
                             <img className='place-image'src={place.placeImage} />
                             <h3>{place.placeName}</h3>
                             <p>Location:{place.location}</p>
