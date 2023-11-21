@@ -1,55 +1,38 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
-import { Button, Modal } from "react-bootstrap";
+import { Button } from "react-bootstrap";
 
 function HomePage() {
-  const [showModal, setShowModal] = useState(false);
-
-  const handleShowModal = () => setShowModal(true);
-  const handleCloseModal = () => setShowModal(false);
 
   return (
     <>
-      <div>
         <div className="galaxy-map">
+
           <span className='hp-random-btn'>
-            <Button variant="light">
-              <Link to="/places/random-place">Random Destination</Link>
+            <Button className='galaxy-btn'>
+              <Link to="/places/random-place"><span>Random Destination</span></Link>
             </Button>{" "}
           </span>
+
           <span className='hp-random-btn2'>
-            <Button variant="light">
-              <Link to="/places/add-place">Log Destination</Link>
+            <Button className='galaxy-btn'>
+              <Link to="/places/add-place"><span>Log Destination</span></Link>
             </Button>{" "}
           </span>
+
           <span className='hp-random-btn3'>
-            <Button variant="light">
-              <Link to='/places/all-places'>Load Database</Link>
+            <Button className='galaxy-btn'>
+              <Link to='/places/all-places'><span>Load Database</span></Link>
             </Button>{" "}
           </span>
 
           <span className='hp-random-btnEarth'>
-            <Button variant="light" onClick={handleShowModal}>
-              Earth
+            <Button className='galaxy-btn'>
+              <Link to='/places/details/1'><span>Earth</span></Link>
             </Button>{" "}
           </span>
-        </div>
 
-        <Modal show={showModal} onHide={handleCloseModal}>
-          <Modal.Header closeButton>
-            <Modal.Title>Earth Details</Modal.Title>
-          </Modal.Header>
-          <Modal.Body>
-            {/* Add Earth details or load content dynamically */}
-            <p>This is the content of the Earth modal.</p>
-          </Modal.Body>
-          <Modal.Footer>
-            <Button variant="secondary" onClick={handleCloseModal}>
-              Close
-            </Button>
-          </Modal.Footer>
-        </Modal>
-      </div>
+        </div>
     </>
   );
 }

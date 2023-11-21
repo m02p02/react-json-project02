@@ -86,8 +86,15 @@ HomePage
 }
 
 .galaxy-map span {
-  font-weight: bold;
-  /* background-color: ivory; */
+  color: aliceblue;
+}
+
+.galaxy-btn {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 15px;
+  background-color:	#021631;
+  border: 1px solid aliceblue;
+  border-radius: 25px;
 }
 
 /*
@@ -108,7 +115,7 @@ AllLocationsPage
 .carousel-item .caption {
   position: relative;
   background-color: #021631;
-  width: 50%;
+  width: 15%;
   margin: auto;
 }
 
@@ -118,12 +125,12 @@ place containers
 .place-container {
   border: 2px solid white;
   margin: 2%;
-  max-width: 60%;
-  max-height: 60%;
+  max-width: 35%;
+  max-height: 30%;
   position: static; 
   top: 50%;
   left: 50%;
-  transform: translate(30%, -0%);
+  transform: translate(90%, -0%);
 }
 
 .place-container h2 {
