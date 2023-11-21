@@ -3,37 +3,27 @@ import { Link } from "react-router-dom";
 import { Button, Modal } from "react-bootstrap";
 
 function HomePage() {
-  const [showModal, setShowModal] = useState(false);
 
-  const handleShowModal = () => setShowModal(true);
-  const handleCloseModal = () => setShowModal(false);
 
-  return (
-    <>
-      <div>
-        <div className="galaxy-map">
-          <span className='hp-random-btn'>
-            <Button variant="light">
-              <Link to="/places/random-place">Random Destination</Link>
-            </Button>{" "}
-          </span>
-          <span className='hp-random-btn2'>
-            <Button variant="light">
-              <Link to="/places/add-place">Log Destination</Link>
-            </Button>{" "}
-          </span>
-          <span className='hp-random-btn3'>
-            <Button variant="light">
-              <Link to='/places/all-places'>Load Database</Link>
-            </Button>{" "}
-          </span>
+    return (
+        <>
+            <div>
 
-          <span className='hp-random-btnEarth'>
-            <Button variant="light" onClick={handleShowModal}>
-              Earth
-            </Button>{" "}
-          </span>
-        </div>
+                {/* <h1>Galaxy Map with links</h1> */}
+                <div className="galaxy-map">
+                    <span className='hp-random-btn'>
+                        <Button variant="outline-secondary"><Link to="/places/random-place">Random Destination</Link></Button>{"  "}
+                    </span>
+                    <span className='hp-random-btn2'>
+                        <Button variant="outline-secondary"><Link to="/places/add-place">Log Destination</Link></Button>{"  "}
+                    </span>
+                    <span className='hp-random-btn3'>
+                        <Button variant="outline-secondary"><Link to='/places/all-places'>Load Database</Link></Button>{"  "}
+                    </span>
+                    <span className='hp-random-btnEarth'>
+                        <Button variant="outline-secondary"><Link to='/places/details/1'>Earth</Link></Button>{"  "}
+                    </span>
+                </div>
 
         <Modal show={showModal} onHide={handleCloseModal}>
           <Modal.Header closeButton>
