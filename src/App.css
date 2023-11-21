@@ -19,7 +19,11 @@ Header, Footer
   height: 50px;
   width: 100%;
 }
-
+.galaxyMap{
+  background-image: url(/src/images/milkyway.jpg);
+  width: 100%;
+  height: 100vh
+}
 .footer-tag {
   font-size: 11px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
