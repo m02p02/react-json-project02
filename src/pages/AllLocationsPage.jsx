@@ -1,13 +1,14 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
+import { Carousel } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
 function AllLocationsPage() {
     const [place, setPlace] = useState([]);
-    
-    const displayAllPlaces = () =>{
+
+    const displayAllPlaces = () => {
         axios.get("https://exo-app-rest-api.adaptable.app/places")
-            .then((response) =>{
+            .then((response) => {
                 setPlace(response.data)
             })
             .catch((error) => console.log(error))
@@ -19,22 +20,21 @@ function AllLocationsPage() {
 
     return (
         <>
-            <h2>All Places</h2>
-            <div className='all-locations-parent'>
-                {place.map(place =>(
-                    <Link to={`/places/details/${place.id}`}>
-                        <div className='all-locations-container' key={place.id}>
-                            <img className='place-image'src={place.placeImage} />
-                            <h3>{place.placeName}</h3>
-                            {/*<p>Location:{place.location}</p>
-                            <p>Description: {place.placeDescription}</p>
-                            <p>inhabitants: {place.inhabitants}</p>
-                            <p>Description: {place.inhabitantsDescription}</p>
-                            <img className='inhabitants-image' src={place.inhabitantsImage} />*/}
+            <p>Where do you want to go?</p>
+            <Carousel className='carousel'>
+                {place.map(place => (
+                    <Carousel.Item className='carousel-item' interval={5 * 1000}>
+                        <div key={place.id}>
+                            <Link to={`/places/details/${place.id}`}>
+                                <img src={place.placeImage} />
+                                <Carousel.Caption>
+                                    <div className='caption'>{place.placeName}</div>
+                                </Carousel.Caption>
+                            </Link>
                         </div>
-                    </Link>
+                    </Carousel.Item>
                 ))}
-            </div>
+            </Carousel>
         </>
     )
 }

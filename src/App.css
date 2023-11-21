@@ -1,9 +1,9 @@
 #root {
   /* max-width: 1280px; */
-  margin: 0 auto;
-  padding: 2rem;
+  margin: 0;
+  padding: 0;
   text-align: center;
-  background-image: url(./images/spacebackground.jpg);
+  background-image: url('./images/planetX.jpeg');
   background-repeat:repeat-x;
   background-repeat: repeat-y;
   background-repeat: repeat;
@@ -11,63 +11,66 @@
   color: white;
 }
 
-ul {
-  list-style-type: none;
-  padding: 0;
+/*
+Header, Footer
+*/
+.header-footer-bg {
+  background-image: url('./images/spacebackground.jpg');
+  height: 50px;
+  width: 100%;
 }
 
-li {
-  border: 1px solid #ccc;
-  margin: 10px;
+.footer-tag {
+  font-size: 11px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   padding: 15px;
-  border-radius: 5px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: absolute;
 }
 
-img {
-  max-width: 400px;
-  border-radius: 5px;
-}
-
-h2 {
-  text-align: center;
-}
-
-h3 {
-  margin-top: 10px;
-}
-
-p {
-  margin: 5px 0;
-}
-
-Link {
-  text-decoration: none;
-  color: #007bff;
-  font-weight: bold;
-  margin-top: 10px;
-  display: inline-block;
-}
-
-/* NavBar */
+/*
+NavBar
+*/
 .nav-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  
+  background-color: #010b19;
+  max-width: 100%;
 }
 
 .nav-btn {
-  border: 1px solid ivory;
-  margin: 2px;
-  padding: 5px;
-  font-size: 20px;
-  font-weight: bold;
-  color: ivory;
-  border-radius: 25px;
+  border: 1px solid #05377b;
+  background-color: #021631;
+  margin: 5px;
+  padding: 1px;
+  font-size: 15px;
+  color: aliceblue;
+  border-radius: 15px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-/* LocationDetailsPage */
+/*
+AllLocationsPage
+*/
+.carousel {
+  height: 350px;
+  align-items: center;
+}
+
+.carousel-item img {
+  justify-content: center;
+  height: 300px;
+  width: auto;
+  border: 2px solid ivory;
+}
+
+.carousel-item .caption {
+  position: relative;
+  background-color: #021631;
+  width: 50%;
+  margin: auto;
+}
+
+/*
+LocationDetailsPage
+*/
 .place-container {
   border: 2px solid white;
   max-width: 60%;
@@ -94,27 +97,6 @@ Link {
   resize: vertical;
 }
 
-/* AllLocationsPage */
-.all-locations-parent {
-  display: flex;
-  justify-content: space-evenly;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-items: center;
-  width: 500px;
-}
-
-.all-locations-container {
-  width: 500px;
-  border: 2px solid ivory;
-  border-radius: 25px;
-  max-width: 40%;
-  padding-top: 5%;
-  margin: 1em;
-  color: ivory;
-  font-size: 20px;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
 
 /* LocationDetailsPage */
 .location-details-container {
