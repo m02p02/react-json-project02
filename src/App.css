@@ -3,7 +3,8 @@
   margin: 0;
   padding: 0;
   text-align: center;
-  background-image: url('./images/planetX.jpeg');
+  background-image: url('./images/spacebackground.jpg');
+  background-blend-mode: multiply;
   background-repeat: no-repeat;
   background-size: cover;
   color: ivory;
@@ -13,7 +14,7 @@
 Header, Footer
 */
 .header-footer-bg {
-  background-image: url('./images/spacebackground.jpg');
+  /* background-image: url('./images/spacebackground.jpg'); */
   height: 50px;
   width: 100%;
 }
@@ -77,7 +78,7 @@ HomePage
 
 .galaxy-map span {
   font-weight: bold;
-  background-color: ivory;
+  /* background-color: ivory; */
 }
 
 /*
