@@ -20,7 +20,7 @@ function NavBar() {
                     <Nav>
                         <Nav.Link href='/' className='nav-btn'>Home</Nav.Link>
                         <Nav.Link href='/places/all-places' className='nav-btn'>All Places</Nav.Link>
-                        <Nav.Link href='/places/random-place' className='nav-btn'>Random Place</Nav.Link>
+                        <Nav.Link href='/places/random-place' className='nav-btn'>Surprise Me!</Nav.Link>
                         <Nav.Link href='/places/add-place' className='nav-btn'>Add Place</Nav.Link>
                     </Nav>
                 </Navbar>
