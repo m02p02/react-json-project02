@@ -5,11 +5,10 @@ import { Button } from "react-bootstrap";
 
 function HomePage() {
 
-
     return (
         <>
             <div>
-
+                
                 {/* <h1>Galaxy Map with links</h1> */}
                 <div className="galaxy-map">
                     <span className='hp-random-btn'>

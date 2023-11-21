@@ -34,7 +34,7 @@ function AddLocationPage(){
             })
     }
     return (
-        <div>
+        <div className='body-div'>
             <h3>Log a Location, Traveller!</h3>
             <form className='input-place-form' onSubmit={handleSubmit}>
                 <label className='input-label'>
@@ -116,7 +116,6 @@ function AddLocationPage(){
                 </label>
                 <button className='submit-btn' type='submit'>Add to Database</button>
             </form>
-
         </div>
     )
 }
