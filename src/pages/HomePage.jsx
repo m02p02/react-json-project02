@@ -38,7 +38,7 @@ function HomePage() {
               Close
             </Button>
           </Modal.Footer>
-        </Modal>
+    </Modal>
       </div>
     </>
   );
