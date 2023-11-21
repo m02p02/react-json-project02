@@ -3,6 +3,8 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 
+import { Accordion } from "react-bootstrap";
+
 function LocationDetailsPage(props) {
 
     const [place, setPlace] = useState({});
@@ -39,22 +41,34 @@ function LocationDetailsPage(props) {
     return (
 
         <>
-            <h1>Place Details</h1>
-            <h2>?? -- add --EDIT-- and --DELETE-- functions to this page??</h2>
-
-            <div className='location-details-container' key={place.id}>
+            <div className='place-container' key={place.id}>
                 {place && (
-                    <div>
-                        <img className='place-image' src={place.placeImage} />
-                        <h3>Place Name: {place.placeName}</h3>
-                        <h3>Location: {place.location}</h3>
-                        <h3>Description: {place.placeDescription}</h3>
+                    <>
+                        <img className='container-image' src={place.placeImage} />
                         <img className='inhabitants-image' src={place.inhabitantsImage} />
-                        <h3>Inhabitants: {place.inhabitants}</h3>
-                        <h3>Description: {place.inhabitantsDescription}</h3>
+
+                        <Accordion>
+                            <Accordion.Item eventKey='0'>
+                                <Accordion.Header><h2>Place</h2></Accordion.Header>
+                                <Accordion.Body>
+                                    <h5>{place.placeName}</h5>
+                                    <p>{place.location}</p>
+                                    <p>{place.placeDescription}</p>
+                                </Accordion.Body>
+                            </Accordion.Item>
+
+                            <Accordion.Item eventKey='1'>
+                                <Accordion.Header><h2>Life</h2></Accordion.Header>
+                                <Accordion.Body>
+                                    <h5>{place.inhabitants}</h5>
+                                    <p>{place.inhabitantsDescription}</p>
+                                </Accordion.Body>
+                            </Accordion.Item>
+                        </Accordion>
+
                         <button className='submit-btn' onClick={() => navigate(`/places/edit/${placeId}`)}>Edit</button>
-                        <button className='submit-btn' onClick={function() {deletePlace()}}>Delete</button>
-                    </div>
+                        <button className='submit-btn' onClick={function () { deletePlace() }}>Delete</button>
+                    </>
                 )}
             </div>
         </>

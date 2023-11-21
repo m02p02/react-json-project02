@@ -69,15 +69,38 @@ AllLocationsPage
 }
 
 /*
-LocationDetailsPage
+place containers
 */
 .place-container {
   border: 2px solid white;
+  margin-top: 2%;
   max-width: 60%;
+  position: static; 
+  bottom: 90%;
+  right: 0%;
 }
 
-.place-image {
-  width: 85%;
+.place-container h2 {
+  font-size: 20px;
+}
+
+.place-container h5 {
+  font-weight: bold;
+  text-align: start;
+}
+
+.place-container p {
+  font-size: 15px;
+  text-align: start;
+}
+
+.container-image {
+  width: 50%;
+  border-radius: 25px;
+}
+
+.inhabitants-image {
+  max-width: 50%;
   border-radius: 25px;
 }
 
@@ -95,19 +118,6 @@ LocationDetailsPage
 
 .input-textarea {
   resize: vertical;
-}
-
-
-/* LocationDetailsPage */
-.location-details-container {
-  border: 2px solid ivory;
-  border-radius: 25px;
-  padding-top: 5%;
-}
-
-.inhabitants-image {
-  max-width: 50%;
-  border-radius: 25px;
 }
 
 /* submit buttons: LocationDetails, AddLocationsPage, EditPage */
