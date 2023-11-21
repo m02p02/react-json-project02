@@ -66,8 +66,8 @@ function LocationDetailsPage(props) {
                             </Accordion.Item>
                         </Accordion>
 
-                        <button className='submit-btn' onClick={() => navigate(`/places/edit/${placeId}`)}>Edit</button>
-                        <button className='submit-btn' onClick={function () { deletePlace() }}>Delete</button>
+                        <button className='submit-btn' onClick={() => navigate(`/places/edit/${placeId}`)}>Update Information</button>
+                        <button className='submit-btn' onClick={function () { deletePlace() }}>Delete from Database</button>
                     </>
                 )}
             </div>

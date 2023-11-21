@@ -35,14 +35,14 @@ function AddLocationPage(){
     }
     return (
         <div>
-            <h3>Add a Place</h3>
+            <h3>Log a Location, Traveller!</h3>
             <form className='input-place-form' onSubmit={handleSubmit}>
                 <label className='input-label'>
-                    Place Name
+                    Name
                     <input 
                     type="text" 
                     name="Place" 
-                    placeholder="Place name"
+                    placeholder="What is the place called?"
                     required={true}
                     value={placeName}
                     onChange={(e) => { setPlaceName(e.target.value) }}
@@ -75,7 +75,7 @@ function AddLocationPage(){
                     <input 
                     type="text" 
                     name="Place Image" 
-                    placeholder="URL of Place Image"
+                    placeholder="URL"
                     required={true}
                     value={placeImage}
                     onChange={(e) => { setPlaceImage(e.target.value) }}
@@ -86,18 +86,18 @@ function AddLocationPage(){
                     <input 
                     type="text" 
                     name="Inhabitants" 
-                    placeholder="What lives there?"
+                    placeholder="Who or what lives there?"
                     required={true}
                     value={inhabitants}
                     onChange={(e) => { setinhabitants(e.target.value) }}
                     />
                 </label>
                 <label className='input-textarea'>
-                    Inhabitants Description
+                    Description
                     <textarea 
                     type="text" 
                     name="Inhabitants description" 
-                    placeholder="Describe those life forms"
+                    placeholder="Can you describe them?"
                     required={true}
                     value={inhabitantsDescription}
                     onChange={(e) => { setInhabitantsDescription(e.target.value) }}
@@ -108,7 +108,7 @@ function AddLocationPage(){
                     <input 
                     type="text" 
                     name="Inhabitants Image" 
-                    placeholder="URL of inhabitants image"
+                    placeholder="URL"
                     required={true}
                     value={inhabitantsImage}
                     onChange={(e) => { setInhabitantsImage(e.target.value) }}
