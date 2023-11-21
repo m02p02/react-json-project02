@@ -54,8 +54,26 @@ NavBar
 HomePage
 */
 .hp-random-btn {
-  top: 80%;
-  left: 20%;
+  top: 72%;
+  left: 27%;
+  position: absolute;
+  background-color: ivory;
+}
+.hp-random-btn2 {
+  top: 58%;
+  left: 28%;
+  position: absolute;
+  background-color: ivory;
+}
+.hp-random-btn3 {
+  top: 65%;
+  left: 30%;
+  position: absolute;
+  background-color: ivory;
+}
+.hp-random-btnEarth {
+  top: 65%;
+  left: 86%;
   position: absolute;
   background-color: ivory;
 }
