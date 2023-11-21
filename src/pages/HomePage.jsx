@@ -4,6 +4,7 @@ import { Button } from "react-bootstrap";
 
 
 function HomePage() {
+    
 
     return (
         <>
@@ -14,11 +15,14 @@ function HomePage() {
                     <span className='hp-random-btn'>
                         <Button variant="outline-secondary"><Link to="/places/random-place">The random place</Link></Button>{"  "}
                     </span>
-                    <span>
+                    <span className='hp-random-btn2'>
                         <Button variant="outline-secondary"><Link to="/places/add-place">Add your new discovery</Link></Button>{"  "}
                     </span>
-                    <span>
+                    <span className='hp-random-btn3'>
                         <Button variant="outline-secondary"><Link to='/places/all-places'>Check what`s discovered</Link></Button>{"  "}
+                    </span>
+                    <span className='hp-random-btnEarth'>
+                        <Button variant="outline-secondary"><Link to='//places/details/1'>The Earth</Link></Button>{"  "}
                     </span>
                 </div>
 
