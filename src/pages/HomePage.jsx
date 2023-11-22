@@ -16,25 +16,28 @@ function HomePage() {
   return (
     <>
         <div className="galaxy-map">
+
           <span className="hp-random-btn">
-            <Button variant="light">
-              <a href="/places/random-place">Random Destination</a>
+            <Button className='galaxy-btn'>
+              <a href="/places/random-place"><span>Random Destination</span></a>
             </Button>{" "}
           </span>
+
           <span className="hp-random-btn2">
-            <Button variant="light">
-              <a href="/places/add-place">Log Destination</a>
+            <Button className='galaxy-btn'>
+              <a href="/places/add-place"><span>Log Destination</span></a>
             </Button>{" "}
           </span>
+
           <span className="hp-random-btn3">
-            <Button variant="light">
-              <a href="/places/all-places">Load Database</a>
+            <Button className='galaxy-btn'>
+              <a href="/places/all-places"><span>Load Database</span></a>
             </Button>{" "}
           </span>
 
           <span className="hp-random-btnEarth">
             <Button
-              variant="light"
+              className='galaxy-btn'
               onClick={() =>
                 handlePreviewUrl(
                   "https://project-exo-app.netlify.app/places/details/1"
