@@ -5,7 +5,7 @@ import { Link, useNavigate } from "react-router-dom";
 function AddLocationPage(){
     const [placeName, setPlaceName] = useState("");
     const [location, setLocation] = useState("");
-    const [description, setDescription] = useState("");
+    const [placeDescription, setPlaceDescription] = useState("");
     const [placeImage, setPlaceImage] = useState('');
     const [inhabitants, setinhabitants] = useState("");
     const [inhabitantsDescription, setInhabitantsDescription] = useState("");
@@ -17,7 +17,7 @@ function AddLocationPage(){
         const requestBody = {
             placeName: placeName,
             location: location,
-            description: description,
+            placeDescription: placeDescription,
             placeImage: placeImage,
             inhabitants: inhabitants,
             inhabitantsDescription: inhabitantsDescription,
@@ -66,8 +66,8 @@ function AddLocationPage(){
                     name="Description" 
                     placeholder="Describe the place and location"
                     required={true}
-                    value={description}
-                    onChange={(e) => { setDescription(e.target.value) }}
+                    value={placeDescription}
+                    onChange={(e) => { setPlaceDescription(e.target.value) }}
                     />
                 </label>
                 <label className='input-label'>
