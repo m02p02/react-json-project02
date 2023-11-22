@@ -1,9 +1,11 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Button, Modal } from "react-bootstrap";
+import "../HomePage.css"
 
 function HomePage() {
   const [showModal, setShowModal] = useState(false);
   const [urlToPreview, setUrlToPreview] = useState("");
+  const [isZoomed, setIsZoomed] = useState(true);
 
   const handleShowModal = () => setShowModal(true);
   const handleCloseModal = () => setShowModal(false);
@@ -12,29 +14,38 @@ function HomePage() {
     setUrlToPreview(url);
     handleShowModal();
   };
+  useEffect(() => {
+    
+    const timeout = setTimeout(() => {
+      setIsZoomed(false);
+    }, 2000);
+
+    return () => clearTimeout(timeout);
+  }, []);
+
 
   return (
     <>
-        <div className="galaxy-map">
+        <div className={`galaxy-map ${isZoomed ? "zoom-in" : ""}`}>
           <span className="hp-random-btn">
-            <Button variant="light">
+            <Button variant="warning">
               <a href="/places/random-place">Random Destination</a>
             </Button>{" "}
           </span>
           <span className="hp-random-btn2">
-            <Button variant="light">
+            <Button variant="warning">
               <a href="/places/add-place">Log Destination</a>
             </Button>{" "}
           </span>
           <span className="hp-random-btn3">
-            <Button variant="light">
+            <Button variant="warning">
               <a href="/places/all-places">Load Database</a>
             </Button>{" "}
           </span>
 
           <span className="hp-random-btnEarth">
             <Button
-              variant="light"
+              variant="warning"
               onClick={() =>
                 handlePreviewUrl(
                   "https://project-exo-app.netlify.app/places/details/1"
