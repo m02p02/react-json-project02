@@ -15,7 +15,6 @@ function HomePage() {
 
   return (
     <>
-      <div>
         <div className="galaxy-map">
           <span className="hp-random-btn">
             <Button variant="light">
@@ -45,7 +44,6 @@ function HomePage() {
               Earth
             </Button>{" "}
           </span>
-        </div>
 
         <Modal show={showModal} onHide={handleCloseModal} size="lg">
           <Modal.Header closeButton>

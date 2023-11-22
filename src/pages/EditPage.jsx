@@ -6,7 +6,7 @@ import { useNavigate, useParams } from "react-router";
 function EditPage() {
   const [placeName, setPlaceName] = useState("");
   const [location, setLocation] = useState("");
-  const [description, setDescription] = useState("");
+  const [placeDescription, setPlaceDescription] = useState("");
   const [placeImage, setPlaceImage] = useState('');
   const [inhabitants, setinhabitants] = useState("");
   const [inhabitantsDescription, setInhabitantsDescription] = useState("");
@@ -22,7 +22,7 @@ function EditPage() {
       .then((response) => {
         setPlaceName(response.data.placeName);
         setLocation(response.data.location);
-        setDescription(response.data.description);
+        setPlaceDescription(response.data.placeDescription);
         setPlaceImage(response.data.placeImage);
         setinhabitants(response.data.inhabitants);
         setInhabitantsDescription(response.data.inhabitantsDescription);
@@ -40,7 +40,7 @@ function EditPage() {
     const requestBody = {
       placeName: placeName,
       location: location,
-      description: description,
+      placeDescription: placeDescription,
       placeImage: placeImage,
       inhabitants: inhabitants,
       inhabitantsDescription: inhabitantsDescription,
@@ -95,9 +95,9 @@ function EditPage() {
             name="Description"
             placeholder="Please enter a description about your place"
             required={true}
-            value={description}
+            value={placeDescription}
             onChange={(e) => {
-              setDescription(e.target.value);
+              setPlaceDescription(e.target.value);
             }}
           />
         </label>
