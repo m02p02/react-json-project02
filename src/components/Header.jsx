@@ -2,7 +2,7 @@ import React from 'react';
 
 function Header() {
 
-    return (      
+    return (
         <div className='header-footer-bg'></div>
     )
 }
