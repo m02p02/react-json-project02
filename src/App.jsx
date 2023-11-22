@@ -2,6 +2,7 @@ import React from 'react'
 import { Route, Routes } from "react-router-dom"
 
 import Header from './components/Header.jsx';
+import SearchBar from './components/SearchBar.jsx';
 import NavBar from "./components/NavBar"
 import HomePage from "./pages/HomePage"
 import AllLocationsPage from './pages/AllLocationsPage.jsx';
@@ -19,7 +20,8 @@ function App() {
     
     <div className='app'>
       
-      <Header />  
+      <Header />
+      <SearchBar />
       <NavBar />
 
       <Routes>
