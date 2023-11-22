@@ -40,8 +40,7 @@ function HomePage() {
             <Modal.Title>Earth Details</Modal.Title>
           </Modal.Header>
           <Modal.Body>
-            {/* Add Earth details or load content dynamically */}
-            <p>This is the content of the Earth modal.</p>
+            
           </Modal.Body>
           <Modal.Footer>
             <Button variant="secondary" onClick={handleCloseModal}>
