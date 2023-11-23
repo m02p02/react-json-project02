@@ -32,12 +32,18 @@ function RandomLocationPage() {
     return (
 
         <>
+
+            <div>
+                <p className='component-header'>▶_</p>
+                <p className='component-header'>▶_location [{place.placeName}] has been loaded...</p>
+            </div>
+
             <div className='place-container' key={place.id}>
                 {place && (
                     <>
                         <img className='container-image' src={place.placeImage} />
                         <img className='inhabitants-image' src={place.inhabitantsImage} />
-                        
+
                         <Accordion>
                             <Accordion.Item eventKey='0'>
                                 <Accordion.Header><h2>Place</h2></Accordion.Header>
@@ -47,7 +53,7 @@ function RandomLocationPage() {
                                     <p>{place.placeDescription}</p>
                                 </Accordion.Body>
                             </Accordion.Item>
-                            
+
                             <Accordion.Item eventKey='1'>
                                 <Accordion.Header><h2>Life</h2></Accordion.Header>
                                 <Accordion.Body>
@@ -56,7 +62,7 @@ function RandomLocationPage() {
                                 </Accordion.Body>
                             </Accordion.Item>
                         </Accordion>
-                        
+
                         <button className='submit-btn' onClick={reloadPage}>Reload</button>
                     </>
                 )}

@@ -41,6 +41,12 @@ function LocationDetailsPage(props) {
     return (
 
         <>
+
+            <div>
+                <p className='component-header'>▶_</p>
+                <p className='component-header'>▶_location [{place.placeName}] has been loaded</p>
+            </div>
+
             <div className='place-container' key={place.id}>
                 {place && (
                     <>
