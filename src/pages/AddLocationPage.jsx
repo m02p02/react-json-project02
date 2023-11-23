@@ -19,6 +19,10 @@ function AddLocationPage() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
+
+        submitAudio.play();
+        const placeImageURL = placeImage.trim() !== '' ? placeImage:"/src/images/matrix.jpg"
+        const inhabitantsImageURL = inhabitantsImage.trim() !== '' ? inhabitantsImage :"/src/images/matrix.jpg"
         const requestBody = {
             placeName: placeName,
             location: location,
@@ -101,7 +105,7 @@ function AddLocationPage() {
                             type="text"
                             name="Place Image"
                             placeholder="▶_記入: expecting URL..."
-                            required={true}
+                            required={false}
                             value={placeImage}
                             onChange={(e) => { setPlaceImage(e.target.value) }}
                         />
@@ -134,7 +138,7 @@ function AddLocationPage() {
                             type="text"
                             name="Inhabitants Image"
                             placeholder="▶_記入: expecting URL..."
-                            required={true}
+                            required={false}
                             value={inhabitantsImage}
                             onChange={(e) => { setInhabitantsImage(e.target.value) }}
                         />

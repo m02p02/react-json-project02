@@ -47,19 +47,29 @@ function RandomLocationPage() {
                             id='uncontrolled-tab-example'
                             className='mb-3 custom-tabs'
                         >
-                            <Tab eventKey='place' title='_: place'>
-                                <img className='container-image' src={place.placeImage} />
-                                <div className='tab-content'>
-                                    <h5>▶_名: {place.placeName}</h5>
-                                    <p>▶_: {place.location}</p>
-                                    <p>▶_: {place.placeDescription}</p>
-                                </div>
-                            </Tab>
-                            <Tab eventKey='life' title='_: life'>
-                                <img className='inhabitants-image' src={place.inhabitantsImage} />
-                                <h5>▶_人類: {place.inhabitants}</h5>
-                                <p>▶_: {place.inhabitantsDescription}</p>
-                            </Tab>
+                          <Tab eventKey='place' title='_: place'>
+    <img
+        className='container-image'
+        src={place.placeImage || "/src/images/stormtroopers1.jpg"}
+        alt={place.placeName}
+        onError={(e) => { e.target.src = "/src/images/stormtroopers1.jpg" }}
+    />
+    <div className='tab-content'>
+        <h5>▶_名: {place.placeName}</h5>
+        <p>▶_: {place.location}</p>
+        <p>▶_: {place.placeDescription}</p>
+    </div>
+</Tab>
+<Tab eventKey='life' title='_: life'>
+    <img
+        className='inhabitants-image'
+        src={place.inhabitantsImage || "/src/images/stormtroopers1.jpg"}
+        alt={place.inhabitants}
+        onError={(e) => { e.target.src = "/src/images/stormtroopers1.jpg" }}
+    />
+    <h5>▶_人類: {place.inhabitants}</h5>
+    <p>▶_: {place.inhabitantsDescription}</p>
+</Tab>
 
                         </Tabs>
 

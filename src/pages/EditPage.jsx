@@ -15,6 +15,8 @@ function EditPage() {
   const { placeId } = useParams();
 
   const navigate = useNavigate();
+  const updateAudio = new Audio("/src/audio/blaster.mp3");
+  const keyboardClickAudio = new Audio('/src/audio/keyboard.mp3');
 
   useEffect(() => {
     axios
@@ -36,6 +38,7 @@ function EditPage() {
 
   const handleFormSubmit = (e) => {
     e.preventDefault();
+    updateAudio.play();
 
     const requestBody = {
       placeName: placeName,
@@ -57,7 +60,9 @@ function EditPage() {
         console.log(error);
       });
   };
-
+  const handleInputChange = (e) => {
+    keyboardClickAudio.play();
+  };
   return (
 
     <>
@@ -78,6 +83,7 @@ function EditPage() {
               required={true}
               value={placeName}
               onChange={(e) => {
+                handleInputChange(e);
                 setPlaceName(e.target.value);
               }}
             />
@@ -114,7 +120,7 @@ function EditPage() {
               type="text"
               name="Place Image"
               placeholder="URL of Place Image"
-              required={true}
+              required={false}
               value={placeImage}
               onChange={(e) => { setPlaceImage(e.target.value) }}
             />
@@ -151,7 +157,7 @@ function EditPage() {
               type="text"
               name="Inhabitants Image"
               placeholder="URL of inhabitants image"
-              required={true}
+              required={false}
               value={inhabitantsImage}
               onChange={(e) => { setInhabitantsImage(e.target.value) }}
             />

@@ -27,24 +27,24 @@ function AllLocationsPage() {
             </div>
 
             <div className='location-cards-container'>
-                {place.map(place => (
-                    <Card className='location-cards' style={{ width: '15rem' }}>
-                        <div key={place.id}>
-                            <Card.Img
-                                variant='top'
-                                src={place.placeImage ? place.placeImage : 'https://t4.ftcdn.net/jpg/04/73/11/19/360_F_473111955_vH53HZxAXuaV1WjFgkmfAKuOB13BUJT9.jpg'}
-                            />
-                            <Card.Body>
-                                <Link to={`/places/details/${place.id}`}>
-                                    <div className='location-cards-font'>
-                                        <Card.Title className='card-font'>
-                                            ▶_: {place.placeName}
-                                        </Card.Title>
-                                    </div>
-                                </Link>
-                            </Card.Body>
-                        </div>
-                    </Card>
+            {place.map(place => (
+    <Card key={place.id} className='location-cards' style={{ width: '15rem' }}>
+        <div>
+            <Card.Img
+                variant='top'
+                src={place.placeImage ? place.placeImage : "/src/images/matrix.jpg"}
+            />
+            <Card.Body>
+                <Link to={`/places/details/${place.id}`}>
+                    <div className='location-cards-font'>
+                        <Card.Title className='card-font'>
+                            ▶_: {place.placeName}
+                        </Card.Title>
+                    </div>
+                </Link>
+            </Card.Body>
+        </div>
+    </Card>
                 ))}
             </div>
         </>
