@@ -22,8 +22,8 @@ function AllLocationsPage() {
         <>
         
             <div>
-                <p className='component-header'>▶_:</p>
-                <p className='component-header'>▶_: all locations have been loaded...</p>
+                <p className='component-header'>▶_記入:</p>
+            <p className='component-header'>▶_済: all locations have been loaded...</p>
             </div>
 
             <div className='location-cards-container'>

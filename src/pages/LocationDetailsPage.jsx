@@ -3,7 +3,7 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 
-import { Accordion } from "react-bootstrap";
+import { Tab, Tabs } from "react-bootstrap";
 
 function LocationDetailsPage(props) {
 
@@ -43,8 +43,8 @@ function LocationDetailsPage(props) {
         <>
 
             <div>
-                <p className='component-header'>▶_: </p>
-                <p className='component-header'>▶_: location [{place.placeName}] has been loaded</p>
+                <p className='component-header'>▶_記入: </p>
+                <p className='component-header'>▶_済: location [{place.placeName}] has been loaded</p>
             </div>
 
             <div className='place-container' key={place.id}>
@@ -53,7 +53,9 @@ function LocationDetailsPage(props) {
                         <img className='container-image' src={place.placeImage} />
                         <img className='inhabitants-image' src={place.inhabitantsImage} />
 
-                        <Accordion>
+                        
+                        
+                        {/*<Accordion>
                             <Accordion.Item eventKey='0'>
                                 <Accordion.Header><h2>Place</h2></Accordion.Header>
                                 <Accordion.Body>
@@ -70,7 +72,7 @@ function LocationDetailsPage(props) {
                                     <p>{place.inhabitantsDescription}</p>
                                 </Accordion.Body>
                             </Accordion.Item>
-                        </Accordion>
+                </Accordion>*/}
 
                         <button className='submit-btn' onClick={() => navigate(`/places/edit/${placeId}`)}>Update Information</button>
                         <button className='submit-btn' onClick={function () { deletePlace() }}>Delete from Database</button>
