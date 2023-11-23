@@ -4,51 +4,59 @@ import { Card } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
 function AllLocationsPage() {
-    const [place, setPlace] = useState([]);
+  const [place, setPlace] = useState([]);
 
-    const displayAllPlaces = () => {
-        axios.get("https://exo-app-rest-api.adaptable.app/places")
-            .then((response) => {
-                setPlace(response.data)
-            })
-            .catch((error) => console.log(error))
-    }
+  const displayAllPlaces = () => {
+    axios
+      .get("https://exo-app-rest-api.adaptable.app/places")
+      .then((response) => {
+        setPlace(response.data);
+      })
+      .catch((error) => console.log(error));
+  };
 
-    useEffect(() => {
-        displayAllPlaces();
-    }, []);
+  useEffect(() => {
+    displayAllPlaces();
+  }, []);
 
-    return (
-        <>
-        
+  return (
+    <>
+      <div>
+        <p className="component-header">▶_記入:</p>
+        <p className="component-header">
+          ▶_済: all locations have been loaded...
+        </p>
+      </div>
+
+      <div className="location-cards-container">
+        {place.map((place) => (
+          <Card
+            key={place.id}
+            className="location-cards"
+            style={{ width: "15rem" }}
+          >
             <div>
-                <p className='component-header'>▶_記入:</p>
-            <p className='component-header'>▶_済: all locations have been loaded...</p>
-            </div>
-
-            <div className='location-cards-container'>
-            {place.map(place => (
-    <Card key={place.id} className='location-cards' style={{ width: '15rem' }}>
-        <div>
-            <Card.Img
-                variant='top'
-                src={place.placeImage ? place.placeImage : "/src/images/matrix.jpg"}
-            />
-            <Card.Body>
+              <Card.Img
+                variant="top"
+                src={
+                  place.placeImage ? place.placeImage : "/src/images/matrix.jpg"
+                }
+              />
+              <Card.Body>
                 <Link to={`/places/details/${place.id}`}>
-                    <div className='location-cards-font'>
-                        <Card.Title className='card-font'>
-                            ▶_: {place.placeName}
-                        </Card.Title>
-                    </div>
+                  <div className="location-cards-font">
+                    <Card.Title className="card-font">
+                      ▶_: {place.placeName}
+                    </Card.Title>
+                  </div>
                 </Link>
-            </Card.Body>
-        </div>
-    </Card>
-                ))}
+              </Card.Body>
             </div>
-        </>
-    )
+          </Card>
+        ))}
+      </div>
+    </>
+  );
 }
 
 export default AllLocationsPage;

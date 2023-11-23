@@ -72,7 +72,9 @@ function LocationDetailsPage(props) {
               <Tab eventKey="life" title="_: life">
                 <img
                   className="inhabitants-image"
-                  src={place.inhabitantsImage || "/src/images/stormtroopers1.jpg"}
+                  src={
+                    place.inhabitantsImage || "/src/images/stormtroopers1.jpg"
+                  }
                   alt={place.inhabitants}
                   onError={(e) => {
                     e.target.src = "/src/images/stormtroopers1.jpg";

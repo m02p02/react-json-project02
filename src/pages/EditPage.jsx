@@ -7,16 +7,16 @@ function EditPage() {
   const [placeName, setPlaceName] = useState("");
   const [location, setLocation] = useState("");
   const [placeDescription, setPlaceDescription] = useState("");
-  const [placeImage, setPlaceImage] = useState('');
+  const [placeImage, setPlaceImage] = useState("");
   const [inhabitants, setinhabitants] = useState("");
   const [inhabitantsDescription, setInhabitantsDescription] = useState("");
-  const [inhabitantsImage, setInhabitantsImage] = useState('');
+  const [inhabitantsImage, setInhabitantsImage] = useState("");
 
   const { placeId } = useParams();
 
   const navigate = useNavigate();
   const updateAudio = new Audio("/src/audio/blaster.mp3");
-  const keyboardClickAudio = new Audio('/src/audio/keyboard.mp3');
+  const keyboardClickAudio = new Audio("/src/audio/keyboard.mp3");
 
   useEffect(() => {
     axios
@@ -47,13 +47,16 @@ function EditPage() {
       placeImage: placeImage,
       inhabitants: inhabitants,
       inhabitantsDescription: inhabitantsDescription,
-      inhabitantsImage: inhabitantsImage
+      inhabitantsImage: inhabitantsImage,
     };
 
     axios
-      .put(`https://exo-app-rest-api.adaptable.app/places/${placeId}`, requestBody)
+      .put(
+        `https://exo-app-rest-api.adaptable.app/places/${placeId}`,
+        requestBody
+      )
       .then((response) => {
-        navigate('/places/all-places');
+        navigate("/places/all-places");
       })
       .catch((error) => {
         console.log("error updating project");
@@ -64,17 +67,17 @@ function EditPage() {
     keyboardClickAudio.play();
   };
   return (
-
     <>
-
       <div>
-        <p className='component-header'>▶_記入: </p>
-        <p className='component-header'>▶_書込中: updating location [{placeName}]...</p>
+        <p className="component-header">▶_記入: </p>
+        <p className="component-header">
+          ▶_書込中: updating location [{placeName}]...
+        </p>
       </div>
 
       <div className="edit-page">
-        <form className='input-place-form' onSubmit={handleFormSubmit}>
-          <label className='input-label'>
+        <form className="input-place-form" onSubmit={handleFormSubmit}>
+          <label className="input-label">
             Place Name
             <input
               type="text"
@@ -88,7 +91,7 @@ function EditPage() {
               }}
             />
           </label>
-          <label className='input-label'>
+          <label className="input-label">
             Location
             <input
               type="text"
@@ -101,7 +104,7 @@ function EditPage() {
               }}
             />
           </label>
-          <label className='input-textarea'>
+          <label className="input-textarea">
             Description
             <textarea
               type="text"
@@ -114,7 +117,7 @@ function EditPage() {
               }}
             />
           </label>
-          <label className='input-label'>
+          <label className="input-label">
             Place Image
             <input
               type="text"
@@ -122,10 +125,12 @@ function EditPage() {
               placeholder="URL of Place Image"
               required={false}
               value={placeImage}
-              onChange={(e) => { setPlaceImage(e.target.value) }}
+              onChange={(e) => {
+                setPlaceImage(e.target.value);
+              }}
             />
           </label>
-          <label className='input-label'>
+          <label className="input-label">
             Inhabitants
             <input
               type="text"
@@ -138,7 +143,7 @@ function EditPage() {
               }}
             />
           </label>
-          <label className='input-textarea'>
+          <label className="input-textarea">
             Inhabitants Description
             <textarea
               type="text"
@@ -151,7 +156,7 @@ function EditPage() {
               }}
             />
           </label>
-          <label className='input-label'>
+          <label className="input-label">
             Inhabitants Image
             <input
               type="text"
@@ -159,13 +164,16 @@ function EditPage() {
               placeholder="URL of inhabitants image"
               required={false}
               value={inhabitantsImage}
-              onChange={(e) => { setInhabitantsImage(e.target.value) }}
+              onChange={(e) => {
+                setInhabitantsImage(e.target.value);
+              }}
             />
           </label>
-          <button className='submit-btn' type="submit">Update</button>
+          <button className="submit-btn" type="submit">
+            Update
+          </button>
         </form>
       </div>
-
     </>
   );
 }
