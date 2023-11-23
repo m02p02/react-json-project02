@@ -45,7 +45,17 @@ function HomePage() {
     <div className='galaxy-container'>
 
       <div className={`galaxy-map ${isZoomed ? "zoom-in" : ""}`}>
-
+        <div
+          className="background-image"
+          style={{
+            backgroundImage: 'url("src/images/milkyway.jpg")',
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            backgroundRepeat: "no-repeat",
+            height: "100vh",
+            transition: "transform 2s",
+          }}
+        ></div>
         <span className="hp-random-btn">
           <Button
             onMouseEnter={() => setIsRandomHovered(true)}

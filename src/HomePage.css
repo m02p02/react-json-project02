@@ -146,4 +146,41 @@
   to {
     transform: scale(1);
   }
+
+  /*.hp-random-btn3 {
+    top: 58%;
+    left: 20%;
+    position: absolute;
+  }
+
+  .hp-random-btnEarth {
+    top: 65%;
+    left: 80%;
+    position: absolute;
+  }
+  
+  .galaxy-map span {
+    color: aliceblue;
+  }
+  
+  .galaxy-btn {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 15px;
+    background-color:	#021631;
+    border: 1px solid aliceblue;
+    border-radius: 25px;
+  }
+
+  .zoom-in {
+    animation: zoomIn 2s ease-in-out; 
+  } 
+  
+  @keyframes zoomIn {
+    from {
+      transform: scale(4); 
+    }
+    to {
+      transform: scale(1);
+    }
+  } */
 }
