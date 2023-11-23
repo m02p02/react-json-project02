@@ -1,9 +1,13 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Button, Modal } from "react-bootstrap";
+import "../HomePage.css";
+import IntroModal from "../components/IntroModal";
 
 function HomePage() {
   const [showModal, setShowModal] = useState(false);
+  const [showIntroModal, setShowIntroModal] = useState(false);
   const [urlToPreview, setUrlToPreview] = useState("");
+  const [isZoomed, setIsZoomed] = useState(true);
 
   const handleShowModal = () => setShowModal(true);
   const handleCloseModal = () => setShowModal(false);
@@ -13,40 +17,55 @@ function HomePage() {
     handleShowModal();
   };
 
+  useEffect(() => {
+    const introModalShown = localStorage.getItem("introModalShown");
+    if (!introModalShown) {
+      setShowIntroModal(true);
+      localStorage.setItem("introModalShown", "true");
+    }
+
+    const timeout = setTimeout(() => {
+      setIsZoomed(false);
+    }, 2000);
+
+    return () => clearTimeout(timeout);
+  }, []);
+
+  const handleIntroModalClose = () => {
+    setShowIntroModal(false);
+  };
+
   return (
     <>
-        <div className="galaxy-map">
+      <div className={`galaxy-map ${isZoomed ? "zoom-in" : ""}`}>
+        <span className="hp-random-btn">
+          <Button variant="warning">
+            <a href="/places/random-place">Random Destination</a>
+          </Button>{" "}
+        </span>
+        <span className="hp-random-btn2">
+          <Button variant="warning">
+            <a href="/places/add-place">Log Destination</a>
+          </Button>{" "}
+        </span>
+        <span className="hp-random-btn3">
+          <Button variant="warning">
+            <a href="/places/all-places">Load Database</a>
+          </Button>{" "}
+        </span>
 
-          <span className="hp-random-btn">
-            <Button className='galaxy-btn'>
-              <a href="/places/random-place"><span>Random Destination</span></a>
-            </Button>{" "}
-          </span>
-
-          <span className="hp-random-btn2">
-            <Button className='galaxy-btn'>
-              <a href="/places/add-place"><span>Log Destination</span></a>
-            </Button>{" "}
-          </span>
-
-          <span className="hp-random-btn3">
-            <Button className='galaxy-btn'>
-              <a href="/places/all-places"><span>Load Database</span></a>
-            </Button>{" "}
-          </span>
-
-          <span className="hp-random-btnEarth">
-            <Button
-              className='galaxy-btn'
-              onClick={() =>
-                handlePreviewUrl(
-                  "https://project-exo-app.netlify.app/places/details/1"
-                )
-              }
-            >
-              Earth
-            </Button>{" "}
-          </span>
+        <span className="hp-random-btnEarth">
+          <Button
+            variant="warning"
+            onClick={() =>
+              handlePreviewUrl(
+                "https://project-exo-app.netlify.app/places/details/1"
+              )
+            }
+          >
+            Earth
+          </Button>{" "}
+        </span>
 
         <Modal show={showModal} onHide={handleCloseModal} size="lg">
           <Modal.Header closeButton>
@@ -57,7 +76,11 @@ function HomePage() {
               <iframe
                 title="URL Preview"
                 src={urlToPreview}
-                style={{ width: "100%", height: "500px", border: "none" }}
+                style={{
+                  width: "100%",
+                  height: "500px",
+                  border: "none",
+                }}
               ></iframe>
             )}
           </Modal.Body>
@@ -67,6 +90,7 @@ function HomePage() {
             </Button>
           </Modal.Footer>
         </Modal>
+        <IntroModal show={showIntroModal} onHide={handleIntroModalClose} />
       </div>
     </>
   );

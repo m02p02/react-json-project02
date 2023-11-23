@@ -27,13 +27,7 @@ Header, Footer
   height: 50px;
   width: 100%;
 }
-.galaxy-map{
-  background-image: url(/src/images/milkyway.jpg);
-  width: 100%;
-  height: 85vh;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
+
 .footer-tag {
   font-size: 11px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -84,38 +78,6 @@ NavBar
 /*
 HomePage
 */
-.hp-random-btn {
-  top: 65%;
-  left: 30%;
-  position: absolute;
-}
-.hp-random-btn2 {
-  top: 72%;
-  left: 27%;
-  position: absolute;
-}
-.hp-random-btn3 {
-  top: 58%;
-  left: 20%;
-  position: absolute;
-}
-.hp-random-btnEarth {
-  top: 85%;
-  left: 56%;
-  position: absolute;
-}
-
-.galaxy-map span {
-  color: aliceblue;
-}
-
-.galaxy-btn {
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  font-size: 15px;
-  background-color:	#021631;
-  border: 1px solid aliceblue;
-  border-radius: 25px;
-}
 
 /*
 AllLocationsPage
