@@ -22,8 +22,8 @@ function AllLocationsPage() {
         <>
         
             <div>
-                <p className='component-header'>▶_</p>
-                <p className='component-header'>▶_all locations have been loaded</p>
+                <p className='component-header'>▶_:</p>
+                <p className='component-header'>▶_: all locations have been loaded...</p>
             </div>
 
             <div className='location-cards-container'>
@@ -37,8 +37,8 @@ function AllLocationsPage() {
                             <Card.Body>
                                 <Link to={`/places/details/${place.id}`}>
                                     <div className='location-cards-font'>
-                                        <Card.Title>
-                                            ▶_{place.placeName}
+                                        <Card.Title className='card-font'>
+                                            ▶_: {place.placeName}
                                         </Card.Title>
                                     </div>
                                 </Link>

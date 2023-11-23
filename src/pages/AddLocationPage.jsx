@@ -38,8 +38,8 @@ function AddLocationPage() {
         <>
 
             <div>
-                <p className='component-header'>▶_</p>
-                <p className='component-header'>▶_logging new discovery...</p>
+                <p className='component-header'>▶_: </p>
+                <p className='component-header'>▶_: logging new discovery...</p>
             </div>
 
             <div className='body-div'>

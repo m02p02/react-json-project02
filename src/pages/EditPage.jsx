@@ -63,8 +63,8 @@ function EditPage() {
     <>
 
       <div>
-        <p className='component-header'>▶_</p>
-        <p className='component-header'>▶_updating location [{placeName}]...</p>
+        <p className='component-header'>▶_: </p>
+        <p className='component-header'>▶_: updating location [{placeName}]...</p>
       </div>
 
       <div className="edit-page">
