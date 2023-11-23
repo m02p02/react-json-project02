@@ -30,10 +30,7 @@ function AllLocationsPage() {
                 {place.map(place => (
                     <Card className='location-cards' style={{ width: '15rem' }}>
                         <div key={place.id}>
-                            <Card.Img
-                                variant='top'
-                                src={place.placeImage ? place.placeImage : 'https://t4.ftcdn.net/jpg/04/73/11/19/360_F_473111955_vH53HZxAXuaV1WjFgkmfAKuOB13BUJT9.jpg'}
-                            />
+                            <Card.Img variant='top' src={place.placeImage} />
                             <Card.Body>
                                 <Link to={`/places/details/${place.id}`}>
                                     <div className='location-cards-font'>
