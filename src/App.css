@@ -176,34 +176,53 @@ place containers
 .input-place-form {
   font-size: 15px;
   min-width: 40%;
+  height: auto;
 }
 
 .input-label, .input-textarea {
   display: flex;
   flex-direction: column;
   width: 100%;
-  color: aliceblue;
-  font-size: 20px;
-  font-weight: bold;
-  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  background-color: #021631;
-  border: 1px solid #05377b;
+  color: #36ba01;
+  font-size: 18px;
+  font-family:'Courier New', Courier, monospace;
+  background-color: transparent;
+  text-align: start;
+  padding-top: 40px;
 }
 
 .input-textarea {
   resize: vertical;
 }
 
+input {
+  background-color: transparent;
+  font-family: 'Courier New', Courier, monospace;
+  color: #36ba01;
+}
+
+textarea {
+  background-color: transparent;
+  font-family: 'Courier New', Courier, monospace;
+  color: #36ba01;
+}
+
+
+
 /* submit buttons: LocationDetails, AddLocationsPage, EditPage */
 .submit-btn {
-  background-color:#021631;
-  border: 1px solid aliceblue;
-  color: aliceblue;
-  font-weight: bold;
-  font-size: 15px;
-  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  width: 45%;
+  background-color: transparent;
+  border: 1px solid #36ba01;
+  color: #36ba01;
+  font-size: 20px;
+  font-family:'Courier New', Courier, monospace;
+  width: 95%;
   padding: 5px;
-  margin: 5px;
+  margin-top: 25px;
   border-radius: 12px;
+}
+
+.submit-btn:hover {
+  background-color: #ffe81f;
+  color: black;
 }

@@ -34,8 +34,8 @@ function RandomLocationPage() {
         <>
 
             <div>
-                <p className='component-header'>▶_: </p>
-                <p className='component-header'>▶_: location [{place.placeName}] has been loaded...</p>
+                <p className='component-header'>▶_記入: </p>
+                <p className='component-header'>▶_済: location [{place.placeName}] has been loaded...</p>
             </div>
 
             <div className='place-container' key={place.id}>

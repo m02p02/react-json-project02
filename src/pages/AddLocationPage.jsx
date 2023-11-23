@@ -38,84 +38,84 @@ function AddLocationPage() {
         <>
 
             <div>
-                <p className='component-header'>▶_: </p>
-                <p className='component-header'>▶_: logging new discovery...</p>
+                <p className='component-header'>▶_記入: </p>
+                <p className='component-header'>▶_書込中: logging new discovery...</p>
             </div>
 
             <div className='body-div'>
                 <form className='input-place-form' onSubmit={handleSubmit}>
                     <label className='input-label'>
-                        Name
+                        ▶_placeName_名前_▶_: --required-- /済
                         <input
                             type="text"
                             name="Place"
-                            placeholder="What is the place called?"
+                            placeholder="▶_記入: logging name..."
                             required={true}
                             value={placeName}
                             onChange={(e) => { setPlaceName(e.target.value) }}
                         />
                     </label>
                     <label className='input-label'>
-                        Location
+                        ▶_location_場所_▶_: --required-- /済
                         <input
                             type="text"
                             name="Location"
-                            placeholder="Where is it located?"
+                            placeholder="▶_記入: logging location..."
                             required={true}
                             value={location}
                             onChange={(e) => { setLocation(e.target.value) }}
                         />
                     </label>
                     <label className='input-textarea'>
-                        Description
+                        ▶_description_▶_: --if:NONE-- input_"unknown"_/済
                         <textarea
                             type="text"
                             name="Description"
-                            placeholder="Describe the place and location"
+                            placeholder="▶_記入: updating location information..."
                             required={true}
                             value={placeDescription}
                             onChange={(e) => { setPlaceDescription(e.target.value) }}
                         />
                     </label>
                     <label className='input-label'>
-                        Place Image
+                        ▶_URL_placeImage_画像_▶_: if:NONE-- input_ _/済
                         <input
                             type="text"
                             name="Place Image"
-                            placeholder="URL"
+                            placeholder="▶_記入: expecting URL..."
                             required={true}
                             value={placeImage}
                             onChange={(e) => { setPlaceImage(e.target.value) }}
                         />
                     </label>
                     <label className='input-label'>
-                        Inhabitants
+                        ▶_inhabitants_人類_▶_: --if:UNKNOWN-- input_"unknown"_/済
                         <input
                             type="text"
                             name="Inhabitants"
-                            placeholder="Who or what lives there?"
+                            placeholder="▶_記入: logging life form..."
                             required={true}
                             value={inhabitants}
                             onChange={(e) => { setinhabitants(e.target.value) }}
                         />
                     </label>
                     <label className='input-textarea'>
-                        Description
+                        ▶_description_▶_: --if:NONE-- input_"unknown"_/済
                         <textarea
                             type="text"
                             name="Inhabitants description"
-                            placeholder="Can you describe them?"
+                            placeholder="▶_記入: updating life form information..."
                             required={true}
                             value={inhabitantsDescription}
                             onChange={(e) => { setInhabitantsDescription(e.target.value) }}
                         />
                     </label>
                     <label className='input-label'>
-                        Inhabitants Image
+                        ▶_URL_inhabitantImage_画像_▶_: --if:NONE-- input_ _/済
                         <input
                             type="text"
                             name="Inhabitants Image"
-                            placeholder="URL"
+                            placeholder="▶_記入: expecting URL..."
                             required={true}
                             value={inhabitantsImage}
                             onChange={(e) => { setInhabitantsImage(e.target.value) }}
