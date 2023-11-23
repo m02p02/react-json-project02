@@ -54,7 +54,6 @@ function LocationDetailsPage(props) {
                         <img className='inhabitants-image' src={place.inhabitantsImage} />
 
                         
-                        
                         {/*<Accordion>
                             <Accordion.Item eventKey='0'>
                                 <Accordion.Header><h2>Place</h2></Accordion.Header>
