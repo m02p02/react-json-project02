@@ -50,28 +50,25 @@ function LocationDetailsPage(props) {
             <div className='place-container' key={place.id}>
                 {place && (
                     <>
-                        <img className='container-image' src={place.placeImage} />
-                        <img className='inhabitants-image' src={place.inhabitantsImage} />
 
-                        
-                        {/*<Accordion>
-                            <Accordion.Item eventKey='0'>
-                                <Accordion.Header><h2>Place</h2></Accordion.Header>
-                                <Accordion.Body>
-                                    <h5>{place.placeName}</h5>
-                                    <p>{place.location}</p>
-                                    <p>{place.placeDescription}</p>
-                                </Accordion.Body>
-                            </Accordion.Item>
+                        <Tabs
+                            defaultActiveKey='place'
+                            id='uncontrolled-tab-example'
+                            className='mb-3 custom-tabs'
+                        >
+                            <Tab eventKey='place' title='_: place'>
+                                <img className='container-image' src={place.placeImage} />
+                                <h5>▶_名: {place.placeName}</h5>
+                                <p>▶_: {place.location}</p>
+                                <p>▶_: {place.placeDescription}</p>
+                            </Tab>
+                            <Tab eventKey='life' title='_: life'>
+                                <img className='inhabitants-image' src={place.inhabitantsImage} />
+                                <h5>▶_人類: {place.inhabitants}</h5>
+                                <p>▶_: {place.inhabitantsDescription}</p>
+                            </Tab>
 
-                            <Accordion.Item eventKey='1'>
-                                <Accordion.Header><h2>Life</h2></Accordion.Header>
-                                <Accordion.Body>
-                                    <h5>{place.inhabitants}</h5>
-                                    <p>{place.inhabitantsDescription}</p>
-                                </Accordion.Body>
-                            </Accordion.Item>
-                </Accordion>*/}
+                        </Tabs>
 
                         <button className='submit-btn' onClick={() => navigate(`/places/edit/${placeId}`)}>Update Information</button>
                         <button className='submit-btn' onClick={function () { deletePlace() }}>Delete from Database</button>

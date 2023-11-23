@@ -3,7 +3,7 @@ import axios from "axios";
 import { useEffect, useState } from 'react';
 import { useParams } from "react-router-dom";
 
-import { Accordion } from "react-bootstrap";
+import { Tab, Tabs } from "react-bootstrap";
 
 function RandomLocationPage() {
 
@@ -34,34 +34,34 @@ function RandomLocationPage() {
         <>
 
             <div>
-                <p className='component-header'>▶_記入: </p>
+                <p className='component-header'>▶_記入:</p>
                 <p className='component-header'>▶_済: location [{place.placeName}] has been loaded...</p>
             </div>
 
             <div className='place-container' key={place.id}>
                 {place && (
                     <>
-                        <img className='container-image' src={place.placeImage} />
-                        <img className='inhabitants-image' src={place.inhabitantsImage} />
 
-                        <Accordion>
-                            <Accordion.Item eventKey='0'>
-                                <Accordion.Header><h2>Place</h2></Accordion.Header>
-                                <Accordion.Body>
-                                    <h5>{place.placeName}</h5>
-                                    <p>{place.location}</p>
-                                    <p>{place.placeDescription}</p>
-                                </Accordion.Body>
-                            </Accordion.Item>
+                        <Tabs
+                            defaultActiveKey='place'
+                            id='uncontrolled-tab-example'
+                            className='mb-3 custom-tabs'
+                        >
+                            <Tab eventKey='place' title='_: place'>
+                                <img className='container-image' src={place.placeImage} />
+                                <div className='tab-content'>
+                                    <h5>▶_名: {place.placeName}</h5>
+                                    <p>▶_: {place.location}</p>
+                                    <p>▶_: {place.placeDescription}</p>
+                                </div>
+                            </Tab>
+                            <Tab eventKey='life' title='_: life'>
+                                <img className='inhabitants-image' src={place.inhabitantsImage} />
+                                <h5>▶_人類: {place.inhabitants}</h5>
+                                <p>▶_: {place.inhabitantsDescription}</p>
+                            </Tab>
 
-                            <Accordion.Item eventKey='1'>
-                                <Accordion.Header><h2>Life</h2></Accordion.Header>
-                                <Accordion.Body>
-                                    <h5>{place.inhabitants}</h5>
-                                    <p>{place.inhabitantsDescription}</p>
-                                </Accordion.Body>
-                            </Accordion.Item>
-                        </Accordion>
+                        </Tabs>
 
                         <button className='submit-btn' onClick={reloadPage}>Reload</button>
                     </>
