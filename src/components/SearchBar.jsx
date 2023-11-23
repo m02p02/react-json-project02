@@ -13,7 +13,7 @@ function SearchBar() {
     const handleSearch = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.get(`https://exo-app-rest-api.adaptable.app/places?search=${searchQuery}`);
+            const response = await axios.get(`https://exo-app-rest-api.adaptable.app/places/?search=${searchQuery}`);
             if (response.data.length > 0) {
                 setSearchResults(response.data);
                 setNegResults(false);
@@ -29,7 +29,7 @@ function SearchBar() {
     };
 
     const handleDestinationClick = (placeId) => {
-        navigate(`/places/${placeId}`);
+        navigate(`/places/details/${placeId}`);
     };
 
     return (
@@ -42,10 +42,10 @@ function SearchBar() {
                     value={searchQuery}
                     onChange={(e) => setSearchQuery(e.target.value)}
                 />
-                <button type='submit'>Search</button>
+                <Button type='submit'>Search</Button>
             </Form>
 
-            {noResults ? (
+            {negResults ? (
                 <p>No results found.</p>
             ) : (
                 searchResults.length > 0 && (
@@ -55,9 +55,8 @@ function SearchBar() {
                             {searchResults.map((result) => (
                                 <li key={result.id}>
                                     <Link
-                                        to={`/places/${result.id}`}
-                                        onClick={() => handleDestinationClick(result.id)}
-                                    >
+                                        to={`/places/details/${result.id}`}
+                                        onClick={() => handleDestinationClick(result.id)}>
                                         {result.placeName}
                                     </Link>
                                 </li>
