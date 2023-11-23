@@ -3,23 +3,23 @@ import { Modal } from "react-bootstrap";
 import "./IntroModal.css";
 
 const IntroModal = ({ show, onHide }) => {
-    const [animationIteration, setAnimationIteration] = useState(0);
-    const audioRef = useRef(new Audio("src/audio/Bootcampwars.m4a"));
+  const [animationIteration, setAnimationIteration] = useState(0);
+  const audioRef = useRef(new Audio("src/audio/Bootcampwars.m4a"));
 
-    useEffect(() =>{
-        const audio = audioRef.current;
+  useEffect(() => {
+    const audio = audioRef.current;
 
-        if (show){
-        audio.play();
-        }else{
-        audio.pause();
-        audio.currentTime = 0;
-        }
-        return () => {
-            audio.pause();
-            audio.currentTime = 0;
-          };
-        }, [show]);
+    if (show) {
+      audio.play();
+    } else {
+      audio.pause();
+      audio.currentTime = 0;
+    }
+    return () => {
+      audio.pause();
+      audio.currentTime = 0;
+    };
+  }, [show]);
 
   const handleAnimationIteration = () => {
     if (animationIteration > 0) {
@@ -43,8 +43,10 @@ const IntroModal = ({ show, onHide }) => {
             textAlign: "center",
           }}
         >
-          <div className={`crawl-text ${show ? "slide" : ""}`}
-            onAnimationIteration={handleAnimationIteration}>
+          <div
+            className={`crawl-text ${show ? "slide" : ""}`}
+            onAnimationIteration={handleAnimationIteration}
+          >
             <p>
               A long time ago in a galaxy far, far away...
               <br />
@@ -59,7 +61,6 @@ const IntroModal = ({ show, onHide }) => {
               the tyranny and oppression of the awesome Luis & Ale EMPIRE.
               <br />
               <br />
-              
               Loading a database from a fortress hidden among the billion stars
               of the galaxy, rebel students have won their first victory in a
               codewars battle.
