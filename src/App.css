@@ -135,37 +135,42 @@ AllLocationsPage
 /*
 place containers
 */
-.place-container {
-  border: 2px solid white;
-  margin: 2%;
-  max-width: 35%;
-  max-height: 30%;
-  position: static; 
-  top: 50%;
-  left: 50%;
-  transform: translate(90%, -0%);
+.custom-tabs .nav-link {
+  font-family: 'Courier New', Courier, monospace;
+  color: #36ba01;
 }
 
-.place-container h2 {
-  font-size: 20px;
+.place-container {
+  margin: 2%;
+  max-width: 50%;
+  height: auto;
+  position: relative; 
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -0%);
+}
+
+.tab-content {
+  margin: 5%;
+  font-family:'Courier New', Courier, monospace;
 }
 
 .place-container h5 {
   font-weight: bold;
   text-align: start;
+  padding-top: 5%;
+  color: #36ba01;
 }
 
-.place-container p {
+.place-container p { 
   font-size: 15px;
   text-align: start;
+  padding-top: 0%;
 }
 
-.container-image {
+.container-image, .inhabitants-image {
   width: 50%;
-}
-
-.inhabitants-image {
-  width: 50%;
+  padding: 20px;
 }
 
 /* AddLocationsPage, EditPage*/
@@ -207,8 +212,6 @@ textarea {
   color: #36ba01;
 }
 
-
-
 /* submit buttons: LocationDetails, AddLocationsPage, EditPage */
 .submit-btn {
   background-color: transparent;
@@ -216,9 +219,10 @@ textarea {
   color: #36ba01;
   font-size: 20px;
   font-family:'Courier New', Courier, monospace;
-  width: 95%;
+  width: 60%;
   padding: 5px;
-  margin-top: 25px;
+  margin-top: 20px;
+  margin-bottom: 60px;
   border-radius: 12px;
 }
 
