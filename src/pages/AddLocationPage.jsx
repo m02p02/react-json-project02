@@ -1,5 +1,5 @@
 import axios from "axios";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
 function AddLocationPage() {
@@ -12,6 +12,11 @@ function AddLocationPage() {
     const [inhabitantsImage, setInhabitantsImage] = useState('');
 
     const navigate = useNavigate();
+
+    const submitAudio = new Audio("/src/audio/blaster.mp3");
+    
+
+
     const handleSubmit = (e) => {
         e.preventDefault();
         const requestBody = {
@@ -33,6 +38,19 @@ function AddLocationPage() {
                 console.log(error);
             })
     }
+
+    useEffect(() => {
+        const keyboardClickAudio = new Audio('/src/audio/keyboard.mp3');
+        const handleKeyPress = () => {
+            keyboardClickAudio.play();
+        };
+        window.addEventListener('keydown', handleKeyPress);
+
+        return() =>{
+            window.removeEventListener('keydown', handleKeyPress)
+        };
+    }, [])
+
     return (
 
         <>
