@@ -1,9 +1,13 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Button, Modal } from "react-bootstrap";
+import "../HomePage.css";
+import IntroModal from "../components/IntroModal";
 
 function HomePage() {
   const [showModal, setShowModal] = useState(false);
+  const [showIntroModal, setShowIntroModal] = useState(false);
   const [urlToPreview, setUrlToPreview] = useState("");
+  const [isZoomed, setIsZoomed] = useState(true);
 
   const handleShowModal = () => setShowModal(true);
   const handleCloseModal = () => setShowModal(false);
@@ -13,40 +17,94 @@ function HomePage() {
     handleShowModal();
   };
 
+  useEffect(() => {
+    const introModalShown = localStorage.getItem("introModalShown");
+    if (!introModalShown) {
+      setShowIntroModal(true);
+      localStorage.setItem("introModalShown", "true");
+    }
+
+    const timeout = setTimeout(() => {
+      setIsZoomed(false);
+    }, 2000);
+
+    return () => clearTimeout(timeout);
+  }, []);
+
+  const handleIntroModalClose = () => {
+    setShowIntroModal(false);
+  };
+
+  const [isEarthHovered, setIsEarthHovered] = useState(false);
+  const [isDatabaseHovered, setIsDatabaseHovered] = useState(false);
+  const [isRandomHovered, setIsRandomHovered] = useState(false);
+  const [isLogHovered, setIsLogHovered] = useState(false);
+
   return (
-    <>
-        <div className="galaxy-map">
 
-          <span className="hp-random-btn">
-            <Button className='galaxy-btn'>
-              <a href="/places/random-place"><span>Random Destination</span></a>
-            </Button>{" "}
-          </span>
+    <div className='galaxy-container'>
 
-          <span className="hp-random-btn2">
-            <Button className='galaxy-btn'>
-              <a href="/places/add-place"><span>Log Destination</span></a>
-            </Button>{" "}
-          </span>
+      <div className={`galaxy-map ${isZoomed ? "zoom-in" : ""}`}>
+        <div
+          className="background-image"
+          style={{
+            backgroundImage: 'url("src/images/milkyway.jpg")',
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            backgroundRepeat: "no-repeat",
+            height: "100vh",
+            transition: "transform 2s",
+          }}
+        ></div>
+        <span className="hp-random-btn">
+          <Button
+            onMouseEnter={() => setIsRandomHovered(true)}
+            onMouseLeave={() => setIsRandomHovered(false)}
+          >
+            <a href="/places/random-place">▶_: random destination</a>
+          </Button>{" "}
+        </span>
 
-          <span className="hp-random-btn3">
-            <Button className='galaxy-btn'>
-              <a href="/places/all-places"><span>Load Database</span></a>
-            </Button>{" "}
-          </span>
+        <span className="hp-log-btn">
+          <Button
+            onMouseEnter={() => setIsLogHovered(true)}
+            onMouseLeave={() => setIsLogHovered(false)}
+          >
+            <a href="/places/add-place">▶_: log destination</a>
+          </Button>{" "}
+        </span>
 
-          <span className="hp-random-btnEarth">
-            <Button
-              className='galaxy-btn'
-              onClick={() =>
-                handlePreviewUrl(
-                  "https://project-exo-app.netlify.app/places/details/1"
-                )
-              }
-            >
-              Earth
-            </Button>{" "}
-          </span>
+        <span className="hp-database-btn">
+          <Button
+            onMouseEnter={() => setIsDatabaseHovered(true)}
+            onMouseLeave={() => setIsDatabaseHovered(false)}
+          >
+            <a href="/places/all-places">▶_: load database</a>
+          </Button>{" "}
+        </span>
+
+        <span className="hp-earth-btn">
+          <Button
+            onMouseEnter={() => setIsEarthHovered(true)}
+            onMouseLeave={() => setIsEarthHovered(false)}
+            onClick={() =>
+              handlePreviewUrl(
+                "https://project-exo-app.netlify.app/places/details/1"
+              )
+            }
+          >
+            ▶_: load [Earth]
+          </Button>{" "}
+        </span>
+
+        <div className={`hp-random-icon-1 ${isRandomHovered ? 'random-hovered' : ''}`}></div>
+        <div className={`hp-random-icon-2 ${isRandomHovered ? 'random-hovered' : ''}`}></div>
+        <div className={`hp-random-icon-3 ${isRandomHovered ? 'random-hovered' : ''}`}></div>
+        <div className={`hp-random-icon-4 ${isRandomHovered ? 'random-hovered' : ''}`}></div>
+        <div className={`hp-random-icon-5 ${isRandomHovered ? 'random-hovered' : ''}`}></div>
+        <div className={`hp-log-icon ${isLogHovered ? 'log-hovered' : ''}`}></div>
+        <div className={`hp-database-icon ${isDatabaseHovered ? 'database-hovered' : ''}`}></div>
+        <div className={`hp-earth-icon ${isEarthHovered ? 'earth-hovered' : ''}`}></div>
 
         <Modal show={showModal} onHide={handleCloseModal} size="lg">
           <Modal.Header closeButton>
@@ -57,7 +115,11 @@ function HomePage() {
               <iframe
                 title="URL Preview"
                 src={urlToPreview}
-                style={{ width: "100%", height: "500px", border: "none" }}
+                style={{
+                  width: "100%",
+                  height: "500px",
+                  border: "none",
+                }}
               ></iframe>
             )}
           </Modal.Body>
@@ -67,8 +129,9 @@ function HomePage() {
             </Button>
           </Modal.Footer>
         </Modal>
+        <IntroModal show={showIntroModal} onHide={handleIntroModalClose} />
       </div>
-    </>
+    </div>
   );
 }
 

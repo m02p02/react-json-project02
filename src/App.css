@@ -1,5 +1,9 @@
 html, body {
   height: 100%;
+  background-image: url('./images/spacebackground.jpg');
+  background-blend-mode: multiply;
+  background-repeat: repeat;
+  background-size: cover;
 }
 
 #root {
@@ -8,10 +12,6 @@ html, body {
   margin: 0;
   padding: 0;
   text-align: center;
-  background-image: url('./images/spacebackground.jpg');
-  background-blend-mode: multiply;
-  background-repeat: no-repeat;
-  background-size: cover;
   color: ivory;
 }
 
@@ -27,13 +27,7 @@ Header, Footer
   height: 50px;
   width: 100%;
 }
-.galaxy-map{
-  background-image: url(/src/images/milkyway.jpg);
-  width: 100%;
-  height: 85vh;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
+
 .footer-tag {
   font-size: 11px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -45,121 +39,138 @@ Header, Footer
 NavBar
 */
 .nav-container {
-  background-color: #010b19;
+  background-color: #ffe81f;
   max-width: 100%;
+  height: 40px;
+  opacity: 0.65;
+  display: flex;
 }
 
 .nav-btn {
-  margin: 0 auto;
   height: 30px;
-  border: 1px solid #05377b;
-  background-color: #021631;
-  margin: 5px;
-  padding: 1px;
+  background-color: black;
+  border: 5px solid black;
   font-size: 15px;
-  font-weight: bold;
-  color: aliceblue;
-  border-radius: 12px;
-  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: #00ff2b;
+  border-radius: 25px;
+  font-family:'Courier New', Courier, monospace;
 }
 
-.navbar-search {
-  height: 25px;
-  width: 150px;
+.nav-btn:hover {
+  background-color: #ffe81f;
+  color: black;
+}
+
+.component-header {
+  background-color: transparent;
+  opacity: 0.65;
+  height: 40px;
+  color: #00ff2b;
+  font-size: 25px;
+  font-family: 'Courier New', Courier, monospace;
+  text-align: start;
+  padding-top: 10px;
+  padding-left: 30px;
+  margin-bottom: 2px;
+  position: relative;
 }
 
 /*
 HomePage
 */
-.hp-random-btn {
-  top: 65%;
-  left: 30%;
-  position: absolute;
-}
-.hp-random-btn2 {
-  top: 72%;
-  left: 27%;
-  position: absolute;
-}
-.hp-random-btn3 {
-  top: 58%;
-  left: 20%;
-  position: absolute;
-}
-.hp-random-btnEarth {
-  top: 85%;
-  left: 56%;
-  position: absolute;
-}
-
-.galaxy-map span {
-  color: aliceblue;
-}
-
-.galaxy-btn {
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  font-size: 15px;
-  background-color:	#021631;
-  border: 1px solid aliceblue;
-  border-radius: 25px;
-}
 
 /*
 AllLocationsPage
 */
-.carousel {
-  height: 350px;
-  align-items: center;
-}
-
-.carousel-item img {
+.location-cards-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   justify-content: center;
-  height: 300px;
-  width: auto;
-  border: 2px solid ivory;
 }
 
-.carousel-item .caption {
+.location-cards {
+  border-radius: 5px;
+  margin: 10px;
+  background-color: transparent;
   position: relative;
-  background-color: #021631;
-  width: 15%;
-  margin: auto;
+  height: 300px;
+  box-shadow: 1px 1px #ffe81f;
+}
+
+.location-cards img {
+  border: 1px solid ivory;
+  max-width: 210px;
+  max-height: 150px;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.location-cards-font {
+  width: 200px;
+  background-color: transparent;
+  border-radius: 8px;
+  color: #00ff2b;
+  font-family:'Courier New', Courier, monospace;
+  padding: 5px 10px 0px 10px;
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 1px 2px grey;
+  text-align: start;
+}
+
+.card-font {
+  font-size: 18px;
+}
+
+.location-cards-font:hover {
+  background-color: #ffe81f;
+  color: black;
 }
 
 /*
 place containers
 */
-.place-container {
-  border: 2px solid white;
-  margin: 2%;
-  max-width: 35%;
-  max-height: 30%;
-  position: static; 
-  top: 50%;
-  left: 50%;
-  transform: translate(90%, -0%);
+.custom-tabs .nav-link {
+  font-family: 'Courier New', Courier, monospace;
+  color: #36ba01;
 }
 
-.place-container h2 {
-  font-size: 20px;
+.place-container {
+  margin: 2%;
+  max-width: 50%;
+  height: auto;
+  position: relative; 
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -0%);
+}
+
+.tab-content {
+  margin: 5%;
+  font-family:'Courier New', Courier, monospace;
 }
 
 .place-container h5 {
   font-weight: bold;
   text-align: start;
+  padding-top: 5%;
+  color: #36ba01;
 }
 
-.place-container p {
+.place-container p { 
   font-size: 15px;
   text-align: start;
+  padding-top: 0%;
 }
 
-.container-image {
+.container-image, .inhabitants-image {
   width: 50%;
-}
-
-.inhabitants-image {
-  width: 50%;
+  padding: 20px;
 }
 
 /* AddLocationsPage, EditPage*/
@@ -170,34 +181,52 @@ place containers
 .input-place-form {
   font-size: 15px;
   min-width: 40%;
+  height: auto;
 }
 
 .input-label, .input-textarea {
   display: flex;
   flex-direction: column;
   width: 100%;
-  color: aliceblue;
-  font-size: 20px;
-  font-weight: bold;
-  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  background-color: #021631;
-  border: 1px solid #05377b;
+  color: #36ba01;
+  font-size: 18px;
+  font-family:'Courier New', Courier, monospace;
+  background-color: transparent;
+  text-align: start;
+  padding-top: 40px;
 }
 
 .input-textarea {
   resize: vertical;
 }
 
+input {
+  background-color: transparent;
+  font-family: 'Courier New', Courier, monospace;
+  color: #36ba01;
+}
+
+textarea {
+  background-color: transparent;
+  font-family: 'Courier New', Courier, monospace;
+  color: #36ba01;
+}
+
 /* submit buttons: LocationDetails, AddLocationsPage, EditPage */
 .submit-btn {
-  background-color:#021631;
-  border: 1px solid aliceblue;
-  color: aliceblue;
-  font-weight: bold;
-  font-size: 15px;
-  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  width: 45%;
+  background-color: transparent;
+  border: 1px solid #36ba01;
+  color: #36ba01;
+  font-size: 20px;
+  font-family:'Courier New', Courier, monospace;
+  width: 60%;
   padding: 5px;
-  margin: 5px;
+  margin-top: 20px;
+  margin-bottom: 60px;
   border-radius: 12px;
+}
+
+.submit-btn:hover {
+  background-color: #ffe81f;
+  color: black;
 }
