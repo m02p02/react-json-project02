@@ -89,7 +89,7 @@ function LocationDetailsPage(props) {
               className="submit-btn"
               onClick={() => navigate(`/places/edit/${placeId}`)}
             >
-              Update Information
+              Update
             </button>
             <button
               className="submit-btn"
@@ -97,7 +97,7 @@ function LocationDetailsPage(props) {
                 deletePlace();
               }}
             >
-              Delete from Database
+              Delete
             </button>
           </>
         )}

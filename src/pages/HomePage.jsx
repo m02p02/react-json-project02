@@ -108,7 +108,7 @@ function HomePage() {
 
         <Modal show={showModal} onHide={handleCloseModal} size="lg">
           <Modal.Header closeButton>
-            <Modal.Title>Earth Details</Modal.Title>
+            <Modal.Title>location: Earth</Modal.Title>
           </Modal.Header>
           <Modal.Body>
             {urlToPreview && (

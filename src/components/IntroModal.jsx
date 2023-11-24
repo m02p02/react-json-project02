@@ -51,27 +51,24 @@ const IntroModal = ({ show, onHide }) => {
               A long time ago in a galaxy far, far away...
               <br />
               <br />
-              Locations( Bootcampwars )
+              Cosmic Logger: Bootcamp Wars
               <br />
               <br />
-              There were two bootcamp students named Alfonso AND yavuz.
+              Two bootcamp students, Alfonso and Yavuz, and a brave alliance of underground freedom
+              fighters have risen up to challenge the tyranny and oppression of the awesome Luis & Ale Iron Empire.
               <br />
               <br />
-              A brave alliance of underground freedom fighters has challenged
-              the tyranny and oppression of the awesome Luis & Ale EMPIRE.
+              Loading into a database from a home-office fortress hidden among the billion starry
+              bytes of the digital galaxy, these Rebel students have won their first pivotal victory 
+              in a Codewars battle.
               <br />
               <br />
-              Loading a database from a fortress hidden among the billion stars
-              of the galaxy, rebel students have won their first victory in a
-              codewars battle.
-              <br />
-              <br />
-              The EMPIRE fears that another bootcamp could bring a thousand more
+              The Iron Empire fears that another bootcamp could bring a thousand more
               students into the rebellion.
               <br />
               <br />
-              To crush the rebellion once and for all, the EMPIRE is
-              constructing a test program named JASMIN.
+              To crush the rebellion once and for all, the Iron Empire is on the way to deploying
+              a new and evil test program codenamed JASMIN...
               <br />
               <br />
             </p>
