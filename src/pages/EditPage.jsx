@@ -78,11 +78,11 @@ function EditPage() {
       <div className="edit-page">
         <form className="input-place-form" onSubmit={handleFormSubmit}>
           <label className="input-label">
-            Place Name
+            ▶_placeName_名前_▶_: --required-- /済
             <input
               type="text"
               name="Name of your place"
-              placeholder="Please enter your place name"
+              placeholder="▶_記入: logging name..."
               required={true}
               value={placeName}
               onChange={(e) => {
@@ -92,11 +92,11 @@ function EditPage() {
             />
           </label>
           <label className="input-label">
-            Location
+            ▶_location_場所_▶_: --required-- /済
             <input
               type="text"
               name="Location"
-              placeholder="Please enter your place location"
+              placeholder="▶_記入: logging location..."
               required={true}
               value={location}
               onChange={(e) => {
@@ -105,11 +105,11 @@ function EditPage() {
             />
           </label>
           <label className="input-textarea">
-            Description
+            ▶_description_▶_: --if:NONE-- input_"unknown"_/済
             <textarea
               type="text"
               name="Description"
-              placeholder="Please enter a description about your place"
+              placeholder="▶_記入: updating location information..."
               required={true}
               value={placeDescription}
               onChange={(e) => {
@@ -118,11 +118,11 @@ function EditPage() {
             />
           </label>
           <label className="input-label">
-            Place Image
+            ▶_URL_placeImage_画像_▶_: if:NONE-- input_ _/済
             <input
               type="text"
               name="Place Image"
-              placeholder="URL of Place Image"
+              placeholder="▶_記入: expecting URL..."
               required={false}
               value={placeImage}
               onChange={(e) => {
@@ -131,11 +131,11 @@ function EditPage() {
             />
           </label>
           <label className="input-label">
-            Inhabitants
+            ▶_inhabitants_人類_▶_: --if:UNKNOWN-- input_"unknown"_/済
             <input
               type="text"
               name="Inhabitants"
-              placeholder="Please enter inhabitants of your place"
+              placeholder="▶_記入: logging life form..."
               required={true}
               value={inhabitants}
               onChange={(e) => {
@@ -144,11 +144,11 @@ function EditPage() {
             />
           </label>
           <label className="input-textarea">
-            Inhabitants Description
+            ▶_description_▶_: --if:NONE-- input_"unknown"_/済
             <textarea
               type="text"
               name="Inhabitants description"
-              placeholder="Please enter a inhabitants details of your place"
+              placeholder="▶_記入: updating life form information..."
               required={true}
               value={inhabitantsDescription}
               onChange={(e) => {
@@ -157,11 +157,11 @@ function EditPage() {
             />
           </label>
           <label className="input-label">
-            Inhabitants Image
+            ▶_URL_inhabitantImage_画像_▶_: --if:NONE-- input_ _/済
             <input
               type="text"
               name="Inhabitants Image"
-              placeholder="URL of inhabitants image"
+              placeholder="▶_記入: expecting URL..."
               required={false}
               value={inhabitantsImage}
               onChange={(e) => {
