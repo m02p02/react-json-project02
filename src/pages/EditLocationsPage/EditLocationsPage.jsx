@@ -3,7 +3,7 @@ import React, { useEffect } from "react";
 import { useState } from "react";
 import { useNavigate, useParams } from "react-router";
 
-function EditPage() {
+function EditLocationsPage() {
   const [placeName, setPlaceName] = useState("");
   const [location, setLocation] = useState("");
   const [placeDescription, setPlaceDescription] = useState("");
@@ -178,4 +178,4 @@ function EditPage() {
   );
 }
 
-export default EditPage;
+export default EditLocationsPage;
