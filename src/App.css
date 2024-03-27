@@ -51,20 +51,26 @@
 }
 
 #title-banner {
-  border: 2px solid yellow;
-  color: white;
-  z-index: 1000;
+  position: absolute;
+  bottom: 7%;
+  width: 100vw;
+  text-shadow:
+    1px 1px 0 var(--pip-01),
+    -1px -1px 0 var(--dark-03);
+  color: var(--pip-02);
+  font-family: var(--font-family-2);
+  font-size: 1.3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-
-
-/* ▶_記入: etc. */
-.component-header {
+.global-code-header {
   background-color: transparent;
   opacity: 0.65;
   padding: 0;
   margin: 1rem;
-  line-height: 1;
+  font-size: 1.2em;
   color: var(--pip-04);
   font-family: var(--font-family-2);
   text-align: start;
@@ -105,7 +111,7 @@ AllLocationsPage
   background-color: transparent;
   border-radius: 8px;
   color: #00ff2b;
-  font-family: "share tech mono";
+  font-family: var(--font-family-4);
   padding: 5px 10px 0px 10px;
   position: absolute;
   top: 80%;
@@ -128,7 +134,7 @@ AllLocationsPage
 place containers
 */
 .custom-tabs .nav-link {
-  font-family: 'Courier New', Courier, monospace;
+  font-family: var(--font-family-2);
   color: #36ba01;
 }
 
@@ -140,7 +146,6 @@ place containers
 
 .tab-content {
   margin: 5%;
-  font-family: 'Courier New', Courier, monospace;
 }
 
 .place-container h5 {

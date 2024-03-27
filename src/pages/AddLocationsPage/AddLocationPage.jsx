@@ -64,8 +64,8 @@ function AddLocationPage() {
         <div className="global-panel">
 
           <div>
-            <p className="component-header">▶_記入: </p>
-            <p className="component-header">▶_書込中: logging new discovery...</p>
+            <p className="global-code-header">▶_記入: </p>
+            <p className="global-code-header">▶_書込中: logging new discovery...</p>
           </div>
 
           <div className="body-div">

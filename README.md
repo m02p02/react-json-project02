@@ -32,9 +32,6 @@ Updates and changes
 - Externally sourced media with available attribution logged below
 - The database is non-persistent and user-submitted images are fetched in real-time via URL and are not saved, stored or duplicated locally or on the database
 
-- Note:
-    - CRT-style horizontal bars adapted from [DEV: Retro CRT terminal screen in CSS + JS, by Edwin](https://dev.to/ekeijl/retro-crt-terminal-screen-in-css-js-4afh)
-
 ## Description
 This app began as a unit project meant to practice and showcase CRUD operations.
 
@@ -70,3 +67,7 @@ The concept of the cosmetic design and interactivity is meant to invoke an exper
 2. [Go to the live app deployed and hosted on Netlify](https://project-exo-app.netlify.app/)
 
 3. ~~``[optional]`` To reload the sequence that executes only upon first visiting the app's URL, ``clear the site's browser data`` (cookies, storage, cache).~~
+
+## Attribution
+- CRT-style horizontal bars adapted from [DEV: Retro CRT terminal screen in CSS + JS, by Edwin](https://dev.to/ekeijl/retro-crt-terminal-screen-in-css-js-4afh)
+- Homepage galaxy photo by <a href="https://unsplash.com/@gferla?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Guillermo Ferla</a> on <a href="https://unsplash.com/photos/galaxy-at-night-kEEl9csCutg?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>

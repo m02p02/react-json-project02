@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { Button } from "react-bootstrap";
 
 import "./HomePage.css";
 
@@ -17,59 +16,57 @@ function HomePage() {
           <div className="homepage-panel">
 
             <div>
-              <p className="component-header">▶_記入: </p>
-              <p className="component-header">▶_書込中: location database...</p>
+              <p className="global-code-header">▶_記入: </p>
+              <p className="global-code-header">▶_書込中: select...</p>
             </div>
 
-            <span className="hp-random-btn">
-              <Button
-                onMouseEnter={() => setIsRandomHovered(true)}
-                onMouseLeave={() => setIsRandomHovered(false)}
-              >
-                <a href="/places/random-place">▶_: random destination</a>
-              </Button>{" "}
-            </span>
+            <div className="homepage-panel-btn-container">
+              <span className="homepage-database-btn">
+                <button
+                  onMouseEnter={() => setIsDatabaseHovered(true)}
+                  onMouseLeave={() => setIsDatabaseHovered(false)}
+                >
+                  <a href="/places/all-places">▶_: load full database</a>
+                </button>{" "}
+              </span>
 
-            <span className="hp-log-btn">
-              <Button
-                onMouseEnter={() => setIsLogHovered(true)}
-                onMouseLeave={() => setIsLogHovered(false)}
-              >
-                <a href="/places/add-place">▶_: log destination</a>
-              </Button>{" "}
-            </span>
+              <span className="homepage-random-btn">
+                <button
+                  onMouseEnter={() => setIsRandomHovered(true)}
+                  onMouseLeave={() => setIsRandomHovered(false)}
+                >
+                  <a href="/places/random-place">▶_: load random destination</a>
+                </button>{" "}
+              </span>
 
-            <span className="hp-database-btn">
-              <Button
-                onMouseEnter={() => setIsDatabaseHovered(true)}
-                onMouseLeave={() => setIsDatabaseHovered(false)}
-              >
-                <a href="/places/all-places">▶_: load database</a>
-              </Button>{" "}
-            </span>
+              <span className="homepage-log-btn">
+                <button
+                  onMouseEnter={() => setIsLogHovered(true)}
+                  onMouseLeave={() => setIsLogHovered(false)}
+                >
+                  <a href="/places/add-place">▶_: log new destination</a>
+                </button>{" "}
+              </span>
 
-            <span className="hp-earth-btn">
-              <Button
-                onMouseEnter={() => setIsEarthHovered(true)}
-                onMouseLeave={() => setIsEarthHovered(false)}
-                onClick={() =>
-                  handlePreviewUrl(
-                    "https://project-exo-app.netlify.app/places/details/1"
-                  )
-                }
-              >
-                ▶_: load [Earth]
-              </Button>{" "}
-            </span>
 
-            <div className={`hp-random-icon-1 ${isRandomHovered ? 'random-hovered' : ''}`}></div>
-            <div className={`hp-random-icon-2 ${isRandomHovered ? 'random-hovered' : ''}`}></div>
-            <div className={`hp-random-icon-3 ${isRandomHovered ? 'random-hovered' : ''}`}></div>
-            <div className={`hp-random-icon-4 ${isRandomHovered ? 'random-hovered' : ''}`}></div>
-            <div className={`hp-random-icon-5 ${isRandomHovered ? 'random-hovered' : ''}`}></div>
-            <div className={`hp-log-icon ${isLogHovered ? 'log-hovered' : ''}`}></div>
-            <div className={`hp-database-icon ${isDatabaseHovered ? 'database-hovered' : ''}`}></div>
-            <div className={`hp-earth-icon ${isEarthHovered ? 'earth-hovered' : ''}`}></div>
+              <span className="homepage-earth-btn">
+                <button
+                  onMouseEnter={() => setIsEarthHovered(true)}
+                  onMouseLeave={() => setIsEarthHovered(false)}
+                >
+                  <a href="/places/details/1">▶_: load [EARTH]</a>
+                </button>{" "}
+              </span>
+            </div>
+
+            <div className={`homepage-random-icon-1 ${isRandomHovered ? 'random-hovered' : ''}`}></div>
+            <div className={`homepage-random-icon-2 ${isRandomHovered ? 'random-hovered' : ''}`}></div>
+            <div className={`homepage-random-icon-3 ${isRandomHovered ? 'random-hovered' : ''}`}></div>
+            <div className={`homepage-random-icon-4 ${isRandomHovered ? 'random-hovered' : ''}`}></div>
+            <div className={`homepage-random-icon-5 ${isRandomHovered ? 'random-hovered' : ''}`}></div>
+            <div className={`homepage-log-icon ${isLogHovered ? 'log-hovered' : ''}`}></div>
+            <div className={`homepage-database-icon ${isDatabaseHovered ? 'database-hovered' : ''}`}></div>
+            <div className={`homepage-earth-icon ${isEarthHovered ? 'earth-hovered' : ''}`}></div>
 
           </div>
         </div>

@@ -26,7 +26,7 @@ function App() {
       {location.pathname !== "/" && <NavMenu />}
       {location.pathname === "/" && (
         <div id="title-banner">
-          <p>Exo App Cosmic Logger: Bootcamp Wars, Ver. 2.0</p>
+          Exo App Cosmic Logger: Bootcamp Wars, Ver. 2.0
         </div>
       )}
     </div>

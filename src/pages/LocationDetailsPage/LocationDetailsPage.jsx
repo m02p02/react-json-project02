@@ -47,9 +47,9 @@ function LocationDetailsPage(props) {
           <div className="homepage-panel">
 
             <div>
-              <p className="component-header">▶_記入: </p>
-              <p className="component-header">
-                ▶_済: location [{place.placeName}] has been loaded
+              <p className="global-code-header">▶_記入: </p>
+              <p className="global-code-header">
+                ▶_済: location [{place.placeName ? place.placeName.toUpperCase() : ""}] loaded...
               </p>
             </div>
 

@@ -1,17 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&family=M+PLUS+Code+Latin:wght@100..700&family=Share+Tech+Mono&family=VT323&display=swap');
 
-/*
-"kode mono"
-"VT323"
-"m plus code latin"
-"share tech mono"
-*/
-
 :root {
-  line-height: 1;
-  font-size: 16px;
-  font-weight: 400;
-  text-decoration: none;
   --font-family-1: "kode mono", courier, monospace;
   --font-family-2: "vt323", courier, monospace;
   --font-family-3: "m plus code latin", courier, monospace;
@@ -19,7 +8,7 @@
 
   color-scheme: light dark;
 
-  --light-01: rgb(243, 245, 243);
+  --light-01: #f3f5f3;
   --dark-01: #0a0a0a;
   --dark-02: #1a200e;
   --dark-03: #111509;
@@ -53,6 +42,12 @@ body {
   box-sizing: content-box;
   margin: 0;
   padding: 0;
+  line-height: 1;
+  font-size: 16px;
+  font-weight: 400;
+  text-decoration: none;
+  font-family: var(--font-family-1);
+  color: var(--pip-04);
 }
 
 a {

@@ -26,9 +26,9 @@ function AllLocationsPage() {
         <div className="global-panel">
 
             <div>
-              <p className="component-header">▶_記入:</p>
-              <p className="component-header">
-                ▶_済: all locations have been loaded...
+              <p className="global-code-header">▶_記入:</p>
+              <p className="global-code-header">
+                ▶_済: all locations loaded...
               </p>
             </div>
 
