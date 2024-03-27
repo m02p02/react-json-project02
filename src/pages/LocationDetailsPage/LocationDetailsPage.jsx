@@ -44,7 +44,6 @@ function LocationDetailsPage(props) {
     <div className="app-monitor">
       <div className="app-bezel">
         <div className="global-panel">
-          <div className="homepage-panel">
 
             <div>
               <p className="global-code-header">▶_記入: </p>
@@ -111,7 +110,6 @@ function LocationDetailsPage(props) {
           </div>
         </div>
       </div>
-    </div>
 
   );
 }

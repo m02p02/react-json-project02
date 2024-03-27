@@ -41,7 +41,7 @@ function RandomLocationPage() {
             </p>
           </div>
 
-          <div className="body-div place-container" key={place.id}>
+          <div className="body-inner-scroll place-container" key={place.id}>
             {place && (
               <>
                 <Tabs

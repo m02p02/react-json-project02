@@ -1,12 +1,12 @@
-import React, { useState } from "react";
+import { useState } from "react";
 
 import "./HomePage.css";
 
 function HomePage() {
-  const [isEarthHovered, setIsEarthHovered] = useState(false);
   const [isDatabaseHovered, setIsDatabaseHovered] = useState(false);
   const [isRandomHovered, setIsRandomHovered] = useState(false);
   const [isLogHovered, setIsLogHovered] = useState(false);
+  const [isEarthHovered, setIsEarthHovered] = useState(false);
 
   return (
 

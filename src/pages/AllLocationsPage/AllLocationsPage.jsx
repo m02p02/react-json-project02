@@ -1,7 +1,9 @@
+import { useEffect, useState } from "react";
 import axios from "axios";
-import React, { useEffect, useState } from "react";
 import { Card } from "react-bootstrap";
 import { Link } from "react-router-dom";
+
+import "./AllLocationsPage.css";
 
 function AllLocationsPage() {
   const [place, setPlace] = useState([]);
@@ -32,7 +34,7 @@ function AllLocationsPage() {
               </p>
             </div>
 
-            <div className="body-div location-cards-container">
+            <div className="body-inner-scroll location-cards-container">
               {place.map((place) => (
                 <Card
                   key={place.id}

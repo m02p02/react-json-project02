@@ -68,7 +68,7 @@ function AddLocationPage() {
             <p className="global-code-header">▶_書込中: logging new discovery...</p>
           </div>
 
-          <div className="body-div">
+          <div className="body-inner-scroll">
             <form className="input-place-form" onSubmit={handleSubmit}>
               <label className="input-label">
                 ▶_placeName_名前_▶_: --required-- /済

@@ -1,22 +1,55 @@
-import { Container, Navbar, Nav } from 'react-bootstrap';
+import { useState } from "react";
+import { Link } from "react-router-dom";
+import { RiHomeFill, RiDatabase2Fill } from "react-icons/ri";
+import { FaQuestionCircle, FaPlusSquare } from "react-icons/fa";
 import "./NavMenu.css";
 
 function NavMenu() {
+    const [navMessage, setNavMessage] = useState("nav: loading...");
+
+    const handleHover = (message) => {
+        setNavMessage(message);
+    };
+
+    const handleOffHover = () => {
+        setNavMessage("nav: loading...");
+    };
 
     return (
         <div className="nav-container-outer">
-            <Container className="nav-container-inner">
-                <Navbar>
-                    <Nav>
-                        <Nav.Link href='/'><button className='nav-btn'>h o m e</button></Nav.Link>
-                        <Nav.Link href='/places/all-places'><button className='nav-btn'>a l l</button></Nav.Link>
-                        <Nav.Link href='/places/random-place'><button className='nav-btn'>r a n d o m</button></Nav.Link>
-                        <Nav.Link href='/places/add-place'><button className='nav-btn'>a d d</button></Nav.Link>
-                    </Nav>
-                </Navbar>
-            </Container>
+            <div className="nav-container-inner">
+
+                <Link to='/'
+                    onMouseEnter={() => handleHover("nav: home")}
+                    onMouseLeave={() => handleHover(handleOffHover)}>
+                    <button className='nav-btn'><RiHomeFill /></button>
+                </Link>
+
+                <Link to='/places/all-places'
+                    onMouseEnter={() => handleHover("nav: full database")}
+                    onMouseLeave={() => handleHover(handleOffHover)}>
+                    <button className='nav-btn'><RiDatabase2Fill /></button>
+                </Link>
+
+                <Link to='/places/random-place'
+                    onMouseEnter={() => handleHover("nav: random destination")}
+                    onMouseLeave={() => handleHover(handleOffHover)}>
+                    <button className='nav-btn'><FaQuestionCircle /></button>
+                </Link>
+
+                <Link to='/places/add-place'
+                    onMouseEnter={() => handleHover("nav: new destination")}
+                    onMouseLeave={() => handleHover(handleOffHover)}>
+                    <button className='nav-btn'><FaPlusSquare /></button>
+                </Link>
+
+                <div className="nav-msg-display">
+                    <p>{navMessage}</p>
+                </div>
+
+            </div>
         </div>
-    )
+    );
 }
 
 export default NavMenu;

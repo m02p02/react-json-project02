@@ -73,13 +73,13 @@ function EditLocationsPage() {
         <div className="global-panel">
 
             <div>
-              <p className="component-header">▶_記入: </p>
-              <p className="component-header">
+              <p className="global-code-header">▶_記入: </p>
+              <p className="global-code-header">
                 ▶_書込中: updating location [{placeName}]...
               </p>
             </div>
 
-            <div className="body-div">
+            <div className="body-inner-scroll">
               <form className="input-place-form" onSubmit={handleFormSubmit}>
                 <label className="input-label">
                   ▶_placeName_名前_▶_: --required-- /済

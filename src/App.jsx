@@ -23,12 +23,7 @@ function App() {
         <Route path="/places/edit/:placeId" element={<EditLocationsPage />} />
         <Route path="/places/add-place" element={<AddLocationPage />} />
       </Routes>
-      {location.pathname !== "/" && <NavMenu />}
-      {location.pathname === "/" && (
-        <div id="title-banner">
-          Exo App Cosmic Logger: Bootcamp Wars, Ver. 2.0
-        </div>
-      )}
+      <NavMenu />
     </div>
   );
 }
