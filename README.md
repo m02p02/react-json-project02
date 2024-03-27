@@ -32,6 +32,9 @@ Updates and changes
 - Externally sourced media with available attribution logged below
 - The database is non-persistent and user-submitted images are fetched in real-time via URL and are not saved, stored or duplicated locally or on the database
 
+- Note:
+    - CRT-style horizontal bars adapted from [DEV: Retro CRT terminal screen in CSS + JS, by Edwin](https://dev.to/ekeijl/retro-crt-terminal-screen-in-css-js-4afh)
+
 ## Description
 This app began as a unit project meant to practice and showcase CRUD operations.
 

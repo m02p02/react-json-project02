@@ -28,23 +28,33 @@
   align-items: flex-start;
   justify-content: flex-start;
   flex-wrap: nowrap;
+  filter: drop-shadow(0 0 5px var(--rust-02));
   overflow: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--dark-02) transparent;
 }
 
 .global-panel:before {
-  height: 85%;
-  width: 85%;
-  position: fixed;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
   content: " ";
   border-radius: 20px;
   background: var(--panel-grad);
-  background-size: 100vh 10px;
+  background-size: 100% 10px;
   background-repeat: repeat;
+  background-attachment: scroll;
   z-index: 2;
   pointer-events: none;
 }
 
-
+#title-banner {
+  border: 2px solid yellow;
+  color: white;
+  z-index: 1000;
+}
 
 
 
@@ -52,14 +62,12 @@
 .component-header {
   background-color: transparent;
   opacity: 0.65;
-  height: 40px;
-  color: #00ff2b;
-  font-size: 25px;
-  font-family: 'Courier New', Courier, monospace;
+  padding: 0;
+  margin: 1rem;
+  line-height: 1;
+  color: var(--pip-04);
+  font-family: var(--font-family-2);
   text-align: start;
-  padding-top: 10px;
-  padding-left: 30px;
-  margin-bottom: 2px;
   position: relative;
 }
 
@@ -125,13 +133,9 @@ place containers
 }
 
 .place-container {
-  margin: 2%;
-  max-width: 50%;
-  height: auto;
+  margin: 0 auto;
+  max-width: 99%;
   position: relative;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -0%);
 }
 
 .tab-content {
@@ -160,7 +164,7 @@ place containers
 
 /* AddLocationsPage, EditPage*/
 .body-div {
-  overflow: hidden;
+  overflow: auto;
 }
 
 .input-place-form {

@@ -16,16 +16,21 @@ function App() {
   return (
     <div>
       <Routes>
-        <Route path='/' element={<HomePage />} />
-        <Route path='/places/all-places' element={<AllLocationsPage />} />
-        <Route path='/places/details/:placeId' element={<LocationDetailsPage />} />
-        <Route path='/places/random-place' element={<RandomLocationPage />} />
-        <Route path='/places/edit/:placeId' element={<EditLocationsPage />} />
-        <Route path='/places/add-place' element={<AddLocationPage />} />
+        <Route path="/" element={<HomePage />} />
+        <Route path="/places/all-places" element={<AllLocationsPage />} />
+        <Route path="/places/details/:placeId" element={<LocationDetailsPage />} />
+        <Route path="/places/random-place" element={<RandomLocationPage />} />
+        <Route path="/places/edit/:placeId" element={<EditLocationsPage />} />
+        <Route path="/places/add-place" element={<AddLocationPage />} />
       </Routes>
-      <NavMenu />
+      {location.pathname !== "/" && <NavMenu />}
+      {location.pathname === "/" && (
+        <div id="title-banner">
+          <p>Exo App Cosmic Logger: Bootcamp Wars, Ver. 2.0</p>
+        </div>
+      )}
     </div>
-  )
+  );
 }
 
 export default App;

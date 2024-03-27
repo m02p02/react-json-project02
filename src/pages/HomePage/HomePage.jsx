@@ -16,6 +16,11 @@ function HomePage() {
         <div className="global-panel">
           <div className="homepage-panel">
 
+            <div>
+              <p className="component-header">▶_記入: </p>
+              <p className="component-header">▶_書込中: location database...</p>
+            </div>
+
             <span className="hp-random-btn">
               <Button
                 onMouseEnter={() => setIsRandomHovered(true)}

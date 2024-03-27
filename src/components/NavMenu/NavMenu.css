@@ -1,26 +1,27 @@
 .nav-container-outer {
   position: fixed;
-  bottom: 2rem;
-  margin: 0 auto;
+  bottom: 0;
+  height: 5.5rem;
+  display: flex;
+  flex-direction: column;
 }
 
-.nav-container-inner {
-  height: 50px;
+/*nav-container-innter {}*/
+
+/* from bootstrap */
+.navbar-nav {
+  height: 10%;
   width: 90vw;
   background: transparent;
-  margin: 0.8rem;
+  margin: 0 auto;
   display: flex;
   justify-content: center;
-  align-items: flex-start;
-}
-
-.navbar-nav {
-  justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
 }
 
 .nav-btn {
-  height: 1.5rem;
+  height: 1.2rem;
   width: 5.5rem;
   font-size: 0.8rem;
   background: var(--dark-01);
