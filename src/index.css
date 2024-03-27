@@ -1,29 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&family=M+PLUS+Code+Latin:wght@100..700&family=Share+Tech+Mono&family=VT323&display=swap');
+
+/*
+"Kode Mono"
+"VT323"
+"m plus code latin"
+"share tech mono"
+*/
+
 :root {
   line-height: 1;
   font-size: 16px;
   font-weight: 400;
   text-decoration: none;
+  --font-family-1: "kode mono", courier, monospace;
+  --font-family-2: "vt323", courier, monospace;
+  --font-family-3: "m plus code latin", courier, monospace;
+  --font-family-4: "share tech mono", courier, monospace;
 
   color-scheme: light dark;
 
-  --pip-01: #000000;
-  --pip-02: #002f00;
-  --pip-03: #005f00;
-  --pip-04: #008e00;
-  --pip-05: #00ee00;
-
+  --light-01: #f3f5f3;
+  --dark-01: #0a0a0a;
+  --rust-01: #736A2F;
+  --rust-02: #403019;
+  --pip-01: #002f00;
+  --pip-02: #005f00;
+  --pip-03: #008e00;
+  --pip-04: #00ee00;
   --matrix-01: #00ff2b;
-
   --swars-01: #ffe81f;
 
   --rusty-grad:
     linear-gradient(
       45deg,
-      #736a2f,
-      #403019,
-      #736a2f,
-      #403019,
-      #736a2f
+      var(--rust-01),
+      var(--rust-02),
+      var(--rust-01),
+      var(--rust-02),
+      var(--rust-01)
       );
 
   font-synthesis: none;
@@ -37,13 +51,6 @@ body {
   box-sizing: content-box;
   margin: 0;
   padding: 0;
-}
-
-body {
-  background-image: url('./images/spacebackground.jpg');
-  background-blend-mode: multiply;
-  background-repeat: repeat;
-  background-size: cover;
 }
 
 a {

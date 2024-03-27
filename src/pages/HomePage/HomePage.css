@@ -1,42 +1,43 @@
-.galaxy-container {
-  margin: 0 auto;
-}
-
-.galaxy-map {
-  width: 85vw;
-  height: 85vh;
+.homepage-panel {
+  position: relative;
+  top: -2rem;
+  height: 85%;
+  width: 85%;
   background-image: url(./src/images/triangulumgalaxy.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   overflow: hidden;
-  border: 1rem solid #929489;
-  border-radius: 25px;
+
+  
+  border-radius: 20px;
+  border: 1px solid var(--pip-02);
 }
 
-.galaxy-map Button {
-  font-family: 'Courier New', Courier, monospace;
-  font-size: 15px;
+.homepage-panel Button {
+  font-family: var(--font-family-2);
+  font-size: 2rem;
   font-weight: bold;
   background-color: transparent;
   border: 0px;
   border-radius: 25px;
-  color: #00ff2b;
+  color: var(--pip-04);
 }
 
+/*
 .hp-earth-icon:hover ~ .hp-log-icon {
   height: 40px;
   width: 40px;
 }
 
-.galaxy-map Button:hover {
+.homepage-panel Button:hover {
   background-color: transparent;
   border: 2px solid #ffe81f;
   color: #00ff2b !important;
   font-weight: normal;
 }
 
-.galaxy-map a {
+.homepage-panel a {
   color: #00ff2b;
 }
 
@@ -135,54 +136,4 @@
   left: 20%;
   position: absolute;
 }
-
-.zoom-in {
-  animation: zoomIn 2s ease-in-out;
-}
-
-@keyframes zoomIn {
-  from {
-    transform: scale(4);
-  }
-
-  to {
-    transform: scale(1);
-  }
-
-  /*.hp-random-btn3 {
-    top: 58%;
-    left: 20%;
-    position: absolute;
-  }
-
-  .hp-random-btnEarth {
-    top: 65%;
-    left: 80%;
-    position: absolute;
-  }
-  
-  .galaxy-map span {
-    color: aliceblue;
-  }
-  
-  .galaxy-btn {
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: 15px;
-    background-color:	#021631;
-    border: 1px solid aliceblue;
-    border-radius: 25px;
-  }
-
-  .zoom-in {
-    animation: zoomIn 2s ease-in-out; 
-  } 
-  
-  @keyframes zoomIn {
-    from {
-      transform: scale(4); 
-    }
-    to {
-      transform: scale(1);
-    }
-  } */
-}
+*/

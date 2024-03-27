@@ -1,31 +1,42 @@
 .nav-container-outer {
+  position: fixed;
+  bottom: 2rem;
   margin: 0 auto;
-  display: flex;
 }
 
 .nav-container-inner {
   height: 50px;
   width: 90vw;
-  background:
-    var(--rusty-grad),
-    url("https://img.freepik.com/free-photo/rough-metallic-surface-texture_23-2148953969.jpg");
-  background-blend-mode: multiply;
-
+  background: transparent;
+  margin: 0.8rem;
   display: flex;
   justify-content: center;
+  align-items: flex-start;
+}
+
+.navbar-nav {
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .nav-btn {
-  height: 30px;
-  background-color: black;
-  border: 5px solid black;
-  font-size: 1rem;
-  color: #00ff2b;
-  border-radius: 25px;
-  font-family: 'Courier New', Courier, monospace;
+  height: 1.5rem;
+  width: 5.5rem;
+  font-size: 0.8rem;
+  background: var(--dark-01);
+  border-radius: 12px;
+  border: 1px solid var(--rust-02);
+  box-shadow: 1px 1px 2px var(--dark-01);
+  color: var(--light-01);
+  font-family: var(--font-family-1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .nav-btn:hover {
-  background-color: #ffe81f;
-  color: black;
+  color: var(--pip-04);
+  transform: translateX(2%) translateY(5%);
+  box-shadow: 1px 1px 2px var(--matrix-01);
+  filter: drop-shadow(0 0 2rem var(--pip-03));
 }

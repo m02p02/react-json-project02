@@ -6,13 +6,13 @@
   background-blend-mode: multiply;
 }
 
-.app-screen {
-  position: relative;
+.app-panel {
   height: 100vh;
   width: 100vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
 }
 
 
@@ -69,7 +69,7 @@ AllLocationsPage
   background-color: transparent;
   border-radius: 8px;
   color: #00ff2b;
-  font-family: 'Courier New', Courier, monospace;
+  font-family: "share tech mono";
   padding: 5px 10px 0px 10px;
   position: absolute;
   top: 80%;
