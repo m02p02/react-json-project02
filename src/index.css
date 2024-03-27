@@ -19,8 +19,10 @@
 
   color-scheme: light dark;
 
-  --light-01: #f3f5f3;
+  --light-01: rgb(243, 245, 243);
   --dark-01: #0a0a0a;
+  --dark-02: #1a200e;
+  --dark-03: #111509;
   --rust-01: #736A2F;
   --rust-02: #403019;
   --pip-01: #002f00;
@@ -30,15 +32,15 @@
   --matrix-01: #00ff2b;
   --swars-01: #ffe81f;
 
-  --rusty-grad:
-    linear-gradient(
-      45deg,
-      var(--rust-01),
-      var(--rust-02),
-      var(--rust-01),
-      var(--rust-02),
-      var(--rust-01)
-      );
+  --monitor-grad:
+    linear-gradient(to bottom,
+      var(--dark-03),
+      var(--dark-02));
+
+  --panel-grad:
+    linear-gradient(to bottom,
+      rgba(0, 95, 0, 0) 50%,
+      rgba(0, 47, 0, 0.25) 50%);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;

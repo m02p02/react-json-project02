@@ -1,27 +1,22 @@
 .homepage-panel {
-  position: relative;
-  top: -2rem;
-  height: 85%;
-  width: 85%;
+  height: 100%;
+  width: 100%;
   background-image: url(./src/images/triangulumgalaxy.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   overflow: hidden;
-
-  
-  border-radius: 20px;
-  border: 1px solid var(--pip-02);
 }
 
 .homepage-panel Button {
+  margin: 1rem;
   font-family: var(--font-family-2);
-  font-size: 2rem;
-  font-weight: bold;
-  background-color: transparent;
+  font-size: 1.2rem;
   border: 0px;
   border-radius: 25px;
   color: var(--pip-04);
+  background-color: transparent;
+  display: flex;
 }
 
 /*

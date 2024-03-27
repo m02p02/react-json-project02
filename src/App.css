@@ -1,12 +1,12 @@
-.app-frame {
+.app-monitor {
   position: fixed;
   background:
-    var(--rusty-grad),
+    var(--monitor-grad),
     url("https://img.freepik.com/free-photo/rough-metallic-surface-texture_23-2148953969.jpg");
   background-blend-mode: multiply;
 }
 
-.app-panel {
+.app-bezel {
   height: 100vh;
   width: 100vw;
   display: flex;
@@ -15,6 +15,34 @@
   align-items: center;
 }
 
+.global-panel {
+  position: relative;
+  top: -2rem;
+  height: 85%;
+  width: 85%;
+  border-radius: 20px;
+  border: 1px solid var(--pip-02);
+  background: var(--dark-01);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  overflow: auto;
+}
+
+.global-panel:before {
+  height: 85%;
+  width: 85%;
+  position: fixed;
+  content: " ";
+  border-radius: 20px;
+  background: var(--panel-grad);
+  background-size: 100vh 10px;
+  background-repeat: repeat;
+  z-index: 2;
+  pointer-events: none;
+}
 
 
 

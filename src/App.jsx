@@ -14,18 +14,16 @@ import './App.css'
 function App() {
 
   return (
-    <div className="app-frame">
-      <div className="app-panel">
-        <Routes>
-          <Route path='/' element={<HomePage />} />
-          <Route path='/places/all-places' element={<AllLocationsPage />} />
-          <Route path='/places/details/:placeId' element={<LocationDetailsPage />} />
-          <Route path='/places/random-place' element={<RandomLocationPage />} />
-          <Route path='/places/edit/:placeId' element={<EditLocationsPage />} />
-          <Route path='/places/add-place' element={<AddLocationPage />} />
-        </Routes>
-        <NavMenu />
-      </div>
+    <div>
+      <Routes>
+        <Route path='/' element={<HomePage />} />
+        <Route path='/places/all-places' element={<AllLocationsPage />} />
+        <Route path='/places/details/:placeId' element={<LocationDetailsPage />} />
+        <Route path='/places/random-place' element={<RandomLocationPage />} />
+        <Route path='/places/edit/:placeId' element={<EditLocationsPage />} />
+        <Route path='/places/add-place' element={<AddLocationPage />} />
+      </Routes>
+      <NavMenu />
     </div>
   )
 }
