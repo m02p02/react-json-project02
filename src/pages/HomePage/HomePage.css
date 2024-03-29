@@ -1,7 +1,7 @@
 .homepage-panel {
   height: 100%;
   width: 100%;
-  background-image: url(./src/images/triangulumgalaxy.jpg);
+  background: url(./src/images/triangulumgalaxy.jpg?v=2);
   background-size: cover;
   background-position: center;
 }
@@ -17,7 +17,7 @@
   font-family: var(--font-family-2);
   border: 0px;
   background: transparent;
-  border-radius: 20px;
+  border-radius: 8px;
   display: flex;
 }
 

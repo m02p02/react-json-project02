@@ -1,4 +1,5 @@
 .location-cards-container {
+    height: 100%;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -6,45 +7,51 @@
   }
   
   .location-cards {
-    height: 350px;
-    max-width: 220px;
-    border-radius: 2px;
-    background: transparent;
     position: relative;
-    
-    border: 1px solid red;
+    height: 50%;
+    margin: 0.5rem;
+    background: transparent;
+    border: 1px solid var(--pip-03);
+    border-radius: 8px;
   }
   
   .location-cards img {
-    border: 1px solid var(--pip-03);
-    max-width: 200px;
-    max-height: auto;
     position: absolute;
     top: 40%;
     left: 50%;
+    max-width: 90%;
+    max-height: 50%;
+    object-fit: contain;
     transform: translate(-50%, -50%);
   }
   
   .location-cards-font {
-    width: 10rem;
-    background-color: transparent;
-    border-radius: 8px;
-    color: var(--matrix-01);
-    font-family: var(--font-family-4);
-    padding: 5px 10px 0px 10px;
     position: absolute;
     top: 80%;
     left: 50%;
+    width: 75%;
+    padding: 2px;
+    background-color: transparent;
+    border-bottom: 1px solid var(--pip-04);
+    border-radius: 0;
     transform: translate(-50%, -50%);
-    box-shadow: 1px 2px grey;
-    text-align: start;
+
   }
   
   .card-font {
-    font-size: 18px;
+    padding: 5px 2px 0 2px;
+    color: var(--matrix-01);
+    font-family: var(--font-family-4);
+    font-size: 1rem;
+    text-align: start;
   }
   
   .location-cards-font:hover {
-    background-color: #ffe81f;
-    color: black;
+    background: var(--matrix-01);
+    border-radius: 8px;
+  }
+
+  .location-cards-font:hover
+  .card-font {
+    color: var(--dark-01);
   }

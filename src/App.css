@@ -78,40 +78,53 @@
 }
 
 /*
-place containers
+location details and random pages
 */
-.custom-tabs .nav-link {
-  font-family: var(--font-family-2);
-  color: #36ba01;
-}
-
 .place-container {
   margin: 0 auto;
-  max-width: 99%;
+  max-width: 85%;
   position: relative;
 }
 
-.tab-content {
-  margin: 5%;
+.custom-tabs {
+  border-bottom: 1px solid var(--pip-04);
+  font-family: var(--font-family-2);
+  font-size: 1.5rem;
 }
 
-.place-container h5 {
-  font-weight: bold;
-  text-align: start;
-  padding-top: 5%;
-  color: #36ba01;
+#uncontrolled-tab-example-tab-place.nav-link,
+#uncontrolled-tab-example-tab-life.nav-link {
+  color: var(--matrix-01);
+  background: transparent;
+  border: 0;
 }
 
-.place-container p {
-  font-size: 15px;
+#uncontrolled-tab-example-tab-place.nav-link.active,
+#uncontrolled-tab-example-tab-life.nav-link.active {
+  color: var(--dark-01);
+  background: var(--pip-04);
+}
+
+.tab-panel {
+  margin: 0 1rem;
+  padding: 0;
   text-align: start;
-  padding-top: 0%;
+}
+
+.tab-panel h1 {
+  margin: 0.5rem 0;
+}
+
+.tab-panel p {
+  line-height: 1.5rem;
 }
 
 .container-image,
 .inhabitants-image {
-  width: 50%;
-  padding: 20px;
+  max-width: 60%;
+  max-height: 50%;
+  object-fit: contain;
+  margin: 1rem 1rem 0 1rem;
 }
 
 /* AddLocationsPage, EditPage*/
@@ -154,21 +167,24 @@ textarea {
   color: #36ba01;
 }
 
-/* submit buttons: LocationDetails, AddLocationsPage, EditPage */
+/*
+global: submit buttons
+*/
 .submit-btn {
+  width: 8rem;
+  margin: 1rem;
+  padding: 2px 1rem;
   background-color: transparent;
-  border: 1px solid #36ba01;
-  color: #36ba01;
-  font-size: 20px;
-  font-family: 'Courier New', Courier, monospace;
-  width: 60%;
-  padding: 5px;
-  margin-top: 20px;
-  margin-bottom: 60px;
-  border-radius: 12px;
+  border-style: none;
+  border-radius: 0;
+  border-top: 1px solid var(--pip-04);
+  font-family: var(--font-family-4);
+  color: var(--pip-04);
+  font-size: 1.2rem;
 }
 
 .submit-btn:hover {
-  background-color: #ffe81f;
-  color: black;
+  border-radius: 8px;
+  background-color: var(--matrix-01);
+  color: var(--dark-01);
 }

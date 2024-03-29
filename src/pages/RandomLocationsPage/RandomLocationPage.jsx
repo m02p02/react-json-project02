@@ -1,8 +1,6 @@
-import React from "react";
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-
 import { Tab, Tabs } from "react-bootstrap";
 
 function RandomLocationPage() {
@@ -49,7 +47,7 @@ function RandomLocationPage() {
                   id="uncontrolled-tab-example"
                   className="mb-3 custom-tabs"
                 >
-                  <Tab eventKey="place" title="_: place">
+                  <Tab eventKey="place" title="▶_: place">
                     <img
                       className="container-image"
                       src={place.placeImage || "/src/images/stormtroopers1.jpg"}
@@ -58,13 +56,13 @@ function RandomLocationPage() {
                         e.target.src = "/src/images/stormtroopers1.jpg";
                       }}
                     />
-                    <div className="tab-content">
-                      <h5>▶_名: {place.placeName}</h5>
+                    <div className="tab-panel">
+                      <h1>▶_名: {place.placeName}</h1>
                       <p>▶_: {place.location}</p>
                       <p>▶_: {place.placeDescription}</p>
                     </div>
                   </Tab>
-                  <Tab eventKey="life" title="_: life">
+                  <Tab eventKey="life" title="▶_: life">
                     <img
                       className="inhabitants-image"
                       src={
@@ -75,8 +73,10 @@ function RandomLocationPage() {
                         e.target.src = "/src/images/stormtroopers1.jpg";
                       }}
                     />
-                    <h5>▶_人類: {place.inhabitants}</h5>
-                    <p>▶_: {place.inhabitantsDescription}</p>
+                    <div className="tab-panel">
+                      <h1>▶_人類: {place.inhabitants}</h1>
+                      <p>▶_: {place.inhabitantsDescription}</p>
+                    </div>
                   </Tab>
                 </Tabs>
 
