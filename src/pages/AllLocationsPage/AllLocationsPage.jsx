@@ -28,9 +28,9 @@ function AllLocationsPage() {
         <div className="global-panel">
 
             <div>
-              <p className="global-code-header">▶_記入:</p>
+              <p className="global-code-header">▶_: 記入</p>
               <p className="global-code-header">
-                ▶_済: all locations loaded...
+                ▶_: all locations loaded...
               </p>
             </div>
 
@@ -44,9 +44,10 @@ function AllLocationsPage() {
                   <div>
                     <Card.Img
                       variant="top"
-                      src={
-                        place.placeImage ? place.placeImage : "/src/images/matrix.jpg"
-                      }
+                      src={place.placeImage}
+                      onError={(e) => {
+                        e.target.src="/src/images/broken-pip04.png";
+                      }}
                     />
                     <Card.Body>
                       <Link to={`/places/details/${place.id}`}>

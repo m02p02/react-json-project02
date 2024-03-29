@@ -1,6 +1,8 @@
 # Exo App Cosmic Logger: Bootcamp Wars
 Ironhack Web Development Bootcamp, Module 02, Week 06, Project 02: React, JSON API + CRUD (create, read, update, delete) functionality.
 
+<img src="./src/images/readme-image-01.png">
+
 by [Alfonso Marquez](https://github.com/mqzmcs) and [Yavuz Balay](https://github.com/yvzbly)
 
 # [2024 APR] Version 2 by [Alfonso Marquez](https://github.com/mqzmcs)
@@ -39,7 +41,9 @@ It is momentarily a non-persistent JSON API database in which users are able to 
 
 The concept of the cosmetic design and interactivity is meant to invoke an experience of retro sci-fi nostalgia and distopian grungy hacker tropes: Star Wars meets The Matrix meets Cyberpunk 2077 meets Fallout.
 
-<img src='src/images/readme-image.png'>
+<img src="./src/images/readme-image-02.png">
+
+
 
 ## Run the app locally or through your browser:
 

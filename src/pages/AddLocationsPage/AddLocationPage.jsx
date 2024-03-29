@@ -1,6 +1,6 @@
 import axios from "axios";
-import React, { useState, useEffect } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 function AddLocationPage() {
   const [placeName, setPlaceName] = useState("");
@@ -64,109 +64,130 @@ function AddLocationPage() {
         <div className="global-panel">
 
           <div>
-            <p className="global-code-header">▶_記入: </p>
-            <p className="global-code-header">▶_書込中: logging new discovery...</p>
+            <p className="global-code-header">▶_: 記入</p>
+            <p className="global-code-header">▶_: logging new discovery...</p>
           </div>
 
           <div className="body-inner-scroll">
             <form className="input-place-form" onSubmit={handleSubmit}>
-              <label className="input-label">
-                ▶_placeName_名前_▶_: --required-- /済
-                <input
-                  type="text"
-                  name="Place"
-                  placeholder="▶_記入: logging name..."
-                  required={true}
-                  value={placeName}
-                  onChange={(e) => {
-                    setPlaceName(e.target.value);
-                  }}
-                />
+              <label
+                className="input-label"
+                htmlFor="place-name">
+                ▶_: logging name
               </label>
-              <label className="input-label">
-                ▶_location_場所_▶_: --required-- /済
-                <input
-                  type="text"
-                  name="Location"
-                  placeholder="▶_記入: logging location..."
-                  required={true}
-                  value={location}
-                  onChange={(e) => {
-                    setLocation(e.target.value);
-                  }}
-                />
+              <input
+                type="text"
+                id="place-name"
+                name="place"
+                placeholder="▶_: enter place name..."
+                required={true}
+                value={placeName}
+                onChange={(e) => {
+                  setPlaceName(e.target.value);
+                }}
+              />
+              <label
+                className="input-label"
+                htmlFor="location">
+                ▶_: logging location -name
               </label>
-              <label className="input-textarea">
-                ▶_description_▶_: --if:NONE-- input_"unknown"_/済
-                <textarea
-                  type="text"
-                  name="Description"
-                  placeholder="▶_記入: updating location information..."
-                  required={true}
-                  value={placeDescription}
-                  onChange={(e) => {
-                    setPlaceDescription(e.target.value);
-                  }}
-                />
+              <input
+                type="text"
+                id="location"
+                name="location"
+                placeholder="▶_: enter location..."
+                required={true}
+                value={location}
+                onChange={(e) => {
+                  setLocation(e.target.value);
+                }}
+              />
+              <label
+                className="input-textarea"
+                htmlFor="location-description">
+                ▶_: logging location -description
               </label>
-              <label className="input-label">
-                ▶_URL_placeImage_画像_▶_: if:NONE-- input_ _/済
-                <input
-                  type="text"
-                  name="Place Image"
-                  placeholder="▶_記入: expecting URL..."
-                  required={false}
-                  value={placeImage}
-                  onChange={(e) => {
-                    setPlaceImage(e.target.value);
-                  }}
-                />
+              <textarea
+                type="text"
+                id="location-description"
+                name="description"
+                placeholder="▶_: enter location description or [unknown]..."
+                required={true}
+                value={placeDescription}
+                onChange={(e) => {
+                  setPlaceDescription(e.target.value);
+                }}
+              />
+              <label
+                className="input-label"
+                htmlFor="location-image-url">
+                ▶_: logging image URL -location
               </label>
-              <label className="input-label">
-                ▶_inhabitants_人類_▶_: --if:UNKNOWN-- input_"unknown"_/済
-                <input
-                  type="text"
-                  name="Inhabitants"
-                  placeholder="▶_記入: logging life form..."
-                  required={true}
-                  value={inhabitants}
-                  onChange={(e) => {
-                    setinhabitants(e.target.value);
-                  }}
-                />
+              <input
+                type="text"
+                id="location-image-url"
+                name="place Image"
+                placeholder="▶_: enter URL or [ ]..."
+                required={false}
+                value={placeImage}
+                onChange={(e) => {
+                  setPlaceImage(e.target.value);
+                }}
+              />
+              <label
+                className="input-label"
+                htmlFor="inhabitants-name">
+                ▶_: logging lifeforms -inhabitants
               </label>
-              <label className="input-textarea">
-                ▶_description_▶_: --if:NONE-- input_"unknown"_/済
-                <textarea
-                  type="text"
-                  name="Inhabitants description"
-                  placeholder="▶_記入: updating life form information..."
-                  required={true}
-                  value={inhabitantsDescription}
-                  onChange={(e) => {
-                    setInhabitantsDescription(e.target.value);
-                  }}
-                />
+              <input
+                type="text"
+                id="inhabitants-name"
+                name="Inhabitants"
+                placeholder="▶_: enter lifeforms or [unknown]..."
+                required={true}
+                value={inhabitants}
+                onChange={(e) => {
+                  setinhabitants(e.target.value);
+                }}
+              />
+              <label
+                className="input-textarea"
+                htmlFor="inhabitants-description">
+                ▶_: logging inhabitants -description
               </label>
-              <label className="input-label">
-                ▶_URL_inhabitantImage_画像_▶_: --if:NONE-- input_ _/済
-                <input
-                  type="text"
-                  name="Inhabitants Image"
-                  placeholder="▶_記入: expecting URL..."
-                  required={false}
-                  value={inhabitantsImage}
-                  onChange={(e) => {
-                    setInhabitantsImage(e.target.value);
-                  }}
-                />
+              <textarea
+                type="text"
+                id="inhabitants-description"
+                name="inhabitants-description"
+                placeholder="▶_: enter inhabitant information or [unknown]..."
+                required={true}
+                value={inhabitantsDescription}
+                onChange={(e) => {
+                  setInhabitantsDescription(e.target.value);
+                }}
+              />
+              <label
+                className="input-label"
+                htmlFor="inhabitants-image-url">
+                ▶_: logging image URL -inhabitants
               </label>
-              <button className="submit-btn" type="submit">
-                Add to Database
+              <input
+                type="text"
+                id="inhabitants-image-url"
+                name="inhabitants-image"
+                placeholder="▶_: enter URL or [ ]..."
+                required={false}
+                value={inhabitantsImage}
+                onChange={(e) => {
+                  setInhabitantsImage(e.target.value);
+                }}
+              />
+              <button className="form-submit-btn" type="submit">
+                add to database
               </button>
             </form>
           </div>
-          
+
         </div>
       </div>
     </div>

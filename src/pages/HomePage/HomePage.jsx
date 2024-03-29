@@ -16,8 +16,8 @@ function HomePage() {
           <div className="homepage-panel">
 
             <div>
-              <p className="global-code-header">▶_記入: </p>
-              <p className="global-code-header">▶_書込中: select...</p>
+              <p className="global-code-header">▶_: 記入</p>
+              <p className="global-code-header">▶_: select...</p>
             </div>
 
             <div className="homepage-panel-btn-container">

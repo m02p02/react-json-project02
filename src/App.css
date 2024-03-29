@@ -15,6 +15,11 @@
   align-items: center;
 }
 
+.body-inner-scroll {
+  margin: 0 auto;
+  overflow: auto;
+}
+
 .global-panel {
   position: relative;
   top: -2rem;
@@ -111,69 +116,106 @@ location details and random pages
   text-align: start;
 }
 
-.tab-panel h1 {
-  margin: 0.5rem 0;
+.tab-panel-name {
+  margin: 2rem 0;
+  font-size: 1.5rem;
 }
 
-.tab-panel p {
+.tab-panel-location {
+  margin-bottom: 1rem;
+}
+
+.tab-panel-description {
   line-height: 1.5rem;
 }
 
 .container-image,
 .inhabitants-image {
-  max-width: 60%;
-  max-height: 50%;
+  max-width: 500px;
+  max-height: 350px;
   object-fit: contain;
   margin: 1rem 1rem 0 1rem;
 }
 
-/* AddLocationsPage, EditPage*/
-.body-inner-scroll {
-  overflow: auto;
-}
-
+/*
+add and edit location pages
+*/
 .input-place-form {
-  font-size: 15px;
-  min-width: 70%;
-  height: auto;
+  width: 75vw;
 }
 
 .input-label,
 .input-textarea {
+  padding: 1.5rem 0 5px 2rem;
+  background: transparent;
+  color: var(--pip-04);
+  font-family: var(--font-family-2);
+  font-size: 1.2rem;
+  text-align: start;
   display: flex;
   flex-direction: column;
-  width: 100%;
-  color: #36ba01;
-  font-size: 18px;
-  font-family: 'Courier New', Courier, monospace;
-  background-color: transparent;
-  text-align: start;
-  padding-top: 40px;
+  flex-wrap: nowrap;
 }
 
 .input-textarea {
   resize: vertical;
 }
 
-input {
+input,
+textarea {
+  margin: 0 2rem;
+  padding: 5px 0 0 0;
+  width: 50ch;
   background-color: transparent;
-  font-family: 'Courier New', Courier, monospace;
-  color: #36ba01;
+  border-style: none;
+  border-bottom: 1px solid var(--pip-03);
+  color: var(--matrix-01);
+  line-height: 1.5rem;
 }
 
-textarea {
-  background-color: transparent;
-  font-family: 'Courier New', Courier, monospace;
-  color: #36ba01;
+@media screen and (max-width: 729px) {
+  input,
+  textarea {
+    width: 35ch;
+  }
+}
+
+@media screen and (max-width: 549px) {
+  input,
+  textarea {
+    width: 28ch;
+  }
+}
+
+@media screen and (max-width: 444px) {
+  input,
+  textarea {
+    width: 22ch;
+  }
+}
+
+
+input::placeholder,
+textarea::placeholder {
+  font-size: 1.2rem;
+  font-family: var(--font-family-2);
+  color: var(--pip-03);
+}
+
+.form-submit-btn {
+  width: 8rem;
+  margin: 2rem;
+  padding: 2px 1rem;
+  display: flex;
+  justify-content: center;
 }
 
 /*
 global: submit buttons
 */
-.submit-btn {
+.submit-btn,
+.form-submit-btn {
   width: 8rem;
-  margin: 1rem;
-  padding: 2px 1rem;
   background-color: transparent;
   border-style: none;
   border-radius: 0;
@@ -183,7 +225,13 @@ global: submit buttons
   font-size: 1.2rem;
 }
 
-.submit-btn:hover {
+.submit-btn {
+  margin: 1rem;
+  padding: 2px 1rem;
+}
+
+.submit-btn:hover,
+.form-submit-btn:hover {
   border-radius: 8px;
   background-color: var(--matrix-01);
   color: var(--dark-01);

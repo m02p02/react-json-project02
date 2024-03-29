@@ -44,9 +44,9 @@ function LocationDetailsPage(props) {
         <div className="global-panel">
 
           <div>
-            <p className="global-code-header">▶_記入: </p>
+            <p className="global-code-header">▶_: 記入</p>
             <p className="global-code-header">
-              ▶_済: location [{place.placeName ? place.placeName.toUpperCase() : ""}] loaded...
+              ▶_: location [{place.placeName ? place.placeName.toUpperCase() : ""}] loaded...
             </p>
           </div>
 
@@ -61,32 +61,32 @@ function LocationDetailsPage(props) {
                   <Tab eventKey="place" title="▶_: place">
                     <img
                       className="container-image"
-                      src={place.placeImage || "/src/images/stormtroopers1.jpg"}
+                      src={place.placeImage || "/src/images/broken-pip04.png"}
                       alt={place.placeName}
                       onError={(e) => {
-                        e.target.src = "/src/images/stormtroopers1.jpg";
+                        e.target.src = "/src/images/broken-pip04.png";
                       }}
                     />
                     <div className="tab-panel">
-                      <h1>▶_名: {place.placeName}</h1>
-                      <p>▶_: {place.location}</p>
-                      <p>▶_: {place.placeDescription}</p>
+                      <p className="tab-panel-name">▶_: {place.placeName}</p>
+                      <p className="tab-panel-location">▶_: {place.location}</p>
+                      <p className="tab-panel-description">▶_: {place.placeDescription}</p>
                     </div>
                   </Tab>
                   <Tab eventKey="life" title="▶_: life">
                     <img
                       className="inhabitants-image"
                       src={
-                        place.inhabitantsImage || "/src/images/stormtroopers1.jpg"
+                        place.inhabitantsImage || "/src/images/broken-pip04.png"
                       }
                       alt={place.inhabitants}
                       onError={(e) => {
-                        e.target.src = "/src/images/stormtroopers1.jpg";
+                        e.target.src = "/src/images/broken-pip04.png";
                       }}
                     />
                     <div className="tab-panel">
-                      <h1>▶_人類: {place.inhabitants}</h1>
-                      <p>▶_: {place.inhabitantsDescription}</p>
+                      <p className="tab-panel-name">▶_: {place.inhabitants}</p>
+                      <p className="tab-panel-description">▶_: {place.inhabitantsDescription}</p>
                     </div>
                   </Tab>
                 </Tabs>
@@ -95,7 +95,7 @@ function LocationDetailsPage(props) {
                   className="submit-btn"
                   onClick={() => navigate(`/places/edit/${placeId}`)}
                 >
-                  Update
+                  ▶_: update
                 </button>
                 <button
                   className="submit-btn"
@@ -103,7 +103,7 @@ function LocationDetailsPage(props) {
                     deletePlace();
                   }}
                 >
-                  Delete
+                  ▶_: delete
                 </button>
               </>
             )}
