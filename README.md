@@ -4,7 +4,7 @@
 <br />
 by [Alfonso Marquez](https://github.com/mqzmcs) and [Yavuz Balay](https://github.com/yvzbly)
 <br />
-<img src="./src/assets/images/readme-image-01.png" style="width:800px">
+<img src="https://res.cloudinary.com/dr2c3k5gm/image/upload/v1711833191/projects/exo-app-01_x5dwz7.png" style="width:1080px">
 
 Description below
 
@@ -52,7 +52,7 @@ Updates and changes
     - The remainder of the collaborated codebase is regularly being refactored.
 
 ## Description
-<img src="./src/assets/images/readme-image-02.png" style="width:800px">
+<img src="https://res.cloudinary.com/dr2c3k5gm/image/upload/v1711833188/projects/exo-app-02_ynkpoq.png" style="width:1080px">
 
 This app began as a unit project during Ironhack's Web Development Bootcamp to exercise and showcase React.js + CRUD (create, read, update, delete) functionality.
 
