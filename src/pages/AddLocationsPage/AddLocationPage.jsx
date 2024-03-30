@@ -19,12 +19,12 @@ function AddLocationPage() {
     const placeImageURL =
       placeImage.trim() !== ""
       ? placeImage
-      : "https://res.cloudinary.com/dr2c3k5gm/image/upload/v1711818514/utility/broken-pipgreen.png";
+      : import.meta.env.VITE_BROKEN_IMAGE;
 
     const inhabitantsImageURL =
       inhabitantsImage.trim() !== ""
         ? inhabitantsImage
-        : "https://res.cloudinary.com/dr2c3k5gm/image/upload/v1711818514/utility/broken-pipgreen.png";
+        : import.meta.env.VITE_BROKEN_IMAGE;
 
     const requestBody = {
       placeName: placeName,
@@ -37,7 +37,7 @@ function AddLocationPage() {
     };
 
     axios
-      .post("https://exo-app-rest-api.adaptable.app/places/", requestBody)
+      .post(import.meta.env.VITE_API_URL, requestBody)
       .then((response) => {
         navigate("/places/all-places");
       })

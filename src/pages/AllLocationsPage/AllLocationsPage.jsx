@@ -1,5 +1,5 @@
-import { useEffect, useState } from "react";
 import axios from "axios";
+import { useEffect, useState } from "react";
 import { Card } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
@@ -10,7 +10,7 @@ function AllLocationsPage() {
 
   const displayAllPlaces = () => {
     axios
-      .get("https://exo-app-rest-api.adaptable.app/places")
+      .get(import.meta.env.VITE_API_URL)
       .then((response) => {
         setPlace(response.data);
       })
@@ -46,7 +46,7 @@ function AllLocationsPage() {
                       variant="top"
                       src={place.placeImage}
                       onError={(e) => {
-                        e.target.src="/src/assets/images/broken-pip04.png";
+                        e.target.src = import.meta.env.VITE_BROKEN_IMAGE;
                       }}
                     />
                     <Card.Body>

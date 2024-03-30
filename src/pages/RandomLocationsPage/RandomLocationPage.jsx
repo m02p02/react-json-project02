@@ -9,7 +9,7 @@ function RandomLocationPage() {
 
   const getRandomPlace = () => {
     axios
-      .get("https://exo-app-rest-api.adaptable.app/places/")
+      .get(import.meta.env.VITE_API_URL)
       .then((response) => {
         const allPlaces = response.data;
         const randomize = Math.floor(Math.random() * allPlaces.length);
@@ -50,10 +50,10 @@ function RandomLocationPage() {
                   <Tab eventKey="place" title="▶_: place">
                     <img
                       className="container-image"
-                      src={place.placeImage || "/src/assets/images/broken-pip04.png"}
+                      src={place.placeImage || import.meta.env.VITE_BROKEN_IMAGE}
                       alt={place.placeName}
                       onError={(e) => {
-                        e.target.src = "/src/assets/images/broken-pip04.png";
+                        e.target.src = import.meta.env.VITE_BROKEN_IMAGE;
                       }}
                     />
                     <div className="tab-panel">
@@ -65,12 +65,10 @@ function RandomLocationPage() {
                   <Tab eventKey="life" title="▶_: life">
                     <img
                       className="inhabitants-image"
-                      src={
-                        place.inhabitantsImage || "/src/assets/images/broken-pip04.png"
-                      }
+                      src={place.inhabitantsImage || import.meta.env.VITE_BROKEN_IMAGE}
                       alt={place.inhabitants}
                       onError={(e) => {
-                        e.target.src = "/src/assets/images/broken-pip04.png";
+                        e.target.src = import.meta.env.VITE_BROKEN_IMAGE;
                       }}
                     />
                     <div className="tab-panel">
