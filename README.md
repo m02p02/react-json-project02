@@ -58,7 +58,7 @@ This app began as a unit project during Ironhack's Web Development Bootcamp to e
 
 It momentarily employs a non-persistent JSON API database in which users are able to submit, read, edit and remove entries, details and images of a fictional or non-fictional location and its life forms.
 
-The concept of the cosmetic design and interactivity is meant to evoke a sense of sci-fi nostalgia and distopian grungy hacker tropes: Star Wars meets The Matrix meets Cyberpunk 2077 meets Fallout.
+The aesthetics are meant to evoke a sense of sci-fi nostalgia and dystopian grungy hacker tropes: Star Wars meets The Matrix meets Cyberpunk 2077 meets Fallout.
 
 #### This web app features:
 - JavaScript
