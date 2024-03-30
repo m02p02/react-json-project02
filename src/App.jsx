@@ -2,7 +2,7 @@ import React from "react";
 import { Route, Routes } from "react-router-dom";
 
 import NavMenu from "./components/NavMenu/NavMenu.jsx";
-import HomePage from "./pages/Homepage/HomePage.jsx";
+import HomePage from "./pages/HomePage/HomePage.jsx";
 import AllLocationsPage from "./pages/AllLocationsPage/AllLocationsPage.jsx";
 import LocationDetailsPage from "./pages/LocationDetailsPage/LocationDetailsPage.jsx";
 import RandomLocationPage from "./pages/RandomLocationsPage/RandomLocationPage.jsx";
