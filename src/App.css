@@ -135,8 +135,8 @@ ul.mb-3.custom-tabs.nav.nav-tabs {
 
 .container-image,
 .inhabitants-image {
-  max-width: 500px;
-  max-height: 350px;
+  max-width: 85%;
+  max-height: 85%;
   object-fit: contain;
   margin: 1rem 1rem 0 1rem;
 }
@@ -145,6 +145,7 @@ ul.mb-3.custom-tabs.nav.nav-tabs {
 add and edit location pages
 */
 .input-place-form {
+  margin-left: 0.5rem;
   width: 75vw;
 }
 
@@ -167,7 +168,6 @@ add and edit location pages
 
 input,
 textarea {
-  margin: 0;
   padding: 5px 0 0 0;
   width: 50ch;
   background-color: transparent;
