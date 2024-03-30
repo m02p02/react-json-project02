@@ -10,7 +10,7 @@ function AllLocationsPage() {
 
   const displayAllPlaces = () => {
     axios
-      .get(import.meta.env.VITE_API_URL)
+      .get(import.meta.env.VITE_DEV_API)
       .then((response) => {
         setPlace(response.data);
       })
