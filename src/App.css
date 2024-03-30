@@ -87,7 +87,7 @@ location details and random pages
 */
 .place-container {
   margin: 0 auto;
-  max-width: 85%;
+  width: 60%;
   position: relative;
 }
 
