@@ -17,12 +17,14 @@ function AddLocationPage() {
     e.preventDefault();
 
     const placeImageURL =
-      placeImage.trim() !== "" ? placeImage : "/src/assets/images/broken-pip04.png";
+      placeImage.trim() !== ""
+      ? placeImage
+      : "https://res.cloudinary.com/dr2c3k5gm/image/upload/v1711818514/utility/broken-pipgreen.png";
 
     const inhabitantsImageURL =
       inhabitantsImage.trim() !== ""
         ? inhabitantsImage
-        : "/src/assets/images/broken-pip04.png";
+        : "https://res.cloudinary.com/dr2c3k5gm/image/upload/v1711818514/utility/broken-pipgreen.png";
 
     const requestBody = {
       placeName: placeName,
