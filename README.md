@@ -36,10 +36,11 @@ Updates and changes
 
 - Changes:
     - Version 1 was previously named <i>Cosmic Logger: Bootcamp Wars</i>.
-    - CSS tags renamed, reworked and consolidated ref. D.R.Y. principles.
+    - Vite config.js used to create global variables for back end and utility URLs
+    - CSS tags renamed, reworked and consolidated using CSS variables and DRY principles.
     - Previously, 2-3 massive .css files contained all the CSS code -- now, where applicable and logical, each page and/or component has its own corresponding .css file to handle specificities.
     - Layout, interface, colour scheme and font style reworked and redesigned to evoke something similar to the [Pip-Boy wearable computer from Bethesda's Fallout video game franchise](https://en.wikipedia.org/wiki/Pip-Boy).
-    - <b>Responsive design:</b> version 2 has been redesigned and restructured beginning with a 375px (iPhone SE) viewport width in mind.
+    - <b>Responsive design:</b> version 2 has been redesigned and restructured beginning with a minimum 375px (iPhone SE) viewport width in mind.
 
 - Other:
     - Copyrighted material removed (intro music, homepage background image).
@@ -63,6 +64,7 @@ The concept of the cosmetic design and interactivity is meant to evoke a sense o
 - JavaScript
 - HTML
 - CSS (vanilla) + React-Bootstrap
+- Vite
 - React.js
 - Node.js
 - JSON API
