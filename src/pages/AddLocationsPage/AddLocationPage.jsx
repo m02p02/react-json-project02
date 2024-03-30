@@ -58,7 +58,7 @@ function AddLocationPage() {
             <p className="global-code-header">▶_: logging new discovery...</p>
           </div>
 
-          <div className="body-inner-scroll">
+          <div className="body-inner-scroll form-container">
             <form className="input-place-form" onSubmit={handleSubmit}>
               <label
                 className="input-label"
@@ -79,9 +79,9 @@ function AddLocationPage() {
               <label
                 className="input-label"
                 htmlFor="location">
-                ▶_: logging location -name
+                ▶_: logging location -where
               </label>
-              <input
+              <textarea
                 type="text"
                 id="location"
                 name="location"
@@ -133,7 +133,7 @@ function AddLocationPage() {
                 type="text"
                 id="inhabitants-name"
                 name="Inhabitants"
-                placeholder="▶_: enter lifeforms or [unknown]..."
+                placeholder="▶_: enter name or [unknown]..."
                 required={true}
                 value={inhabitants}
                 onChange={(e) => {

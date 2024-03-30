@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router";
+import { API_URL } from "/config";
 
 function EditLocationsPage() {
   const [placeName, setPlaceName] = useState("");
@@ -16,7 +17,7 @@ function EditLocationsPage() {
 
   useEffect(() => {
     axios
-      .get(`https://exo-app-rest-api.adaptable.app/places/${placeId}`)
+      .get(`${API_URL}${placeId}`)
       .then((response) => {
         setPlaceName(response.data.placeName);
         setLocation(response.data.location);
@@ -47,7 +48,7 @@ function EditLocationsPage() {
 
     axios
       .put(
-        `https://exo-app-rest-api.adaptable.app/places/${placeId}`,
+        `${API_URL}${placeId}`,
         requestBody
       )
       .then((response) => {
@@ -72,7 +73,7 @@ function EditLocationsPage() {
             </p>
           </div>
 
-          <div className="body-inner-scroll">
+          <div className="body-inner-scroll form-container" >
             <form className="input-place-form" onSubmit={handleFormSubmit}>
               <label
                 className="input-label"
@@ -93,9 +94,9 @@ function EditLocationsPage() {
               <label
                 className="input-label"
                 htmlFor="location">
-                ▶_: logging location -name
+                ▶_: logging location -where
               </label>
-              <input
+              <textarea
                 type="text"
                 id="location"
                 name="location"
