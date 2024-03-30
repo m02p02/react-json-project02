@@ -8,12 +8,11 @@ import "./AllLocationsPage.css";
 function AllLocationsPage() {
   const [place, setPlace] = useState([]);
 
-  const API_URL = import.meta.env.VITE_API_URL;
   const BROKEN_IMG = import.meta.env.VITE_BROKEN_IMAGE;
 
   const displayAllPlaces = () => {
     axios
-      .get(API_URL)
+      .get("https://exo-app-rest-api.adaptable.app/places/")
       .then((response) => {
         setPlace(response.data);
       })
