@@ -8,9 +8,12 @@ import "./AllLocationsPage.css";
 function AllLocationsPage() {
   const [place, setPlace] = useState([]);
 
+  const API_URL = import.meta.env.VITE_API_URL;
+  const BROKEN_IMG = import.meta.env.VITE_BROKEN_IMAGE;
+
   const displayAllPlaces = () => {
     axios
-      .get(import.meta.env.VITE_API_URL)
+      .get(API_URL)
       .then((response) => {
         setPlace(response.data);
       })
@@ -46,7 +49,7 @@ function AllLocationsPage() {
                       variant="top"
                       src={place.placeImage}
                       onError={(e) => {
-                        e.target.src = import.meta.env.VITE_BROKEN_IMAGE;
+                        e.target.src = BROKEN_IMG;
                       }}
                     />
                     <Card.Body>
