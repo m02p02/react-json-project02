@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { API_URL, BROKEN_IMG } from "/config";
 
 function AddLocationPage() {
   const [placeName, setPlaceName] = useState("");
@@ -19,12 +20,12 @@ function AddLocationPage() {
     const placeImageURL =
       placeImage.trim() !== ""
       ? placeImage
-      : import.meta.env.VITE_BROKEN_IMAGE;
+      : BROKEN_IMG;
 
     const inhabitantsImageURL =
       inhabitantsImage.trim() !== ""
         ? inhabitantsImage
-        : import.meta.env.VITE_BROKEN_IMAGE;
+        : BROKEN_IMG;
 
     const requestBody = {
       placeName: placeName,
@@ -37,7 +38,7 @@ function AddLocationPage() {
     };
 
     axios
-      .post(import.meta.env.VITE_API_URL, requestBody)
+      .post(API_URL, requestBody)
       .then((response) => {
         navigate("/places/all-places");
       })

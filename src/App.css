@@ -110,6 +110,10 @@ location details and random pages
   background: var(--pip-04);
 }
 
+ul.mb-3.custom-tabs.nav.nav-tabs {
+  border-color: var(--pip-04);
+}
+
 .tab-panel {
   margin: 0 1rem;
   padding: 0;
@@ -146,7 +150,7 @@ add and edit location pages
 
 .input-label,
 .input-textarea {
-  padding: 1.5rem 0 5px 2rem;
+  padding: 1.5rem 0 5px 0;
   background: transparent;
   color: var(--pip-04);
   font-family: var(--font-family-2);
@@ -163,7 +167,7 @@ add and edit location pages
 
 input,
 textarea {
-  margin: 0 2rem;
+  margin: 0;
   padding: 5px 0 0 0;
   width: 50ch;
   background-color: transparent;

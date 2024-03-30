@@ -2,6 +2,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { Tab, Tabs } from "react-bootstrap";
+import { API_URL, BROKEN_IMG } from "/config";
 
 function RandomLocationPage() {
   const [place, setPlace] = useState({});
@@ -9,7 +10,7 @@ function RandomLocationPage() {
 
   const getRandomPlace = () => {
     axios
-      .get(import.meta.env.VITE_API_URL)
+      .get(API_URL)
       .then((response) => {
         const allPlaces = response.data;
         const randomize = Math.floor(Math.random() * allPlaces.length);
@@ -50,10 +51,10 @@ function RandomLocationPage() {
                   <Tab eventKey="place" title="▶_: place">
                     <img
                       className="container-image"
-                      src={place.placeImage || import.meta.env.VITE_BROKEN_IMAGE}
+                      src={place.placeImage || BROKEN_IMG}
                       alt={place.placeName}
                       onError={(e) => {
-                        e.target.src = import.meta.env.VITE_BROKEN_IMAGE;
+                        e.target.src = BROKEN_IMG;
                       }}
                     />
                     <div className="tab-panel">
@@ -65,10 +66,10 @@ function RandomLocationPage() {
                   <Tab eventKey="life" title="▶_: life">
                     <img
                       className="inhabitants-image"
-                      src={place.inhabitantsImage || import.meta.env.VITE_BROKEN_IMAGE}
+                      src={place.inhabitantsImage || BROKEN_IMG}
                       alt={place.inhabitants}
                       onError={(e) => {
-                        e.target.src = import.meta.env.VITE_BROKEN_IMAGE;
+                        e.target.src = BROKEN_IMG;
                       }}
                     />
                     <div className="tab-panel">

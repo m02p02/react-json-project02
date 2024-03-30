@@ -2,6 +2,7 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { Tab, Tabs } from "react-bootstrap";
+import { API_URL, BROKEN_IMG } from "/config";
 
 function LocationDetailsPage(props) {
   const [place, setPlace] = useState({});
@@ -15,7 +16,7 @@ function LocationDetailsPage(props) {
 
   const getOnePlace = () => {
     axios
-      .get(`${import.meta.env.VITE_API_URL}${placeId}`)
+      .get(`${API_URL}${placeId}`)
       .then((response) => {
         setPlace(response.data);
       })
@@ -28,7 +29,7 @@ function LocationDetailsPage(props) {
 
   const deletePlace = () => {
     axios
-      .delete(`${import.meta.env.VITE_API_URL}${placeId}`)
+      .delete(`${API_URL}${placeId}`)
       .then((response) => {
         navigate("/places/all-places");
       })
@@ -61,10 +62,10 @@ function LocationDetailsPage(props) {
                   <Tab eventKey="place" title="▶_: place">
                     <img
                       className="container-image"
-                      src={place.placeImage || import.meta.env.VITE_BROKEN_IMAGE}
+                      src={place.placeImage || BROKEN_IMG}
                       alt={place.placeName}
                       onError={(e) => {
-                        e.target.src = import.meta.env.VITE_BROKEN_IMAGE;
+                        e.target.src = BROKEN_IMG;
                       }}
                     />
                     <div className="tab-panel">
@@ -76,10 +77,10 @@ function LocationDetailsPage(props) {
                   <Tab eventKey="life" title="▶_: life">
                     <img
                       className="inhabitants-image"
-                      src={place.inhabitantsImage || import.meta.env.VITE_BROKEN_IMAGE}
+                      src={place.inhabitantsImage || BROKEN_IMG}
                       alt={place.inhabitants}
                       onError={(e) => {
-                        e.target.src = import.meta.env.VITE_BROKEN_IMAGE;
+                        e.target.src = BROKEN_IMG;
                       }}
                     />
                     <div className="tab-panel">
