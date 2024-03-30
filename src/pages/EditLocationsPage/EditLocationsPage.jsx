@@ -7,15 +7,12 @@ function EditLocationsPage() {
   const [location, setLocation] = useState("");
   const [placeDescription, setPlaceDescription] = useState("");
   const [placeImage, setPlaceImage] = useState("");
-  const [inhabitants, setinhabitants] = useState("");
+  const [inhabitants, setInhabitants] = useState("");
   const [inhabitantsDescription, setInhabitantsDescription] = useState("");
   const [inhabitantsImage, setInhabitantsImage] = useState("");
 
   const { placeId } = useParams();
-
   const navigate = useNavigate();
-  const updateAudio = new Audio("/src/audio/blaster.mp3");
-  const keyboardClickAudio = new Audio("/src/audio/keyboard.mp3");
 
   useEffect(() => {
     axios
@@ -25,19 +22,18 @@ function EditLocationsPage() {
         setLocation(response.data.location);
         setPlaceDescription(response.data.placeDescription);
         setPlaceImage(response.data.placeImage);
-        setinhabitants(response.data.inhabitants);
+        setInhabitants(response.data.inhabitants);
         setInhabitantsDescription(response.data.inhabitantsDescription);
         setInhabitantsImage(response.data.inhabitantsImage);
       })
       .catch((error) => {
-        console.log("error getting place in the API");
+        console.log("Error: unable to fetch location from API");
         console.log(error);
       });
   }, []);
 
   const handleFormSubmit = (e) => {
     e.preventDefault();
-    updateAudio.play();
 
     const requestBody = {
       placeName: placeName,
@@ -58,13 +54,11 @@ function EditLocationsPage() {
         navigate("/places/all-places");
       })
       .catch((error) => {
-        console.log("error updating project");
+        console.log("Error: unable to edit location on API");
         console.log(error);
       });
   };
-  const handleInputChange = (e) => {
-    keyboardClickAudio.play();
-  };
+
   return (
 
     <div className="app-monitor">
@@ -93,7 +87,6 @@ function EditLocationsPage() {
                 required={true}
                 value={placeName}
                 onChange={(e) => {
-                  handleInputChange(e);
                   setPlaceName(e.target.value);
                 }}
               />
@@ -158,7 +151,7 @@ function EditLocationsPage() {
                 required={true}
                 value={inhabitants}
                 onChange={(e) => {
-                  setinhabitants(e.target.value);
+                  setInhabitants(e.target.value);
                 }}
               />
               <label

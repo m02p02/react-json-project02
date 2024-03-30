@@ -1,5 +1,5 @@
 import axios from "axios";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 function AddLocationPage() {
@@ -7,24 +7,23 @@ function AddLocationPage() {
   const [location, setLocation] = useState("");
   const [placeDescription, setPlaceDescription] = useState("");
   const [placeImage, setPlaceImage] = useState("");
-  const [inhabitants, setinhabitants] = useState("");
+  const [inhabitants, setInhabitants] = useState("");
   const [inhabitantsDescription, setInhabitantsDescription] = useState("");
   const [inhabitantsImage, setInhabitantsImage] = useState("");
 
   const navigate = useNavigate();
 
-  const submitAudio = new Audio("/src/audio/blaster.mp3");
-
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    submitAudio.play();
     const placeImageURL =
-      placeImage.trim() !== "" ? placeImage : "/src/images/matrix.jpg";
+      placeImage.trim() !== "" ? placeImage : "/src/assets/images/broken-pip04.png";
+
     const inhabitantsImageURL =
       inhabitantsImage.trim() !== ""
         ? inhabitantsImage
-        : "/src/images/matrix.jpg";
+        : "/src/assets/images/broken-pip04.png";
+
     const requestBody = {
       placeName: placeName,
       location: location,
@@ -41,22 +40,10 @@ function AddLocationPage() {
         navigate("/places/all-places");
       })
       .catch((error) => {
-        console.log("error creating place in the API");
+        console.log("Error: unable to log new location in the API");
         console.log(error);
       });
   };
-
-  useEffect(() => {
-    const keyboardClickAudio = new Audio("/src/audio/keyboard.mp3");
-    const handleKeyPress = () => {
-      keyboardClickAudio.play();
-    };
-    window.addEventListener("keydown", handleKeyPress);
-
-    return () => {
-      window.removeEventListener("keydown", handleKeyPress);
-    };
-  }, []);
 
   return (
     <div className="app-monitor">
@@ -147,7 +134,7 @@ function AddLocationPage() {
                 required={true}
                 value={inhabitants}
                 onChange={(e) => {
-                  setinhabitants(e.target.value);
+                  setInhabitants(e.target.value);
                 }}
               />
               <label

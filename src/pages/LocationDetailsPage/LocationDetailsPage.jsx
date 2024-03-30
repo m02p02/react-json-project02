@@ -61,10 +61,10 @@ function LocationDetailsPage(props) {
                   <Tab eventKey="place" title="▶_: place">
                     <img
                       className="container-image"
-                      src={place.placeImage || "/src/images/broken-pip04.png"}
+                      src={place.placeImage || "/src/assets/images/broken-pip04.png"}
                       alt={place.placeName}
                       onError={(e) => {
-                        e.target.src = "/src/images/broken-pip04.png";
+                        e.target.src = "/src/assets/images/broken-pip04.png";
                       }}
                     />
                     <div className="tab-panel">
@@ -77,11 +77,11 @@ function LocationDetailsPage(props) {
                     <img
                       className="inhabitants-image"
                       src={
-                        place.inhabitantsImage || "/src/images/broken-pip04.png"
+                        place.inhabitantsImage || "/src/assets/images/broken-pip04.png"
                       }
                       alt={place.inhabitants}
                       onError={(e) => {
-                        e.target.src = "/src/images/broken-pip04.png";
+                        e.target.src = "/src/assets/images/broken-pip04.png";
                       }}
                     />
                     <div className="tab-panel">

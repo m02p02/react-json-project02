@@ -46,7 +46,7 @@ function AllLocationsPage() {
                       variant="top"
                       src={place.placeImage}
                       onError={(e) => {
-                        e.target.src="/src/images/broken-pip04.png";
+                        e.target.src="/src/assets/images/broken-pip04.png";
                       }}
                     />
                     <Card.Body>

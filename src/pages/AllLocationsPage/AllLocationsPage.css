@@ -1,57 +1,56 @@
 .location-cards-container {
-    height: 100%;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  
-  .location-cards {
-    position: relative;
-    height: 50%;
-    margin: 0.5rem;
-    background: transparent;
-    border: 1px solid var(--pip-03);
-    border-radius: 8px;
-  }
-  
-  .location-cards img {
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    max-width: 90%;
-    max-height: 50%;
-    object-fit: contain;
-    transform: translate(-50%, -50%);
-  }
-  
-  .location-cards-font {
-    position: absolute;
-    top: 80%;
-    left: 50%;
-    width: 75%;
-    padding: 2px;
-    background-color: transparent;
-    border-bottom: 1px solid var(--pip-04);
-    border-radius: 0;
-    transform: translate(-50%, -50%);
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
 
-  }
-  
-  .card-font {
-    padding: 5px 2px 0 2px;
-    color: var(--matrix-01);
-    font-family: var(--font-family-4);
-    font-size: 1rem;
-    text-align: start;
-  }
-  
-  .location-cards-font:hover {
-    background: var(--matrix-01);
-    border-radius: 8px;
-  }
+.location-cards.card {
+  position: relative;
+  height: 50%;
+  margin: 0.5rem;
+  background: transparent;
+  border: 1px solid var(--pip-03);
+  border-radius: 8px;
+}
 
-  .location-cards-font:hover
-  .card-font {
-    color: var(--dark-01);
-  }
+.location-cards.card img {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  max-width: 90%;
+  max-height: 50%;
+  object-fit: contain;
+  transform: translate(-50%, -50%);
+}
+
+.location-cards-font {
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  width: 75%;
+  padding: 2px;
+  background-color: transparent;
+  border-bottom: 1px solid var(--pip-04);
+  border-radius: 0;
+  transform: translate(-50%, -50%);
+}
+
+.card-font.card-title.h5 {
+  padding: 5px 2px 0 2px;
+  color: var(--matrix-01);
+  font-family: var(--font-family-4);
+  font-size: 1rem;
+  text-align: start;
+}
+
+.location-cards-font:hover {
+  background: var(--matrix-01);
+  border-radius: 8px;
+}
+
+.location-cards-font:hover
+.card-font.card-title.h5 {
+  color: var(--dark-01);
+}

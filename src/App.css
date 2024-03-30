@@ -2,7 +2,7 @@
   position: fixed;
   background:
     var(--monitor-grad),
-    url("https://img.freepik.com/free-photo/rough-metallic-surface-texture_23-2148953969.jpg");
+    url(/src/assets/images/grungy-bg.jpg);
   background-blend-mode: multiply;
 }
 

@@ -1,7 +1,7 @@
 .homepage-panel {
   height: 100%;
   width: 100%;
-  background: url(./src/images/triangulumgalaxy.jpg?v=2);
+  background: url(/src/assets/images/homepage-galaxy.jpg);
   background-size: cover;
   background-position: center;
 }
