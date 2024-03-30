@@ -2,17 +2,16 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { Card } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import { API_URL, BROKEN_IMG } from "/config";
 
 import "./AllLocationsPage.css";
 
 function AllLocationsPage() {
   const [place, setPlace] = useState([]);
 
-  const BROKEN_IMG = import.meta.env.VITE_BROKEN_IMAGE;
-
   const displayAllPlaces = () => {
     axios
-      .get("https://exo-app-rest-api.adaptable.app/places/")
+      .get(API_URL)
       .then((response) => {
         setPlace(response.data);
       })
