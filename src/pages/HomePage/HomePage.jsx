@@ -15,6 +15,11 @@ function HomePage() {
         <div className="global-panel">
           <div className="homepage-panel">
 
+            {/* delete after migration */}
+            <div>
+              <p className="under-construction">Currently migrating the back end</p>
+            </div>
+
             <div>
               <p className="global-code-header">▶_: 記入</p>
               <p className="global-code-header">▶_: select...</p>

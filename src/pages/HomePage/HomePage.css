@@ -6,6 +6,20 @@
   background-position: center;
 }
 
+/* delete after migration */
+.under-construction {
+  position: fixed;
+  top: 50px;
+  left: 25%;
+  padding: 5px;
+  z-index: 1000;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: red;
+  background-color: black;
+  border: 2px solid red;
+}
+
 .homepage-panel-btn-container {
   position: absolute;
   top: 70px;
